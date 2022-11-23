@@ -1,0 +1,7 @@
+beautifulsoup4==4.11.1
+Faker==15.3.2
+httpx==0.23.1
+lxml==4.9.1
+orjson==3.8.2
+pandas==1.5.1
+uvloop==0.17.0

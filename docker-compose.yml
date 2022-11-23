@@ -1,0 +1,89 @@
+version: "3"
+
+services:
+  python36:
+    build:
+      context: ./docker/
+      args:
+        DOCKER_IMAGE: python:3.6.15-slim-buster
+        SETUPTOOLS_VERSION: 59.6.0
+        REQUIREMENTS: requirements36.txt
+    entrypoint: ./entrypoint.sh
+    # tty: true
+    # stdin_open: true
+    environment:
+      - PY_VERSION=3.6
+    volumes:
+      - ./src:/code/src
+      - ./report:/code/report
+  python37:
+    build:
+      context: ./docker/
+      args:
+        DOCKER_IMAGE: python:3.7.15-slim-buster
+        REQUIREMENTS: requirements37.txt
+    entrypoint: ./entrypoint.sh
+    environment:
+      - PY_VERSION=3.7
+    volumes:
+      - ./src:/code/src
+      - ./report:/code/report
+    depends_on:
+      python36:
+        condition: service_completed_successfully
+  python38:
+    build:
+      context: ./docker/
+      args:
+        DOCKER_IMAGE: python:3.8.15-slim-buster
+    entrypoint: ./entrypoint.sh
+    environment:
+      - PY_VERSION=3.8
+    volumes:
+      - ./src:/code/src
+      - ./report:/code/report
+    depends_on:
+      python37:
+        condition: service_completed_successfully
+  python39:
+    build:
+      context: ./docker/
+      args:
+        DOCKER_IMAGE: python:3.9.15-slim-buster
+    entrypoint: ./entrypoint.sh
+    environment:
+      - PY_VERSION=3.9
+    volumes:
+      - ./src:/code/src
+      - ./report:/code/report
+    depends_on:
+      python38:
+        condition: service_completed_successfully
+  python310:
+    build:
+      context: ./docker/
+      args:
+        DOCKER_IMAGE: python:3.10.8-slim-buster
+    entrypoint: ./entrypoint.sh
+    environment:
+      - PY_VERSION=3.10
+    volumes:
+      - ./src:/code/src
+      - ./report:/code/report
+    depends_on:
+      python39:
+        condition: service_completed_successfully
+  python311:
+    build:
+      context: ./docker/
+      args:
+        DOCKER_IMAGE: python:3.11.0-slim-buster
+    entrypoint: ./entrypoint.sh
+    environment:
+      - PY_VERSION=3.11
+    volumes:
+      - ./src:/code/src
+      - ./report:/code/report
+    depends_on:
+      python310:
+        condition: service_completed_successfully

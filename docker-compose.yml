@@ -87,3 +87,8 @@ services:
     depends_on:
       python310:
         condition: service_completed_successfully
+  dummy:
+    image: hello-world:latest
+    depends_on:
+      python311:
+        condition: service_completed_successfully

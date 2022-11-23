@@ -13,8 +13,6 @@ do
     MPROF_INTERVAL=${MPROF_INTERVAL:="0.01"}
     MPROF_MULTIPROCESS=$(cat ${FILE} | grep -e "@MPROF_MULTIPROCESS" | sed 's/# @MPROF_MULTIPROCESS: //')
     MPROF_MULTIPROCESS=${MPROF_MULTIPROCESS:="-C"}
-    echo "MPROF_INTERVAL: $MPROF_INTERVAL"
-    echo "MPROF_MULTIPROCESS: $MPROF_MULTIPROCESS"
 
     if [ -z "$DONT_RUN" ]
     then
@@ -26,15 +24,15 @@ do
             # Performance
             hyperfine --show-output --export-json report/tmp/${i}part_${PY_VERSION}.json --runs 5 --warmup 3 "python ${FILE}"
             # Memory
-            for k in 1 2 3; do
+            for k in 1 2 3 4 5; do
                 mprof run ${MPROF_MULTIPROCESS} -T ${MPROF_INTERVAL} -o report/tmp/${i}_${k}part_${PY_VERSION}.dat ${FILE} &
             done
             wait
             echo "${FILE}" >> report/tmp/${i}part_${PY_VERSION}_full.txt
-            for k in 1 2 3; do
+            for k in 1 2 3 4 5; do
                 cat report/tmp/${i}_${k}part_${PY_VERSION}.dat | sed '/^CHLD/ d' > report/tmp/${i}_${k}part_${PY_VERSION}_parcial.dat
                 mv report/tmp/${i}_${k}part_${PY_VERSION}_parcial.dat report/tmp/${i}_${k}part_${PY_VERSION}.dat
-                cat report/tmp/${i}_${k}part_${PY_VERSION}.dat | tail -1 >> report/tmp/${i}part_${PY_VERSION}_full.txt
+                cat report/tmp/${i}_${k}part_${PY_VERSION}.dat | tail -2 >> report/tmp/${i}part_${PY_VERSION}_full.txt &
             done
             mprof clean
         fi
@@ -45,7 +43,9 @@ do
 done
 
 python -m report ${PY_VERSION}
-rm report/tmp/*.json
-rm report/tmp/*.dat
-rm report/tmp/*.txt
+sleep 1
+
+rm report/tmp/*.json &
+rm report/tmp/*.dat &
+rm report/tmp/*.txt &
 sleep 2

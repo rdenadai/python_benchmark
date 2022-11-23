@@ -26,4 +26,20 @@ $> ./benchmarh.sh
 
 Results will be write down on the main README.md file (it's partiallys regenerated at each run).
 
+To benchmark a new program, simple put it inside de **src** folder.
+
+Please also check this metadata tags to put inside the program to be able to change some aspects of execution.
+
+```python
+# @DONT_RUN
+# @MPROF_INTERVAL: 0.1
+# @MPROF_MULTIPROCESS: -M
+# @ALLOWED_VERSIONS: 3.6, 3.7, 3.8, 3.9, 3.10, 3.11
+```
+
+ - @DONT_RUN: This file should not be executed (in case of utils routines);
+ - @MPROF_INTERVAL: To benchmark memory usage mprof is used, this param you maybe able to improve interval collect of memory;
+ - @MPROF_MULTIPROCESS: In case your program uses python multiprocess (possible params -M or -C, default: -C);
+ - @ALLOWED_VERSIONS: What python versions your program can be run: from 3.6 to 3.11;
+
 ## Results

@@ -1,0 +1,102 @@
+[
+    {
+        "command": "complex/dataclasses_.py",
+        "executed": "no",
+        "mean": 0,
+        "stddev": 0,
+        "median": 0,
+        "min": 0,
+        "max": 0,
+        "memory": 0.0
+    },
+    {
+        "command": "complex/simplenamespace.py",
+        "executed": "yes",
+        "mean": 0.05209,
+        "stddev": 0.0006,
+        "median": 0.05225,
+        "min": 0.05106,
+        "max": 0.05266,
+        "memory": 17.53594
+    },
+    {
+        "command": "algorithm/twosum/twosum.py",
+        "executed": "yes",
+        "mean": 0.08267,
+        "stddev": 0.00263,
+        "median": 0.08128,
+        "min": 0.0801,
+        "max": 0.08634,
+        "memory": 13.49219
+    },
+    {
+        "command": "algorithm/twosum/twosum_naive.py",
+        "executed": "yes",
+        "mean": 0.08389,
+        "stddev": 0.00427,
+        "median": 0.08406,
+        "min": 0.07915,
+        "max": 0.08894,
+        "memory": 17.95234
+    },
+    {
+        "command": "long_run/processes/generate_fake_data.py",
+        "executed": "yes",
+        "mean": 0.89876,
+        "stddev": 0.07297,
+        "median": 0.8797,
+        "min": 0.82998,
+        "max": 1.00086,
+        "memory": 65.18125
+    },
+    {
+        "command": "long_run/processes/collect_names_from_site.py",
+        "executed": "no",
+        "mean": 0,
+        "stddev": 0,
+        "median": 0,
+        "min": 0,
+        "max": 0,
+        "memory": 0.0
+    },
+    {
+        "command": "math/pow_using_math.py",
+        "executed": "yes",
+        "mean": 0.0339,
+        "stddev": 0.0015,
+        "median": 0.03328,
+        "min": 0.03301,
+        "max": 0.03657,
+        "memory": 21.98828
+    },
+    {
+        "command": "math/pow_simple.py",
+        "executed": "yes",
+        "mean": 0.0337,
+        "stddev": 0.00034,
+        "median": 0.03358,
+        "min": 0.03341,
+        "max": 0.03425,
+        "memory": 21.87266
+    },
+    {
+        "command": "modules/json/json_module.py",
+        "executed": "yes",
+        "mean": 0.20243,
+        "stddev": 0.00195,
+        "median": 0.20242,
+        "min": 0.19948,
+        "max": 0.20446,
+        "memory": 17.61094
+    },
+    {
+        "command": "modules/json/orjson_module.py",
+        "executed": "yes",
+        "mean": 0.18367,
+        "stddev": 0.00224,
+        "median": 0.18419,
+        "min": 0.18094,
+        "max": 0.18592,
+        "memory": 22.77188
+    }
+]

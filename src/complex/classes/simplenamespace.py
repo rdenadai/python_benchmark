@@ -4,8 +4,8 @@ from types import SimpleNamespace
 
 
 def main():
-    for _ in range(100):
-        person = SimpleNamespace(**{"name": "Rodolfo", "age": 39})
+    persons = [SimpleNamespace(**{"name": "Rodolfo", "age": 39}) for _ in range(20_000)]
+    for person in persons:
         name, age = person.name, person.age
     return 0
 

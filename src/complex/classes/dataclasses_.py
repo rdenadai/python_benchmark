@@ -10,8 +10,8 @@ class Person:
 
 
 def main():
-    for _ in range(100):
-        person = Person("Rodolfo", 40)
+    persons = [Person("Rodolfo", 40) for _ in range(20_000)]
+    for person in persons:
         name, age = person.name, person.age
     return 0
 

@@ -22,19 +22,16 @@ do
             echo "{\"results\": [{\"command\": \"${FILE}\"}]}" > report/tmp/${i}part_${PY_VERSION}.json
         else
             # Performance
-            hyperfine --show-output --export-json report/tmp/${i}part_${PY_VERSION}.json --runs 5 --warmup 3 "python ${FILE}"
+            hyperfine --show-output --export-json report/tmp/${i}part_${PY_VERSION}.json --runs 10 --warmup 3 "python ${FILE}"
             # Memory
-            for k in 1 2 3 4 5; do
-                mprof run ${MPROF_MULTIPROCESS} -T ${MPROF_INTERVAL} -o report/tmp/${i}_${k}part_${PY_VERSION}.dat ${FILE} &
+            for k in {1..10}; do
+                mprof run ${MPROF_MULTIPROCESS} -T ${MPROF_INTERVAL} -o report/tmp/${i}_${k}part_${PY_VERSION}.dat ${FILE} &>/dev/null &
             done
             wait
-            echo "${FILE}" >> report/tmp/${i}part_${PY_VERSION}_full.txt
-            for k in 1 2 3 4 5; do
+            for k in {1..10}; do
                 cat report/tmp/${i}_${k}part_${PY_VERSION}.dat | sed '/^CHLD/ d' > report/tmp/${i}_${k}part_${PY_VERSION}_parcial.dat
                 mv report/tmp/${i}_${k}part_${PY_VERSION}_parcial.dat report/tmp/${i}_${k}part_${PY_VERSION}.dat
-                cat report/tmp/${i}_${k}part_${PY_VERSION}.dat | tail -2 >> report/tmp/${i}part_${PY_VERSION}_full.txt &
             done
-            mprof clean
         fi
         ((i=i+1))
     else
@@ -47,5 +44,4 @@ sleep 1
 
 rm report/tmp/*.json &
 rm report/tmp/*.dat &
-rm report/tmp/*.txt &
 sleep 2

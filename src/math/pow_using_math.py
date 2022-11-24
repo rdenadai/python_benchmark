@@ -4,8 +4,9 @@ from math import pow
 
 
 def main():
-    for i in range(10):
-        pow(i, i)
+    for _ in range(100_000):
+        for i in range(100):
+            x = pow(i, i)
     return 0
 
 

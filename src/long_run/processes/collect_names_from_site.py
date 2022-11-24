@@ -74,7 +74,6 @@ async def main():
 
 if __name__ == "__main__":
     try:
-        print("Iniciando rotina...")
         gc.set_threshold(7_000, 100, 100)
         gc.freeze()
 

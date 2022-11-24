@@ -33,7 +33,7 @@ def main():
     fake = Faker("pt_BR")
 
     with ProcessPoolExecutor(max_workers=cpu_count() * 2) as exc:
-        items = exc.map(partial(generate_item, fake), range(15_000), chunksize=100)
+        items = exc.map(partial(generate_item, fake), range(1_000), chunksize=100)
 
         dataframe = pd.DataFrame(
             items,

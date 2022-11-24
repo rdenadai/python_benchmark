@@ -14,7 +14,7 @@ NAMES = (
 
 def main():
     names = NAMES  # pylint(loop-global-usage)
-    for _ in range(10_000):
+    for _ in range(30_000):
         dumped = dumps(
             {
                 "name": choice(names),

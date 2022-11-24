@@ -1,10 +1,7 @@
 # @ALLOWED_VERSIONS: 3.6, 3.7, 3.8, 3.9, 3.10, 3.11
 
 
-def main():
-    for _ in range(100_000):
-        for i in range(100):
-            x = i * i
+def main() -> int:
     return 0
 
 

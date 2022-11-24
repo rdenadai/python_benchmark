@@ -16,33 +16,37 @@ def main(version: str):
         content = content.get("results")[0]
         performance.append(
             {
+                "version": version,
                 "command": content.get("command", "").replace("python src/", "").replace("src/", ""),
                 "executed": "yes" if content.get("mean", None) else "no",
-                "mean": round(content.get("mean", 0), 5),
-                "stddev": round(content.get("stddev", 0), 5),
-                "median": round(content.get("median", 0), 5),
-                "min": round(content.get("min", 0), 5),
-                "max": round(content.get("max", 0), 5),
+                "mean": round(content.get("mean", -1), 5),
+                "stddev": round(content.get("stddev", -1), 5),
+                "median": round(content.get("median", -1), 5),
+                "min": round(content.get("min", -1), 5),
+                "max": round(content.get("max", -1), 5),
             }
         )
 
     # Load and parse memory stats generate by mprof
     memory = defaultdict(list)
-    filenames = "report/tmp/*part_%s_full.txt" % version
+    filenames = "report/tmp/*_*part_%s.dat" % version
     for file in sorted(glob(filenames)):
-        with open(file, encoding="utf-8") as tfile:
+        with open(file, "r", encoding="utf-8") as tfile:
             content = tfile.read().split("\n")
-        command, memory_usage = content[0].strip().replace("src/", ""), content[1:]
-        for line in memory_usage:
+        command = content[0].strip().split("python ")[-1].replace("src/", "")
+        memory_usage = content[1:]
+        for line in reversed(memory_usage):
             if not line:
                 continue
-            mem = line.replace("MEM", "").strip().split()[0]
-            memory[command].append(float(mem))
+            mem = float(line.replace("MEM", "").strip().split()[0])
+            if mem > 0:
+                memory[command].append(float(mem))
+                break
 
     # Add memory usage to general performance stats
     for perf in performance:
         command = perf.get("command", "")
-        perf["memory"] = round(mean(memory.get(command, [0.0])), 5)
+        perf["memory"] = round(mean(memory.get(command, [-1])), 5)
 
     # Get system information (num of cpus, memory, etc)
     system_state = []

@@ -6,7 +6,7 @@ from os.path import abspath, dirname
 
 def main():
     ROOT_DIR = dirname(abspath(__file__))
-    with open(f"{ROOT_DIR}/../../data/titanic.csv", encoding="utf-8", newline="") as csvfile:
+    with open(f"{ROOT_DIR}/../../../data/titanic.csv", encoding="utf-8", newline="") as csvfile:
         csv_reader = DictReader(csvfile, delimiter=",", quotechar='"')
         data = [row for row in csv_reader]
     return 0

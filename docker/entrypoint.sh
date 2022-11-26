@@ -1,7 +1,7 @@
 #!/bin/bash
 
 i=0
-for FILE in $(find src/ -name "*.py")
+for FILE in $(find src/tests -name "*.py")
 do
     echo "--------------------"
     echo "Running $FILE"
@@ -21,6 +21,7 @@ do
             echo "Python ${PY_VERSION} version not allowed in $FILE"
             echo "{\"results\": [{\"command\": \"${FILE}\"}]}" > report/tmp/${i}part_${PY_VERSION}.json
         else
+            python src/prepare/tear_up.py
             # Performance
             hyperfine --show-output --export-json report/tmp/${i}part_${PY_VERSION}.json --runs 10 --warmup 3 "python ${FILE}"
             # Memory
@@ -32,6 +33,7 @@ do
                 cat report/tmp/${i}_${k}part_${PY_VERSION}.dat | sed '/^CHLD/ d' > report/tmp/${i}_${k}part_${PY_VERSION}_parcial.dat
                 mv report/tmp/${i}_${k}part_${PY_VERSION}_parcial.dat report/tmp/${i}_${k}part_${PY_VERSION}.dat
             done
+            python src/prepare/tear_down.py
         fi
         ((i=i+1))
     else

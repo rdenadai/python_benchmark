@@ -5,9 +5,19 @@ services:
     image: postgres
     hostname: postgres
     restart: unless-stopped
+    ports:
+      - 5432:5432
+    volumes:
+      - ./src/data:/docker-entrypoint-initdb.d
     environment:
       POSTGRES_DB: benchmark
       POSTGRES_PASSWORD: password
+  dummy_start:
+    image: alpine:latest
+    command: sleep 5
+    depends_on:
+      postgres:
+        condition: service_started
   python36:
     build:
       context: ./docker/
@@ -24,6 +34,8 @@ services:
       - ./src:/code/src
       - ./report:/code/report
     depends_on:
+      dummy_start:
+        condition: service_completed_successfully
       postgres:
         condition: service_started
   python37:
@@ -107,7 +119,7 @@ services:
         condition: service_started
       python310:
         condition: service_completed_successfully
-  dummy:
+  dummy_close:
     image: hello-world:latest
     depends_on:
       postgres:

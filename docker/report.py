@@ -17,7 +17,7 @@ def main(version: str):
         performance.append(
             {
                 "version": version,
-                "command": content.get("command", "").replace("python src/", "").replace("src/", ""),
+                "command": content.get("command", "").replace("python src/tests/", "").replace("src/tests/", ""),
                 "executed": "yes" if content.get("mean", None) else "no",
                 "mean": round(content.get("mean", -1), 5),
                 "stddev": round(content.get("stddev", -1), 5),
@@ -33,7 +33,7 @@ def main(version: str):
     for file in sorted(glob(filenames)):
         with open(file, "r", encoding="utf-8") as tfile:
             content = tfile.read().split("\n")
-        command = content[0].strip().split("python ")[-1].replace("src/", "")
+        command = content[0].strip().split("python ")[-1].replace("src/tests/", "")
         memory_usage = content[1:]
         for line in reversed(memory_usage):
             if not line:

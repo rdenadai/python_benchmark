@@ -36,13 +36,14 @@ RUN wget https://github.com/sharkdp/hyperfine/releases/download/v1.15.0/hyperfin
 
 ARG SETUPTOOLS_VERSION=65.6.0
 ARG REQUIREMENTS=requirements.txt
+ARG REQUIREMENTS_INTERNAL=requirements-internal.txt
 
 COPY ./${REQUIREMENTS} .
-COPY ./requirements-internal.txt .
+COPY ./${REQUIREMENTS_INTERNAL} .
 
 RUN pip install pip setuptools==${SETUPTOOLS_VERSION} --upgrade && \
     pip install --no-cache-dir -r ${REQUIREMENTS} && \
-    pip install --no-cache-dir -r requirements-internal.txt 
+    pip install --no-cache-dir -r ${REQUIREMENTS_INTERNAL}
 
 COPY ./entrypoint.sh .
 

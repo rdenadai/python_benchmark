@@ -55,121 +55,131 @@ Please also check this metadata tags to put inside the program to be able to cha
  - @ALLOWED_VERSIONS: What python versions your program can be run: from 3.6 to 3.11;
 
 ## Results
-> Last run: Sat Nov 26 11:23:04 AM -03 2022
+> Last run: Tue Nov 29 12:39:06 PM -03 2022
 ### **Comparison**
 
 #### How much faster 3.11 is? (Mean / Median from 3.6 to 3.10)
 | Command | 3.6 (Mean / Median) | 3.7 (...) | 3.8 (...) | 3.9 (...) | 3.10 (...) |
 |:---|---:|---:|---:|---:|---:|
-| `algorithm/twosum/twosum.py` | 15.23% / 13.60% | -6.46% / -6.44% | 2.65% / 2.24% | 13.69% / 13.01% | 8.14% / 8.20% |
-| `algorithm/twosum/twosum_naive.py` | 13.86% / 13.67% | -4.45% / -6.08% | 3.21% / 3.07% | 13.86% / 13.81% | 8.38% / 8.19% |
-| `complex/classes/classes.py` | 127.60% / 132.30% | 90.51% / 95.01% | 105.08% / 104.46% | 111.44% / 116.23% | 102.36% / 107.77% |
-| `complex/classes/dataclasses_.py` | -- / -- | -10.83% / -10.80% | -3.15% / -3.16% | 14.11% / 14.17% | 7.29% / 7.06% |
-| `complex/classes/namedtuple_classes.py` | 18.70% / 19.21% | -3.33% / -3.11% | 4.83% / 3.43% | 12.41% / 12.66% | 7.32% / 7.45% |
-| `complex/classes/simplenamespace.py` | 138.21% / 141.07% | 53.41% / 54.19% | 62.27% / 63.59% | 77.43% / 79.44% | 64.77% / 67.02% |
-| `complex/classes/sloted_classes.py` | 100.09% / 104.00% | 66.49% / 71.21% | 73.69% / 78.06% | 85.23% / 90.43% | 76.82% / 79.71% |
-| `dummy/dummy.py` | 101.09% / 91.57% | 63.57% / 58.46% | 74.86% / 69.00% | 96.84% / 83.32% | 80.69% / 75.55% |
-| `long_run/database/postgresql.py` | 2.41% / 2.64% | -5.65% / -6.34% | 1.55% / 1.34% | 9.05% / 9.22% | 2.08% / 1.81% |
-| `long_run/file/load_titanic_csv_pandas.py` | 14.45% / 14.13% | -6.71% / -7.10% | 2.44% / 2.38% | 7.86% / 7.90% | 1.92% / 2.08% |
-| `long_run/file/load_titanic_csv_python.py` | 24.49% / 22.86% | 10.36% / 10.05% | 18.27% / 18.11% | 28.30% / 28.13% | 18.71% / 18.34% |
-| `long_run/processes/collect_names_from_site.py` | -- / -- | -- / -- | 20.83% / 20.85% | 24.66% / 23.70% | 19.41% / 19.19% |
-| `long_run/processes/generate_fake_data.py` | 8.31% / 8.17% | -3.87% / -3.83% | 0.36% / 0.33% | 6.56% / 6.23% | 1.59% / 1.41% |
-| `math/haversine.py` | 31.14% / 30.55% | 23.54% / 23.82% | 10.66% / 11.06% | 22.47% / 23.85% | 14.06% / 14.74% |
-| `math/pow_simple.py` | 41.31% / 40.98% | 33.94% / 33.58% | 33.75% / 33.35% | 32.78% / 31.50% | 25.54% / 25.14% |
-| `math/pow_using_math.py` | 37.77% / 37.45% | 22.23% / 21.56% | 16.76% / 15.54% | 18.75% / 19.51% | 17.82% / 17.40% |
-| `modules/json/json_module.py` | 47.67% / 48.99% | 37.69% / 36.83% | 26.39% / 27.56% | 34.19% / 34.74% | 19.06% / 19.79% |
-| `modules/json/orjson_module.py` | 53.38% / 53.14% | 19.82% / 19.95% | 28.06% / 24.80% | 37.60% / 37.09% | 26.73% / 26.66% |
+| `algorithm/twosum/twosum.py` | 12.03% / 13.46% | -8.81% / -7.30% | 0.17% / 1.85% | 11.85% / 12.90% | 6.72% / 7.42% |
+| `algorithm/twosum/twosum_naive.py` | 13.29% / 12.46% | -7.93% / -8.99% | 1.39% / 0.52% | 11.82% / 11.02% | 8.22% / 5.07% |
+| `complex/classes/classes.py` | 91.01% / 97.24% | 59.81% / 64.37% | 68.24% / 72.65% | 78.00% / 83.52% | 68.93% / 73.90% |
+| `complex/classes/dataclasses_.py` | -- / -- | -10.84% / -10.70% | -4.34% / -4.22% | 14.11% / 14.11% | 7.75% / 7.80% |
+| `complex/classes/namedtuple_classes.py` | 18.38% / 17.58% | -1.67% / -2.55% | 3.42% / 3.30% | 15.12% / 14.68% | 7.43% / 6.82% |
+| `complex/classes/simplenamespace.py` | 147.13% / 147.67% | 59.45% / 60.13% | 71.85% / 66.76% | 91.50% / 85.61% | 72.18% / 72.26% |
+| `complex/classes/sloted_classes.py` | 125.09% / 124.69% | 89.09% / 88.45% | 98.57% / 98.16% | 112.19% / 111.76% | 99.39% / 99.54% |
+| `dummy/dummy.py` | 82.97% / 71.32% | 57.17% / 32.10% | 52.05% / 42.38% | 66.44% / 56.30% | 68.35% / 55.51% |
+| `long_run/database/postgresql.py` | 3.64% / 3.28% | -7.81% / -7.64% | 0.78% / 1.03% | 9.63% / 9.68% | 1.91% / 2.11% |
+| `long_run/database/sqlite_.py` | 4.89% / 4.95% | -10.13% / -9.95% | -0.39% / -0.37% | 4.59% / 4.78% | 0.38% / 0.57% |
+| `long_run/file/load_titanic_csv_pandas.py` | 14.78% / 15.00% | -6.53% / -6.41% | 2.42% / 2.38% | 8.45% / 8.23% | 2.50% / 2.49% |
+| `long_run/file/load_titanic_csv_python.py` | 24.66% / 25.04% | 11.22% / 11.04% | 18.91% / 18.89% | 29.38% / 29.54% | 23.07% / 19.43% |
+| `long_run/processes/collect_names_from_site.py` | -- / -- | -- / -- | 16.92% / 17.11% | 11.16% / 16.12% | 4.83% / 7.06% |
+| `long_run/processes/generate_fake_data.py` | 9.22% / 8.57% | -3.76% / -4.32% | 0.03% / -0.02% | 6.80% / 6.13% | 1.29% / 0.44% |
+| `math/haversine.py` | 30.56% / 29.55% | 26.43% / 25.31% | 11.97% / 10.95% | 26.25% / 25.32% | 15.75% / 15.13% |
+| `math/mandelbrot.py` | -0.41% / -0.31% | -1.12% / -0.92% | 0.29% / 0.16% | 1.74% / 0.64% | 1.19% / 0.23% |
+| `math/pow_simple.py` | 40.95% / 41.27% | 33.12% / 32.60% | 32.08% / 32.34% | 30.83% / 31.31% | 25.28% / 25.12% |
+| `math/pow_using_math.py` | 35.23% / 36.55% | 21.85% / 22.58% | 13.84% / 13.18% | 20.31% / 19.19% | 15.69% / 15.01% |
+| `modules/json/json_module.py` | 46.82% / 46.57% | 35.66% / 35.23% | 25.97% / 26.05% | 30.25% / 29.86% | 17.53% / 17.30% |
+| `modules/json/orjson_module.py` | 52.80% / 53.28% | 17.69% / 17.53% | 23.63% / 23.32% | 37.83% / 37.23% | 24.17% / 24.28% |
 ---
 
 #### How much more memory 3.11 uses? (Memory from 3.6 to 3.10)
 | Command |  3.6 | 3.7 | 3.8 | 3.9 | 3.10 |
 |:---|---:|---:|---:|---:|---:|
-| `algorithm/twosum/twosum.py` | 16.75% | 29.09% | 26.01% | 20.49% | 16.97% |
-| `algorithm/twosum/twosum_naive.py` | 16.13% | 28.67% | 25.08% | 14.54% | 11.66% |
-| `complex/classes/classes.py` | 23.84% | 36.6% | 33.75% | 26.47% | 17.91% |
-| `complex/classes/dataclasses_.py` | -- | 36.73% | 31.97% | 19.66% | 17.71% |
-| `complex/classes/namedtuple_classes.py` | 18.78% | 31.29% | 27.99% | 15.93% | 10.89% |
-| `complex/classes/simplenamespace.py` | 24.18% | 33.48% | 32.33% | 21.32% | 11.05% |
-| `complex/classes/sloted_classes.py` | 24.65% | 36.35% | 32.16% | 21.0% | 11.89% |
-| `dummy/dummy.py` | 19.87% | 28.8% | 26.04% | 13.48% | 13.41% |
-| `long_run/database/postgresql.py` | 18.24% | 30.93% | 29.69% | 20.53% | 22.64% |
-| `long_run/file/load_titanic_csv_pandas.py` | 11.66% | 9.23% | 8.68% | 6.3% | 9.62% |
-| `long_run/file/load_titanic_csv_python.py` | 17.41% | 29.65% | 25.01% | 17.16% | 12.66% |
-| `long_run/processes/collect_names_from_site.py` | -- | -- | 5.87% | 5.7% | 5.45% |
-| `long_run/processes/generate_fake_data.py` | 11.13% | 5.87% | 10.56% | 5.64% | 7.1% |
-| `math/haversine.py` | 17.74% | 27.72% | 24.75% | 14.16% | 13.5% |
-| `math/pow_simple.py` | 17.75% | 28.44% | 24.76% | 13.93% | 15.07% |
-| `math/pow_using_math.py` | 20.74% | 30.89% | 27.06% | 17.47% | 13.23% |
-| `modules/json/json_module.py` | 19.97% | 22.98% | 23.36% | 20.12% | 17.68% |
-| `modules/json/orjson_module.py` | 18.44% | 24.76% | 24.24% | 14.73% | 17.8% |
+| `algorithm/twosum/twosum.py` | 15.73% | 29.66% | 26.36% | 20.22% | 17.78% |
+| `algorithm/twosum/twosum_naive.py` | 15.18% | 29.25% | 25.06% | 14.86% | 11.05% |
+| `complex/classes/classes.py` | 24.01% | 36.3% | 32.03% | 25.98% | 16.78% |
+| `complex/classes/dataclasses_.py` | -- | 36.31% | 32.17% | 19.51% | 16.65% |
+| `complex/classes/namedtuple_classes.py` | 18.27% | 30.58% | 29.43% | 15.77% | 10.44% |
+| `complex/classes/simplenamespace.py` | 25.82% | 39.92% | 34.02% | 23.2% | 12.91% |
+| `complex/classes/sloted_classes.py` | 23.01% | 35.44% | 30.73% | 20.53% | 11.43% |
+| `dummy/dummy.py` | 18.39% | 29.64% | 26.01% | 13.7% | 13.82% |
+| `long_run/database/postgresql.py` | 18.7% | 32.15% | 30.38% | 21.32% | 23.02% |
+| `long_run/database/sqlite_.py` | 12.77% | 9.21% | 8.74% | 7.89% | 8.07% |
+| `long_run/file/load_titanic_csv_pandas.py` | 12.32% | 9.14% | 8.51% | 6.75% | 8.75% |
+| `long_run/file/load_titanic_csv_python.py` | 17.0% | 29.63% | 24.78% | 17.13% | 12.29% |
+| `long_run/processes/collect_names_from_site.py` | -- | -- | 5.73% | 4.84% | 4.61% |
+| `long_run/processes/generate_fake_data.py` | 11.48% | 5.51% | 10.34% | 6.01% | 7.56% |
+| `math/haversine.py` | 17.26% | 27.81% | 24.39% | 14.18% | 12.96% |
+| `math/mandelbrot.py` | 6.23% | 12.19% | 10.84% | 9.21% | 7.66% |
+| `math/pow_simple.py` | 17.59% | 28.63% | 24.06% | 13.85% | 14.46% |
+| `math/pow_using_math.py` | 20.33% | 30.31% | 26.91% | 17.75% | 12.81% |
+| `modules/json/json_module.py` | 19.32% | 23.8% | 23.19% | 20.19% | 17.25% |
+| `modules/json/orjson_module.py` | 18.53% | 24.61% | 24.19% | 14.52% | 18.15% |
 ---
 
 #### **Execution**
 
 | Command |  Mean 3.6 [s] | Mean 3.7 [s] | Mean 3.8 [s] | Mean 3.9 [s] | Mean 3.10 [s] | Mean 3.11 [s] |
 |:---|---:|---:|---:|---:|---:|---:|
-| `algorithm/twosum/twosum.py` | 0.08012 | 0.06504 | 0.07137 | 0.07905 | 0.07519 | 0.06953 |
-| `algorithm/twosum/twosum_naive.py` | 0.07863 | 0.06599 | 0.07128 | 0.07863 | 0.07485 | 0.06906 |
-| `complex/classes/classes.py` | 0.04436 | 0.03713 | 0.03997 | 0.04121 | 0.03944 | 0.01949 |
-| `complex/classes/dataclasses_.py` | -- | 0.09571 | 0.10396 | 0.12249 | 0.11517 | 0.10734 |
-| `complex/classes/namedtuple_classes.py` | 0.09313 | 0.07585 | 0.08225 | 0.0882 | 0.0842 | 0.07846 |
-| `complex/classes/simplenamespace.py` | 0.0591 | 0.03806 | 0.04026 | 0.04402 | 0.04088 | 0.02481 |
-| `complex/classes/sloted_classes.py` | 0.04472 | 0.03721 | 0.03882 | 0.0414 | 0.03952 | 0.02235 |
-| `dummy/dummy.py` | 0.03312 | 0.02694 | 0.0288 | 0.03242 | 0.02976 | 0.01647 |
-| `long_run/database/postgresql.py` | 0.14422 | 0.13287 | 0.143 | 0.15356 | 0.14375 | 0.14082 |
-| `long_run/file/load_titanic_csv_pandas.py` | 0.66368 | 0.541 | 0.59405 | 0.62548 | 0.59106 | 0.5799 |
-| `long_run/file/load_titanic_csv_python.py` | 0.06894 | 0.06112 | 0.0655 | 0.07105 | 0.06574 | 0.05538 |
-| `long_run/processes/collect_names_from_site.py` | -- | -- | 1.73577 | 1.79078 | 1.7154 | 1.43654 |
-| `long_run/processes/generate_fake_data.py` | 0.80236 | 0.71216 | 0.74352 | 0.78939 | 0.75261 | 0.74082 |
-| `math/haversine.py` | 0.61803 | 0.58219 | 0.52151 | 0.57715 | 0.53754 | 0.47127 |
-| `math/pow_simple.py` | 0.44517 | 0.42196 | 0.42136 | 0.41831 | 0.39549 | 0.31503 |
-| `math/pow_using_math.py` | 1.59405 | 1.41425 | 1.35104 | 1.374 | 1.36321 | 1.15706 |
-| `modules/json/json_module.py` | 0.4105 | 0.38276 | 0.35134 | 0.37303 | 0.33097 | 0.27798 |
-| `modules/json/orjson_module.py` | 0.26228 | 0.2049 | 0.21898 | 0.2353 | 0.21671 | 0.171 |
+| `algorithm/twosum/twosum.py` | 0.0795 | 0.06471 | 0.07108 | 0.07937 | 0.07573 | 0.07096 |
+| `algorithm/twosum/twosum_naive.py` | 0.08003 | 0.06504 | 0.07162 | 0.07899 | 0.07645 | 0.07064 |
+| `complex/classes/classes.py` | 0.0442 | 0.03698 | 0.03893 | 0.04119 | 0.03909 | 0.02314 |
+| `complex/classes/dataclasses_.py` | -- | 0.09566 | 0.10263 | 0.12243 | 0.1156 | 0.10729 |
+| `complex/classes/namedtuple_classes.py` | 0.09215 | 0.07654 | 0.0805 | 0.08961 | 0.08362 | 0.07784 |
+| `complex/classes/simplenamespace.py` | 0.05899 | 0.03806 | 0.04102 | 0.04571 | 0.0411 | 0.02387 |
+| `complex/classes/sloted_classes.py` | 0.04396 | 0.03693 | 0.03878 | 0.04144 | 0.03894 | 0.01953 |
+| `dummy/dummy.py` | 0.03255 | 0.02796 | 0.02705 | 0.02961 | 0.02995 | 0.01779 |
+| `long_run/database/postgresql.py` | 0.14564 | 0.12954 | 0.14162 | 0.15405 | 0.1432 | 0.14052 |
+| `long_run/database/sqlite_.py` | 0.58362 | 0.50001 | 0.55421 | 0.58194 | 0.55854 | 0.5564 |
+| `long_run/file/load_titanic_csv_pandas.py` | 0.66847 | 0.54437 | 0.59646 | 0.63157 | 0.59693 | 0.58237 |
+| `long_run/file/load_titanic_csv_python.py` | 0.06869 | 0.06128 | 0.06552 | 0.07129 | 0.06781 | 0.0551 |
+| `long_run/processes/collect_names_from_site.py` | -- | -- | 3.68563 | 3.50393 | 3.30459 | 3.15225 |
+| `long_run/processes/generate_fake_data.py` | 0.81595 | 0.71897 | 0.74727 | 0.79788 | 0.75671 | 0.74707 |
+| `math/haversine.py` | 0.61437 | 0.59492 | 0.52688 | 0.59411 | 0.54467 | 0.47057 |
+| `math/mandelbrot.py` | 14.89008 | 14.78379 | 14.9947 | 15.21169 | 15.13002 | 14.95167 |
+| `math/pow_simple.py` | 0.44665 | 0.42185 | 0.41856 | 0.4146 | 0.397 | 0.31689 |
+| `math/pow_using_math.py` | 1.58435 | 1.42762 | 1.33371 | 1.40951 | 1.35538 | 1.1716 |
+| `modules/json/json_module.py` | 0.41144 | 0.38018 | 0.35303 | 0.36501 | 0.32937 | 0.28024 |
+| `modules/json/orjson_module.py` | 0.26375 | 0.20314 | 0.2134 | 0.2379 | 0.21433 | 0.17261 |
 
 | Command |  Median 3.6 [s] | Median 3.7 [s] | Median 3.8 [s] | Median 3.9 [s] | Median 3.10 [s] | Median 3.11 [s] |
 |:---|---:|---:|---:|---:|---:|---:|
-| `algorithm/twosum/twosum.py` | 0.079 | 0.06506 | 0.0711 | 0.07859 | 0.07524 | 0.06954 |
-| `algorithm/twosum/twosum_naive.py` | 0.07858 | 0.06493 | 0.07125 | 0.07868 | 0.07479 | 0.06913 |
-| `complex/classes/classes.py` | 0.04423 | 0.03713 | 0.03893 | 0.04117 | 0.03956 | 0.01904 |
-| `complex/classes/dataclasses_.py` | -- | 0.09566 | 0.10385 | 0.12244 | 0.11481 | 0.10724 |
-| `complex/classes/namedtuple_classes.py` | 0.0934 | 0.07591 | 0.08104 | 0.08827 | 0.08419 | 0.07835 |
-| `complex/classes/simplenamespace.py` | 0.05899 | 0.03773 | 0.04003 | 0.04391 | 0.04087 | 0.02447 |
-| `complex/classes/sloted_classes.py` | 0.04435 | 0.03722 | 0.03871 | 0.0414 | 0.03907 | 0.02174 |
-| `dummy/dummy.py` | 0.03251 | 0.02689 | 0.02868 | 0.03111 | 0.02979 | 0.01697 |
-| `long_run/database/postgresql.py` | 0.14431 | 0.13169 | 0.14248 | 0.15356 | 0.14314 | 0.1406 |
-| `long_run/file/load_titanic_csv_pandas.py` | 0.66173 | 0.53867 | 0.59361 | 0.6256 | 0.5919 | 0.57982 |
-| `long_run/file/load_titanic_csv_python.py` | 0.06819 | 0.06108 | 0.06555 | 0.07111 | 0.06568 | 0.0555 |
-| `long_run/processes/collect_names_from_site.py` | -- | -- | 1.73762 | 1.77857 | 1.71371 | 1.43784 |
-| `long_run/processes/generate_fake_data.py` | 0.80146 | 0.71256 | 0.74333 | 0.78708 | 0.75134 | 0.7409 |
-| `math/haversine.py` | 0.60929 | 0.57786 | 0.51834 | 0.578 | 0.5355 | 0.46671 |
-| `math/pow_simple.py` | 0.44405 | 0.42074 | 0.42001 | 0.41419 | 0.39416 | 0.31497 |
-| `math/pow_using_math.py` | 1.58502 | 1.40175 | 1.33229 | 1.37807 | 1.35376 | 1.15314 |
-| `modules/json/json_module.py` | 0.41043 | 0.37693 | 0.3514 | 0.37118 | 0.33 | 0.27548 |
-| `modules/json/orjson_module.py` | 0.26191 | 0.20515 | 0.21345 | 0.23446 | 0.21663 | 0.17103 |
+| `algorithm/twosum/twosum.py` | 0.07916 | 0.06468 | 0.07106 | 0.07877 | 0.07495 | 0.06977 |
+| `algorithm/twosum/twosum_naive.py` | 0.07979 | 0.06457 | 0.07132 | 0.07877 | 0.07455 | 0.07095 |
+| `complex/classes/classes.py` | 0.04428 | 0.0369 | 0.03876 | 0.0412 | 0.03904 | 0.02245 |
+| `complex/classes/dataclasses_.py` | -- | 0.09576 | 0.10271 | 0.12237 | 0.1156 | 0.10724 |
+| `complex/classes/namedtuple_classes.py` | 0.09161 | 0.07592 | 0.08048 | 0.08935 | 0.08322 | 0.07791 |
+| `complex/classes/simplenamespace.py` | 0.05902 | 0.03816 | 0.03974 | 0.04423 | 0.04105 | 0.02383 |
+| `complex/classes/sloted_classes.py` | 0.04395 | 0.03686 | 0.03876 | 0.04142 | 0.03903 | 0.01956 |
+| `dummy/dummy.py` | 0.0325 | 0.02506 | 0.02701 | 0.02965 | 0.0295 | 0.01897 |
+| `long_run/database/postgresql.py` | 0.14491 | 0.12959 | 0.14176 | 0.15389 | 0.14327 | 0.14031 |
+| `long_run/database/sqlite_.py` | 0.58286 | 0.50014 | 0.55334 | 0.58193 | 0.55854 | 0.55539 |
+| `long_run/file/load_titanic_csv_pandas.py` | 0.66764 | 0.54338 | 0.59438 | 0.62839 | 0.59504 | 0.58058 |
+| `long_run/file/load_titanic_csv_python.py` | 0.06886 | 0.06115 | 0.06547 | 0.07134 | 0.06577 | 0.05507 |
+| `long_run/processes/collect_names_from_site.py` | -- | -- | 3.58295 | 3.55265 | 3.27545 | 3.05938 |
+| `long_run/processes/generate_fake_data.py` | 0.81201 | 0.71562 | 0.74774 | 0.79378 | 0.7512 | 0.7479 |
+| `math/haversine.py` | 0.61189 | 0.59185 | 0.52402 | 0.59188 | 0.54379 | 0.47231 |
+| `math/mandelbrot.py` | 14.88607 | 14.79481 | 14.95654 | 15.02875 | 14.96732 | 14.93276 |
+| `math/pow_simple.py` | 0.44488 | 0.41756 | 0.41676 | 0.4135 | 0.394 | 0.31491 |
+| `math/pow_using_math.py` | 1.60033 | 1.43656 | 1.32649 | 1.39687 | 1.34783 | 1.17197 |
+| `modules/json/json_module.py` | 0.41115 | 0.37934 | 0.35358 | 0.36427 | 0.32903 | 0.28051 |
+| `modules/json/orjson_module.py` | 0.26435 | 0.20269 | 0.21268 | 0.23666 | 0.21434 | 0.17246 |
 
 #### **Memory Usage**
 
 | Command |  MEM 3.6 [MB] | MEM 3.7 [MB] | MEM 3.8 [MB] | MEM 3.9 [MB] | MEM 3.10 [MB] | MEM 3.11 [MB] |
 |:---|---:|---:|---:|---:|---:|---:|
-| `algorithm/twosum/twosum.py` | 22.21758 | 20.09336 | 20.58398 | 21.52813 | 22.17617 | 25.93867 |
-| `algorithm/twosum/twosum_naive.py` | 22.24219 | 20.07383 | 20.65 | 22.54922 | 23.13125 | 25.82891 |
-| `complex/classes/classes.py` | 22.12031 | 20.05391 | 20.48125 | 21.66094 | 23.2332 | 27.39414 |
-| `complex/classes/dataclasses_.py` | -- | 20.0043 | 20.72539 | 22.85859 | 23.23633 | 27.35195 |
-| `complex/classes/namedtuple_classes.py` | 22.19727 | 20.08242 | 20.60039 | 22.74336 | 23.77812 | 26.3668 |
-| `complex/classes/simplenamespace.py` | 21.98984 | 20.45703 | 20.63633 | 22.50781 | 24.58984 | 27.30703 |
-| `complex/classes/sloted_classes.py` | 21.92344 | 20.04219 | 20.67695 | 22.58398 | 24.42383 | 27.32695 |
-| `dummy/dummy.py` | 21.50273 | 20.01172 | 20.44922 | 22.71328 | 22.72812 | 25.775 |
-| `long_run/database/postgresql.py` | 26.70508 | 24.11641 | 24.34688 | 26.19727 | 25.74727 | 31.57617 |
-| `long_run/file/load_titanic_csv_pandas.py` | 61.73633 | 63.10938 | 63.42695 | 64.85039 | 62.88359 | 68.93438 |
-| `long_run/file/load_titanic_csv_python.py` | 22.07578 | 19.99141 | 20.7332 | 22.12344 | 23.00703 | 25.91914 |
-| `long_run/processes/collect_names_from_site.py` | -- | -- | 44.57227 | 44.64375 | 44.75 | 47.18906 |
-| `long_run/processes/generate_fake_data.py` | 64.65352 | 67.86602 | 64.98633 | 68.01055 | 67.08281 | 71.84766 |
-| `math/haversine.py` | 21.79766 | 20.09375 | 20.57305 | 22.48203 | 22.61211 | 25.66445 |
-| `math/pow_simple.py` | 21.73633 | 19.92695 | 20.51523 | 22.46523 | 22.24219 | 25.59414 |
-| `math/pow_using_math.py` | 21.68242 | 20.00117 | 20.60312 | 22.28477 | 23.11914 | 26.17891 |
-| `modules/json/json_module.py` | 21.76914 | 21.2375 | 21.17148 | 21.74219 | 22.19336 | 26.11719 |
-| `modules/json/orjson_module.py` | 22.59766 | 21.45195 | 21.54141 | 23.32773 | 22.71914 | 26.76406 |
+| `algorithm/twosum/twosum.py` | 22.44922 | 20.0375 | 20.56016 | 21.61094 | 22.05703 | 25.97969 |
+| `algorithm/twosum/twosum_naive.py` | 22.40273 | 19.96445 | 20.63398 | 22.4668 | 23.23633 | 25.8043 |
+| `complex/classes/classes.py` | 21.96992 | 19.98867 | 20.63594 | 21.62656 | 23.3293 | 27.24492 |
+| `complex/classes/dataclasses_.py` | -- | 20.03828 | 20.66641 | 22.85508 | 23.41602 | 27.31406 |
+| `complex/classes/namedtuple_classes.py` | 22.29453 | 20.19258 | 20.37227 | 22.77695 | 23.87539 | 26.36797 |
+| `complex/classes/simplenamespace.py` | 22.09961 | 19.87227 | 20.74687 | 22.56836 | 24.62539 | 27.80508 |
+| `complex/classes/sloted_classes.py` | 22.06836 | 20.04414 | 20.76523 | 22.52266 | 24.36328 | 27.14688 |
+| `dummy/dummy.py` | 21.79023 | 19.90039 | 20.47305 | 22.68867 | 22.66562 | 25.79805 |
+| `long_run/database/postgresql.py` | 26.89297 | 24.15508 | 24.48242 | 26.31055 | 25.94805 | 31.92109 |
+| `long_run/database/sqlite_.py` | 62.99492 | 65.04922 | 65.32969 | 65.84609 | 65.73672 | 71.04023 |
+| `long_run/file/load_titanic_csv_pandas.py` | 61.88477 | 63.68477 | 64.05547 | 65.11328 | 63.91445 | 69.50859 |
+| `long_run/file/load_titanic_csv_python.py` | 22.10391 | 19.95 | 20.72539 | 22.0793 | 23.03125 | 25.86172 |
+| `long_run/processes/collect_names_from_site.py` | -- | -- | 44.71523 | 45.09766 | 45.19453 | 47.2793 |
+| `long_run/processes/generate_fake_data.py` | 64.88125 | 68.55273 | 65.55117 | 68.22773 | 67.24727 | 72.32969 |
+| `math/haversine.py` | 21.84336 | 20.03984 | 20.59102 | 22.43242 | 22.67461 | 25.6125 |
+| `math/mandelbrot.py` | 36.45 | 34.51367 | 34.9332 | 35.45469 | 35.9668 | 38.72031 |
+| `math/pow_simple.py` | 21.74727 | 19.88125 | 20.61289 | 22.46172 | 22.34258 | 25.57227 |
+| `math/pow_using_math.py` | 21.74258 | 20.07734 | 20.61445 | 22.21797 | 23.19141 | 26.16211 |
+| `modules/json/json_module.py` | 21.87383 | 21.0832 | 21.18711 | 21.71484 | 22.25977 | 26.1 |
+| `modules/json/orjson_module.py` | 22.60508 | 21.50195 | 21.575 | 23.39648 | 22.67734 | 26.79336 |
 
 ---
 
@@ -179,7 +189,7 @@ Please also check this metadata tags to put inside the program to be able to cha
 ```bash
 Python 3.6.15
 
-Linux b39e2b5c7919 5.15.0-53-generic unknown GNU/Linux
+Linux 67d881f0c9bc 5.15.0-53-generic unknown GNU/Linux
 
 CPU(s):              12
 Thread(s) per core:  2
@@ -190,30 +200,32 @@ CPU max MHz:         4100.0000
 NUMA node0 CPU(s):   0-11
 
 MemTotal:       16078824 kB
-MemFree:         4969044 kB
-MemAvailable:   14456964 kB
+MemFree:         6644568 kB
+MemAvailable:   14559640 kB
 ```
 
 | Command | Executed | Mean [s] | Stddev [s] | Median [s] | Min [s] | Max [s] | Memory [MB] |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| `dummy/dummy.py` | yes | 0.03312 | 0.00171 | 0.03251 | 0.03236 | 0.03795 | 21.50273 |
-| `long_run/processes/generate_fake_data.py` | yes | 0.80236 | 0.00447 | 0.80146 | 0.79616 | 0.81018 | 64.65352 |
+| `dummy/dummy.py` | yes | 0.03255 | 0.00036 | 0.0325 | 0.0321 | 0.03322 | 21.79023 |
+| `long_run/processes/generate_fake_data.py` | yes | 0.81595 | 0.01212 | 0.81201 | 0.80206 | 0.84184 | 64.88125 |
 | `long_run/processes/collect_names_from_site.py` | no | -1 | -1 | -1 | -1 | -1 | -1 |
-| `long_run/database/postgresql.py` | yes | 0.14422 | 0.00198 | 0.14431 | 0.14186 | 0.14899 | 26.70508 |
-| `math/haversine.py` | yes | 0.61803 | 0.02527 | 0.60929 | 0.59697 | 0.68087 | 21.79766 |
-| `math/pow_using_math.py` | yes | 1.59405 | 0.07067 | 1.58502 | 1.49987 | 1.69209 | 21.68242 |
-| `math/pow_simple.py` | yes | 0.44517 | 0.00759 | 0.44405 | 0.43669 | 0.4588 | 21.73633 |
-| `modules/json/json_module.py` | yes | 0.4105 | 0.00639 | 0.41043 | 0.39936 | 0.42147 | 21.76914 |
-| `modules/json/orjson_module.py` | yes | 0.26228 | 0.00313 | 0.26191 | 0.25723 | 0.2671 | 22.59766 |
-| `complex/classes/namedtuple_classes.py` | yes | 0.09313 | 0.00161 | 0.0934 | 0.0908 | 0.09587 | 22.19727 |
-| `complex/classes/classes.py` | yes | 0.04436 | 0.00047 | 0.04423 | 0.04373 | 0.04549 | 22.12031 |
+| `long_run/database/sqlite_.py` | yes | 0.58362 | 0.00452 | 0.58286 | 0.57694 | 0.59191 | 62.99492 |
+| `long_run/database/postgresql.py` | yes | 0.14564 | 0.00298 | 0.14491 | 0.14243 | 0.15284 | 26.89297 |
+| `math/haversine.py` | yes | 0.61437 | 0.01343 | 0.61189 | 0.59802 | 0.64442 | 21.84336 |
+| `math/pow_using_math.py` | yes | 1.58435 | 0.06375 | 1.60033 | 1.50231 | 1.67929 | 21.74258 |
+| `math/mandelbrot.py` | yes | 14.89008 | 0.05825 | 14.88607 | 14.83198 | 15.02585 | 36.45 |
+| `math/pow_simple.py` | yes | 0.44665 | 0.00569 | 0.44488 | 0.44141 | 0.46046 | 21.74727 |
+| `modules/json/json_module.py` | yes | 0.41144 | 0.0049 | 0.41115 | 0.40305 | 0.419 | 21.87383 |
+| `modules/json/orjson_module.py` | yes | 0.26375 | 0.00216 | 0.26435 | 0.26043 | 0.26599 | 22.60508 |
+| `complex/classes/namedtuple_classes.py` | yes | 0.09215 | 0.00169 | 0.09161 | 0.09081 | 0.09676 | 22.29453 |
+| `complex/classes/classes.py` | yes | 0.0442 | 0.0004 | 0.04428 | 0.04356 | 0.0448 | 21.96992 |
 | `complex/classes/dataclasses_.py` | no | -1 | -1 | -1 | -1 | -1 | -1 |
-| `complex/classes/sloted_classes.py` | yes | 0.04472 | 0.0015 | 0.04435 | 0.04321 | 0.04878 | 21.92344 |
-| `complex/classes/simplenamespace.py` | yes | 0.0591 | 0.00076 | 0.05899 | 0.05835 | 0.06097 | 21.98984 |
-| `algorithm/twosum/twosum.py` | yes | 0.08012 | 0.00322 | 0.079 | 0.07771 | 0.0884 | 22.21758 |
-| `algorithm/twosum/twosum_naive.py` | yes | 0.07863 | 0.00036 | 0.07858 | 0.07801 | 0.07922 | 22.24219 |
-| `long_run/file/load_titanic_csv_python.py` | yes | 0.06894 | 0.0023 | 0.06819 | 0.06727 | 0.07516 | 22.07578 |
-| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.66368 | 0.00568 | 0.66173 | 0.65768 | 0.67677 | 61.73633 |
+| `complex/classes/sloted_classes.py` | yes | 0.04396 | 0.00028 | 0.04395 | 0.0434 | 0.04439 | 22.06836 |
+| `complex/classes/simplenamespace.py` | yes | 0.05899 | 0.00038 | 0.05902 | 0.0583 | 0.05953 | 22.09961 |
+| `algorithm/twosum/twosum.py` | yes | 0.0795 | 0.00106 | 0.07916 | 0.07823 | 0.08122 | 22.44922 |
+| `algorithm/twosum/twosum_naive.py` | yes | 0.08003 | 0.00094 | 0.07979 | 0.07899 | 0.08224 | 22.40273 |
+| `long_run/file/load_titanic_csv_python.py` | yes | 0.06869 | 0.00067 | 0.06886 | 0.06776 | 0.06968 | 22.10391 |
+| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.66847 | 0.01139 | 0.66764 | 0.65357 | 0.69174 | 61.88477 |
 
 
 ### **Python 3.7**
@@ -221,7 +233,7 @@ MemAvailable:   14456964 kB
 ```bash
 Python 3.7.15
 
-Linux b80b1d1d90db 5.15.0-53-generic unknown GNU/Linux
+Linux cc99ec4fd242 5.15.0-53-generic unknown GNU/Linux
 
 CPU(s):              12
 Thread(s) per core:  2
@@ -232,30 +244,32 @@ CPU max MHz:         4100.0000
 NUMA node0 CPU(s):   0-11
 
 MemTotal:       16078824 kB
-MemFree:         4950156 kB
-MemAvailable:   14438856 kB
+MemFree:         6626580 kB
+MemAvailable:   14556280 kB
 ```
 
 | Command | Executed | Mean [s] | Stddev [s] | Median [s] | Min [s] | Max [s] | Memory [MB] |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| `dummy/dummy.py` | yes | 0.02694 | 0.00015 | 0.02689 | 0.02678 | 0.0272 | 20.01172 |
-| `long_run/processes/generate_fake_data.py` | yes | 0.71216 | 0.00277 | 0.71256 | 0.70575 | 0.71463 | 67.86602 |
+| `dummy/dummy.py` | yes | 0.02796 | 0.00473 | 0.02506 | 0.02462 | 0.03807 | 19.90039 |
+| `long_run/processes/generate_fake_data.py` | yes | 0.71897 | 0.01193 | 0.71562 | 0.70904 | 0.74473 | 68.55273 |
 | `long_run/processes/collect_names_from_site.py` | no | -1 | -1 | -1 | -1 | -1 | -1 |
-| `long_run/database/postgresql.py` | yes | 0.13287 | 0.00488 | 0.13169 | 0.12857 | 0.14553 | 24.11641 |
-| `math/haversine.py` | yes | 0.58219 | 0.01498 | 0.57786 | 0.56552 | 0.6071 | 20.09375 |
-| `math/pow_using_math.py` | yes | 1.41425 | 0.03359 | 1.40175 | 1.36173 | 1.45877 | 20.00117 |
-| `math/pow_simple.py` | yes | 0.42196 | 0.01254 | 0.42074 | 0.40874 | 0.44618 | 19.92695 |
-| `modules/json/json_module.py` | yes | 0.38276 | 0.01273 | 0.37693 | 0.37011 | 0.41386 | 21.2375 |
-| `modules/json/orjson_module.py` | yes | 0.2049 | 0.00178 | 0.20515 | 0.2012 | 0.20681 | 21.45195 |
-| `complex/classes/namedtuple_classes.py` | yes | 0.07585 | 0.0012 | 0.07591 | 0.07428 | 0.07769 | 20.08242 |
-| `complex/classes/classes.py` | yes | 0.03713 | 0.00043 | 0.03713 | 0.03654 | 0.038 | 20.05391 |
-| `complex/classes/dataclasses_.py` | yes | 0.09571 | 0.00082 | 0.09566 | 0.09445 | 0.09702 | 20.0043 |
-| `complex/classes/sloted_classes.py` | yes | 0.03721 | 0.00046 | 0.03722 | 0.03666 | 0.03792 | 20.04219 |
-| `complex/classes/simplenamespace.py` | yes | 0.03806 | 0.00108 | 0.03773 | 0.0374 | 0.04104 | 20.45703 |
-| `algorithm/twosum/twosum.py` | yes | 0.06504 | 0.00051 | 0.06506 | 0.06423 | 0.06566 | 20.09336 |
-| `algorithm/twosum/twosum_naive.py` | yes | 0.06599 | 0.00351 | 0.06493 | 0.0644 | 0.07592 | 20.07383 |
-| `long_run/file/load_titanic_csv_python.py` | yes | 0.06112 | 0.00031 | 0.06108 | 0.06073 | 0.06168 | 19.99141 |
-| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.541 | 0.005 | 0.53867 | 0.53721 | 0.55284 | 63.10938 |
+| `long_run/database/sqlite_.py` | yes | 0.50001 | 0.00236 | 0.50014 | 0.49623 | 0.50332 | 65.04922 |
+| `long_run/database/postgresql.py` | yes | 0.12954 | 0.00081 | 0.12959 | 0.12835 | 0.13103 | 24.15508 |
+| `math/haversine.py` | yes | 0.59492 | 0.02258 | 0.59185 | 0.56599 | 0.6474 | 20.03984 |
+| `math/pow_using_math.py` | yes | 1.42762 | 0.02832 | 1.43656 | 1.38414 | 1.46183 | 20.07734 |
+| `math/mandelbrot.py` | yes | 14.78379 | 0.15258 | 14.79481 | 14.53766 | 14.97929 | 34.51367 |
+| `math/pow_simple.py` | yes | 0.42185 | 0.01019 | 0.41756 | 0.41166 | 0.43971 | 19.88125 |
+| `modules/json/json_module.py` | yes | 0.38018 | 0.00593 | 0.37934 | 0.37207 | 0.39226 | 21.0832 |
+| `modules/json/orjson_module.py` | yes | 0.20314 | 0.00156 | 0.20269 | 0.20177 | 0.20719 | 21.50195 |
+| `complex/classes/namedtuple_classes.py` | yes | 0.07654 | 0.00263 | 0.07592 | 0.07361 | 0.08109 | 20.19258 |
+| `complex/classes/classes.py` | yes | 0.03698 | 0.0004 | 0.0369 | 0.03657 | 0.03774 | 19.98867 |
+| `complex/classes/dataclasses_.py` | yes | 0.09566 | 0.0007 | 0.09576 | 0.09445 | 0.09677 | 20.03828 |
+| `complex/classes/sloted_classes.py` | yes | 0.03693 | 0.00034 | 0.03686 | 0.03653 | 0.03752 | 20.04414 |
+| `complex/classes/simplenamespace.py` | yes | 0.03806 | 0.00037 | 0.03816 | 0.03749 | 0.03847 | 19.87227 |
+| `algorithm/twosum/twosum.py` | yes | 0.06471 | 0.00036 | 0.06468 | 0.06415 | 0.06542 | 20.0375 |
+| `algorithm/twosum/twosum_naive.py` | yes | 0.06504 | 0.0014 | 0.06457 | 0.06385 | 0.06853 | 19.96445 |
+| `long_run/file/load_titanic_csv_python.py` | yes | 0.06128 | 0.00062 | 0.06115 | 0.06042 | 0.06249 | 19.95 |
+| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.54437 | 0.00461 | 0.54338 | 0.53992 | 0.5558 | 63.68477 |
 
 
 ### **Python 3.8**
@@ -263,7 +277,7 @@ MemAvailable:   14438856 kB
 ```bash
 Python 3.8.15
 
-Linux c0c066bfb1bf 5.15.0-53-generic unknown GNU/Linux
+Linux 2e2347a3652b 5.15.0-53-generic unknown GNU/Linux
 
 CPU(s):              12
 Thread(s) per core:  2
@@ -274,30 +288,32 @@ CPU max MHz:         4100.0000
 NUMA node0 CPU(s):   0-11
 
 MemTotal:       16078824 kB
-MemFree:         4971180 kB
-MemAvailable:   14460940 kB
+MemFree:         6632188 kB
+MemAvailable:   14573168 kB
 ```
 
 | Command | Executed | Mean [s] | Stddev [s] | Median [s] | Min [s] | Max [s] | Memory [MB] |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| `dummy/dummy.py` | yes | 0.0288 | 0.00042 | 0.02868 | 0.02831 | 0.02974 | 20.44922 |
-| `long_run/processes/generate_fake_data.py` | yes | 0.74352 | 0.00331 | 0.74333 | 0.73963 | 0.74935 | 64.98633 |
-| `long_run/processes/collect_names_from_site.py` | yes | 1.73577 | 0.01893 | 1.73762 | 1.69396 | 1.76253 | 44.57227 |
-| `long_run/database/postgresql.py` | yes | 0.143 | 0.00238 | 0.14248 | 0.14102 | 0.14957 | 24.34688 |
-| `math/haversine.py` | yes | 0.52151 | 0.01388 | 0.51834 | 0.50623 | 0.54696 | 20.57305 |
-| `math/pow_using_math.py` | yes | 1.35104 | 0.05197 | 1.33229 | 1.30793 | 1.48585 | 20.60312 |
-| `math/pow_simple.py` | yes | 0.42136 | 0.00891 | 0.42001 | 0.40871 | 0.44109 | 20.51523 |
-| `modules/json/json_module.py` | yes | 0.35134 | 0.00335 | 0.3514 | 0.34665 | 0.35698 | 21.17148 |
-| `modules/json/orjson_module.py` | yes | 0.21898 | 0.01206 | 0.21345 | 0.21092 | 0.2467 | 21.54141 |
-| `complex/classes/namedtuple_classes.py` | yes | 0.08225 | 0.00406 | 0.08104 | 0.08012 | 0.09374 | 20.60039 |
-| `complex/classes/classes.py` | yes | 0.03997 | 0.00229 | 0.03893 | 0.03839 | 0.04449 | 20.48125 |
-| `complex/classes/dataclasses_.py` | yes | 0.10396 | 0.00078 | 0.10385 | 0.10316 | 0.10584 | 20.72539 |
-| `complex/classes/sloted_classes.py` | yes | 0.03882 | 0.00051 | 0.03871 | 0.0379 | 0.03965 | 20.67695 |
-| `complex/classes/simplenamespace.py` | yes | 0.04026 | 0.00078 | 0.04003 | 0.03962 | 0.04231 | 20.63633 |
-| `algorithm/twosum/twosum.py` | yes | 0.07137 | 0.00063 | 0.0711 | 0.07067 | 0.07231 | 20.58398 |
-| `algorithm/twosum/twosum_naive.py` | yes | 0.07128 | 0.00072 | 0.07125 | 0.0701 | 0.07264 | 20.65 |
-| `long_run/file/load_titanic_csv_python.py` | yes | 0.0655 | 0.00035 | 0.06555 | 0.06489 | 0.06605 | 20.7332 |
-| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.59405 | 0.00503 | 0.59361 | 0.58847 | 0.60115 | 63.42695 |
+| `dummy/dummy.py` | yes | 0.02705 | 0.0006 | 0.02701 | 0.02621 | 0.02818 | 20.47305 |
+| `long_run/processes/generate_fake_data.py` | yes | 0.74727 | 0.0061 | 0.74774 | 0.73986 | 0.75686 | 65.55117 |
+| `long_run/processes/collect_names_from_site.py` | yes | 3.68563 | 0.55163 | 3.58295 | 2.96887 | 4.62939 | 44.71523 |
+| `long_run/database/sqlite_.py` | yes | 0.55421 | 0.00461 | 0.55334 | 0.54788 | 0.56437 | 65.32969 |
+| `long_run/database/postgresql.py` | yes | 0.14162 | 0.0008 | 0.14176 | 0.1404 | 0.14283 | 24.48242 |
+| `math/haversine.py` | yes | 0.52688 | 0.01156 | 0.52402 | 0.5149 | 0.55269 | 20.59102 |
+| `math/pow_using_math.py` | yes | 1.33371 | 0.01685 | 1.32649 | 1.32084 | 1.37411 | 20.61445 |
+| `math/mandelbrot.py` | yes | 14.9947 | 0.14109 | 14.95654 | 14.8497 | 15.37504 | 34.9332 |
+| `math/pow_simple.py` | yes | 0.41856 | 0.0048 | 0.41676 | 0.41521 | 0.43117 | 20.61289 |
+| `modules/json/json_module.py` | yes | 0.35303 | 0.00532 | 0.35358 | 0.34598 | 0.36136 | 21.18711 |
+| `modules/json/orjson_module.py` | yes | 0.2134 | 0.00199 | 0.21268 | 0.21122 | 0.21777 | 21.575 |
+| `complex/classes/namedtuple_classes.py` | yes | 0.0805 | 0.00045 | 0.08048 | 0.07995 | 0.0813 | 20.37227 |
+| `complex/classes/classes.py` | yes | 0.03893 | 0.00057 | 0.03876 | 0.03829 | 0.04028 | 20.63594 |
+| `complex/classes/dataclasses_.py` | yes | 0.10263 | 0.00055 | 0.10271 | 0.1015 | 0.10325 | 20.66641 |
+| `complex/classes/sloted_classes.py` | yes | 0.03878 | 0.00038 | 0.03876 | 0.03823 | 0.03939 | 20.76523 |
+| `complex/classes/simplenamespace.py` | yes | 0.04102 | 0.00186 | 0.03974 | 0.03926 | 0.04377 | 20.74687 |
+| `algorithm/twosum/twosum.py` | yes | 0.07108 | 0.00048 | 0.07106 | 0.07035 | 0.07169 | 20.56016 |
+| `algorithm/twosum/twosum_naive.py` | yes | 0.07162 | 0.00127 | 0.07132 | 0.06999 | 0.07435 | 20.63398 |
+| `long_run/file/load_titanic_csv_python.py` | yes | 0.06552 | 0.0003 | 0.06547 | 0.06509 | 0.06595 | 20.72539 |
+| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.59646 | 0.0061 | 0.59438 | 0.5923 | 0.6129 | 64.05547 |
 
 
 ### **Python 3.9**
@@ -305,7 +321,7 @@ MemAvailable:   14460940 kB
 ```bash
 Python 3.9.15
 
-Linux f43fc35d1971 5.15.0-53-generic unknown GNU/Linux
+Linux b25ab42144a8 5.15.0-53-generic unknown GNU/Linux
 
 CPU(s):              12
 Thread(s) per core:  2
@@ -316,30 +332,32 @@ CPU max MHz:         4100.0000
 NUMA node0 CPU(s):   0-11
 
 MemTotal:       16078824 kB
-MemFree:         4955784 kB
-MemAvailable:   14446400 kB
+MemFree:         6598156 kB
+MemAvailable:   14549660 kB
 ```
 
 | Command | Executed | Mean [s] | Stddev [s] | Median [s] | Min [s] | Max [s] | Memory [MB] |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| `dummy/dummy.py` | yes | 0.03242 | 0.00472 | 0.03111 | 0.03027 | 0.04579 | 22.71328 |
-| `long_run/processes/generate_fake_data.py` | yes | 0.78939 | 0.00952 | 0.78708 | 0.7804 | 0.8117 | 68.01055 |
-| `long_run/processes/collect_names_from_site.py` | yes | 1.79078 | 0.02788 | 1.77857 | 1.75381 | 1.82857 | 44.64375 |
-| `long_run/database/postgresql.py` | yes | 0.15356 | 0.00069 | 0.15356 | 0.15217 | 0.15426 | 26.19727 |
-| `math/haversine.py` | yes | 0.57715 | 0.00776 | 0.578 | 0.56678 | 0.58948 | 22.48203 |
-| `math/pow_using_math.py` | yes | 1.374 | 0.01259 | 1.37807 | 1.35593 | 1.39368 | 22.28477 |
-| `math/pow_simple.py` | yes | 0.41831 | 0.00728 | 0.41419 | 0.41292 | 0.43293 | 22.46523 |
-| `modules/json/json_module.py` | yes | 0.37303 | 0.00886 | 0.37118 | 0.36243 | 0.39136 | 21.74219 |
-| `modules/json/orjson_module.py` | yes | 0.2353 | 0.00207 | 0.23446 | 0.23268 | 0.23854 | 23.32773 |
-| `complex/classes/namedtuple_classes.py` | yes | 0.0882 | 0.00047 | 0.08827 | 0.08735 | 0.08881 | 22.74336 |
-| `complex/classes/classes.py` | yes | 0.04121 | 0.00044 | 0.04117 | 0.04075 | 0.04227 | 21.66094 |
-| `complex/classes/dataclasses_.py` | yes | 0.12249 | 0.0004 | 0.12244 | 0.12178 | 0.12319 | 22.85859 |
-| `complex/classes/sloted_classes.py` | yes | 0.0414 | 0.0005 | 0.0414 | 0.0405 | 0.04238 | 22.58398 |
-| `complex/classes/simplenamespace.py` | yes | 0.04402 | 0.00031 | 0.04391 | 0.04372 | 0.04459 | 22.50781 |
-| `algorithm/twosum/twosum.py` | yes | 0.07905 | 0.00136 | 0.07859 | 0.07788 | 0.08251 | 21.52813 |
-| `algorithm/twosum/twosum_naive.py` | yes | 0.07863 | 0.0003 | 0.07868 | 0.0781 | 0.07902 | 22.54922 |
-| `long_run/file/load_titanic_csv_python.py` | yes | 0.07105 | 0.00043 | 0.07111 | 0.07022 | 0.07155 | 22.12344 |
-| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.62548 | 0.00251 | 0.6256 | 0.62113 | 0.62899 | 64.85039 |
+| `dummy/dummy.py` | yes | 0.02961 | 0.00053 | 0.02965 | 0.0288 | 0.03067 | 22.68867 |
+| `long_run/processes/generate_fake_data.py` | yes | 0.79788 | 0.01552 | 0.79378 | 0.78566 | 0.83823 | 68.22773 |
+| `long_run/processes/collect_names_from_site.py` | yes | 3.50393 | 0.94225 | 3.55265 | 2.11588 | 5.01346 | 45.09766 |
+| `long_run/database/sqlite_.py` | yes | 0.58194 | 0.00196 | 0.58193 | 0.57927 | 0.58628 | 65.84609 |
+| `long_run/database/postgresql.py` | yes | 0.15405 | 0.00081 | 0.15389 | 0.15278 | 0.15549 | 26.31055 |
+| `math/haversine.py` | yes | 0.59411 | 0.01572 | 0.59188 | 0.57179 | 0.62062 | 22.43242 |
+| `math/pow_using_math.py` | yes | 1.40951 | 0.04596 | 1.39687 | 1.36404 | 1.50642 | 22.21797 |
+| `math/mandelbrot.py` | yes | 15.21169 | 0.3639 | 15.02875 | 14.86413 | 15.8278 | 35.45469 |
+| `math/pow_simple.py` | yes | 0.4146 | 0.0025 | 0.4135 | 0.41222 | 0.41977 | 22.46172 |
+| `modules/json/json_module.py` | yes | 0.36501 | 0.00594 | 0.36427 | 0.35633 | 0.37334 | 21.71484 |
+| `modules/json/orjson_module.py` | yes | 0.2379 | 0.00467 | 0.23666 | 0.23395 | 0.25035 | 23.39648 |
+| `complex/classes/namedtuple_classes.py` | yes | 0.08961 | 0.00152 | 0.08935 | 0.08832 | 0.09367 | 22.77695 |
+| `complex/classes/classes.py` | yes | 0.04119 | 0.0005 | 0.0412 | 0.0404 | 0.04215 | 21.62656 |
+| `complex/classes/dataclasses_.py` | yes | 0.12243 | 0.00023 | 0.12237 | 0.12221 | 0.12291 | 22.85508 |
+| `complex/classes/sloted_classes.py` | yes | 0.04144 | 0.00013 | 0.04142 | 0.04129 | 0.04175 | 22.52266 |
+| `complex/classes/simplenamespace.py` | yes | 0.04571 | 0.00481 | 0.04423 | 0.04386 | 0.05939 | 22.56836 |
+| `algorithm/twosum/twosum.py` | yes | 0.07937 | 0.00141 | 0.07877 | 0.07807 | 0.08137 | 21.61094 |
+| `algorithm/twosum/twosum_naive.py` | yes | 0.07899 | 0.0007 | 0.07877 | 0.07803 | 0.08039 | 22.4668 |
+| `long_run/file/load_titanic_csv_python.py` | yes | 0.07129 | 0.00091 | 0.07134 | 0.06984 | 0.07266 | 22.0793 |
+| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.63157 | 0.00883 | 0.62839 | 0.62509 | 0.65465 | 65.11328 |
 
 
 ### **Python 3.10**
@@ -347,7 +365,7 @@ MemAvailable:   14446400 kB
 ```bash
 Python 3.10.8
 
-Linux 2a18f956fd22 5.15.0-53-generic unknown GNU/Linux
+Linux a9d8041ccd93 5.15.0-53-generic unknown GNU/Linux
 
 CPU(s):              12
 Thread(s) per core:  2
@@ -358,30 +376,32 @@ CPU max MHz:         4100.0000
 NUMA node0 CPU(s):   0-11
 
 MemTotal:       16078824 kB
-MemFree:         4929932 kB
-MemAvailable:   14445392 kB
+MemFree:         6589664 kB
+MemAvailable:   14551976 kB
 ```
 
 | Command | Executed | Mean [s] | Stddev [s] | Median [s] | Min [s] | Max [s] | Memory [MB] |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| `dummy/dummy.py` | yes | 0.02976 | 0.00028 | 0.02979 | 0.02928 | 0.03028 | 22.72812 |
-| `long_run/processes/generate_fake_data.py` | yes | 0.75261 | 0.00798 | 0.75134 | 0.74312 | 0.7697 | 67.08281 |
-| `long_run/processes/collect_names_from_site.py` | yes | 1.7154 | 0.02346 | 1.71371 | 1.68068 | 1.74953 | 44.75 |
-| `long_run/database/postgresql.py` | yes | 0.14375 | 0.00164 | 0.14314 | 0.14244 | 0.14731 | 25.74727 |
-| `math/haversine.py` | yes | 0.53754 | 0.00992 | 0.5355 | 0.5272 | 0.56169 | 22.61211 |
-| `math/pow_using_math.py` | yes | 1.36321 | 0.02929 | 1.35376 | 1.33291 | 1.41644 | 23.11914 |
-| `math/pow_simple.py` | yes | 0.39549 | 0.0045 | 0.39416 | 0.39128 | 0.40565 | 22.24219 |
-| `modules/json/json_module.py` | yes | 0.33097 | 0.00701 | 0.33 | 0.32035 | 0.34606 | 22.19336 |
-| `modules/json/orjson_module.py` | yes | 0.21671 | 0.00434 | 0.21663 | 0.21136 | 0.22579 | 22.71914 |
-| `complex/classes/namedtuple_classes.py` | yes | 0.0842 | 0.00055 | 0.08419 | 0.08361 | 0.08558 | 23.77812 |
-| `complex/classes/classes.py` | yes | 0.03944 | 0.00054 | 0.03956 | 0.03854 | 0.04021 | 23.2332 |
-| `complex/classes/dataclasses_.py` | yes | 0.11517 | 0.00138 | 0.11481 | 0.11398 | 0.11872 | 23.23633 |
-| `complex/classes/sloted_classes.py` | yes | 0.03952 | 0.00147 | 0.03907 | 0.03863 | 0.04361 | 24.42383 |
-| `complex/classes/simplenamespace.py` | yes | 0.04088 | 0.00045 | 0.04087 | 0.0402 | 0.04148 | 24.58984 |
-| `algorithm/twosum/twosum.py` | yes | 0.07519 | 0.00047 | 0.07524 | 0.07441 | 0.07585 | 22.17617 |
-| `algorithm/twosum/twosum_naive.py` | yes | 0.07485 | 0.00056 | 0.07479 | 0.07432 | 0.07617 | 23.13125 |
-| `long_run/file/load_titanic_csv_python.py` | yes | 0.06574 | 0.00023 | 0.06568 | 0.06547 | 0.06618 | 23.00703 |
-| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.59106 | 0.00248 | 0.5919 | 0.58656 | 0.59457 | 62.88359 |
+| `dummy/dummy.py` | yes | 0.02995 | 0.00133 | 0.0295 | 0.02918 | 0.03361 | 22.66562 |
+| `long_run/processes/generate_fake_data.py` | yes | 0.75671 | 0.01677 | 0.7512 | 0.74718 | 0.80319 | 67.24727 |
+| `long_run/processes/collect_names_from_site.py` | yes | 3.30459 | 0.90055 | 3.27545 | 2.05002 | 5.01627 | 45.19453 |
+| `long_run/database/sqlite_.py` | yes | 0.55854 | 0.00386 | 0.55854 | 0.55314 | 0.56413 | 65.73672 |
+| `long_run/database/postgresql.py` | yes | 0.1432 | 0.00067 | 0.14327 | 0.14226 | 0.14434 | 25.94805 |
+| `math/haversine.py` | yes | 0.54467 | 0.01009 | 0.54379 | 0.53137 | 0.5613 | 22.67461 |
+| `math/pow_using_math.py` | yes | 1.35538 | 0.03018 | 1.34783 | 1.32347 | 1.43265 | 23.19141 |
+| `math/mandelbrot.py` | yes | 15.13002 | 0.35699 | 14.96732 | 14.71101 | 15.79404 | 35.9668 |
+| `math/pow_simple.py` | yes | 0.397 | 0.00716 | 0.394 | 0.38986 | 0.41251 | 22.34258 |
+| `modules/json/json_module.py` | yes | 0.32937 | 0.00327 | 0.32903 | 0.32525 | 0.33655 | 22.25977 |
+| `modules/json/orjson_module.py` | yes | 0.21433 | 0.00166 | 0.21434 | 0.21205 | 0.21657 | 22.67734 |
+| `complex/classes/namedtuple_classes.py` | yes | 0.08362 | 0.00132 | 0.08322 | 0.08255 | 0.08726 | 23.87539 |
+| `complex/classes/classes.py` | yes | 0.03909 | 0.00035 | 0.03904 | 0.03861 | 0.03968 | 23.3293 |
+| `complex/classes/dataclasses_.py` | yes | 0.1156 | 0.00069 | 0.1156 | 0.11447 | 0.11678 | 23.41602 |
+| `complex/classes/sloted_classes.py` | yes | 0.03894 | 0.00036 | 0.03903 | 0.03835 | 0.03939 | 24.36328 |
+| `complex/classes/simplenamespace.py` | yes | 0.0411 | 0.00043 | 0.04105 | 0.04033 | 0.04169 | 24.62539 |
+| `algorithm/twosum/twosum.py` | yes | 0.07573 | 0.00297 | 0.07495 | 0.07396 | 0.08402 | 22.05703 |
+| `algorithm/twosum/twosum_naive.py` | yes | 0.07645 | 0.00384 | 0.07455 | 0.07359 | 0.08355 | 23.23633 |
+| `long_run/file/load_titanic_csv_python.py` | yes | 0.06781 | 0.00658 | 0.06577 | 0.06537 | 0.08653 | 23.03125 |
+| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.59693 | 0.00599 | 0.59504 | 0.59166 | 0.61132 | 63.91445 |
 
 
 ### **Python 3.11**
@@ -389,7 +409,7 @@ MemAvailable:   14445392 kB
 ```bash
 Python 3.11.0
 
-Linux 2293264c899c 5.15.0-53-generic unknown GNU/Linux
+Linux af90d2d0ca2a 5.15.0-53-generic unknown GNU/Linux
 
 CPU(s):              12
 Thread(s) per core:  2
@@ -400,28 +420,30 @@ CPU max MHz:         4100.0000
 NUMA node0 CPU(s):   0-11
 
 MemTotal:       16078824 kB
-MemFree:         4927236 kB
-MemAvailable:   14443732 kB
+MemFree:         6583416 kB
+MemAvailable:   14553444 kB
 ```
 
 | Command | Executed | Mean [s] | Stddev [s] | Median [s] | Min [s] | Max [s] | Memory [MB] |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| `dummy/dummy.py` | yes | 0.01647 | 0.00441 | 0.01697 | 0.01196 | 0.02364 | 25.775 |
-| `long_run/processes/generate_fake_data.py` | yes | 0.74082 | 0.00466 | 0.7409 | 0.73409 | 0.74763 | 71.84766 |
-| `long_run/processes/collect_names_from_site.py` | yes | 1.43654 | 0.01101 | 1.43784 | 1.41957 | 1.45354 | 47.18906 |
-| `long_run/database/postgresql.py` | yes | 0.14082 | 0.00081 | 0.1406 | 0.13961 | 0.14223 | 31.57617 |
-| `math/haversine.py` | yes | 0.47127 | 0.01905 | 0.46671 | 0.4501 | 0.50531 | 25.66445 |
-| `math/pow_using_math.py` | yes | 1.15706 | 0.01117 | 1.15314 | 1.14462 | 1.17615 | 26.17891 |
-| `math/pow_simple.py` | yes | 0.31503 | 0.00111 | 0.31497 | 0.31382 | 0.31731 | 25.59414 |
-| `modules/json/json_module.py` | yes | 0.27798 | 0.00744 | 0.27548 | 0.27332 | 0.2987 | 26.11719 |
-| `modules/json/orjson_module.py` | yes | 0.171 | 0.00084 | 0.17103 | 0.1697 | 0.17242 | 26.76406 |
-| `complex/classes/namedtuple_classes.py` | yes | 0.07846 | 0.00041 | 0.07835 | 0.07779 | 0.07925 | 26.3668 |
-| `complex/classes/classes.py` | yes | 0.01949 | 0.00154 | 0.01904 | 0.01875 | 0.02384 | 27.39414 |
-| `complex/classes/dataclasses_.py` | yes | 0.10734 | 0.00044 | 0.10724 | 0.10661 | 0.10808 | 27.35195 |
-| `complex/classes/sloted_classes.py` | yes | 0.02235 | 0.00293 | 0.02174 | 0.01922 | 0.02645 | 27.32695 |
-| `complex/classes/simplenamespace.py` | yes | 0.02481 | 0.0009 | 0.02447 | 0.0241 | 0.02661 | 27.30703 |
-| `algorithm/twosum/twosum.py` | yes | 0.06953 | 0.00051 | 0.06954 | 0.06887 | 0.07043 | 25.93867 |
-| `algorithm/twosum/twosum_naive.py` | yes | 0.06906 | 0.00037 | 0.06913 | 0.06856 | 0.0696 | 25.82891 |
-| `long_run/file/load_titanic_csv_python.py` | yes | 0.05538 | 0.00049 | 0.0555 | 0.05472 | 0.05599 | 25.91914 |
-| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.5799 | 0.00369 | 0.57982 | 0.57601 | 0.58843 | 68.93438 |
+| `dummy/dummy.py` | yes | 0.01779 | 0.00269 | 0.01897 | 0.0115 | 0.01932 | 25.79805 |
+| `long_run/processes/generate_fake_data.py` | yes | 0.74707 | 0.00541 | 0.7479 | 0.73639 | 0.75411 | 72.32969 |
+| `long_run/processes/collect_names_from_site.py` | yes | 3.15225 | 0.64584 | 3.05938 | 2.08028 | 4.1565 | 47.2793 |
+| `long_run/database/sqlite_.py` | yes | 0.5564 | 0.00524 | 0.55539 | 0.55115 | 0.56834 | 71.04023 |
+| `long_run/database/postgresql.py` | yes | 0.14052 | 0.00065 | 0.14031 | 0.1398 | 0.14196 | 31.92109 |
+| `math/haversine.py` | yes | 0.47057 | 0.01869 | 0.47231 | 0.44554 | 0.50328 | 25.6125 |
+| `math/pow_using_math.py` | yes | 1.1716 | 0.01497 | 1.17197 | 1.15175 | 1.19802 | 26.16211 |
+| `math/mandelbrot.py` | yes | 14.95167 | 0.13603 | 14.93276 | 14.81818 | 15.2932 | 38.72031 |
+| `math/pow_simple.py` | yes | 0.31689 | 0.00518 | 0.31491 | 0.31385 | 0.32983 | 25.57227 |
+| `modules/json/json_module.py` | yes | 0.28024 | 0.00263 | 0.28051 | 0.27575 | 0.28373 | 26.1 |
+| `modules/json/orjson_module.py` | yes | 0.17261 | 0.0014 | 0.17246 | 0.17039 | 0.17453 | 26.79336 |
+| `complex/classes/namedtuple_classes.py` | yes | 0.07784 | 0.0004 | 0.07791 | 0.07694 | 0.07832 | 26.36797 |
+| `complex/classes/classes.py` | yes | 0.02314 | 0.00135 | 0.02245 | 0.02209 | 0.02515 | 27.24492 |
+| `complex/classes/dataclasses_.py` | yes | 0.10729 | 0.00051 | 0.10724 | 0.10671 | 0.10821 | 27.31406 |
+| `complex/classes/sloted_classes.py` | yes | 0.01953 | 0.0003 | 0.01956 | 0.01908 | 0.01993 | 27.14688 |
+| `complex/classes/simplenamespace.py` | yes | 0.02387 | 0.00035 | 0.02383 | 0.0234 | 0.02457 | 27.80508 |
+| `algorithm/twosum/twosum.py` | yes | 0.07096 | 0.0031 | 0.06977 | 0.06902 | 0.07935 | 25.97969 |
+| `algorithm/twosum/twosum_naive.py` | yes | 0.07064 | 0.00119 | 0.07095 | 0.06922 | 0.07277 | 25.8043 |
+| `long_run/file/load_titanic_csv_python.py` | yes | 0.0551 | 0.00051 | 0.05507 | 0.05429 | 0.05583 | 25.86172 |
+| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.58237 | 0.00449 | 0.58058 | 0.57856 | 0.5923 | 69.50859 |
 

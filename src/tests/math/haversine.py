@@ -1,6 +1,6 @@
 # @ALLOWED_VERSIONS: 3.6, 3.7, 3.8, 3.9, 3.10, 3.11
 
-from math import asin, cos, pi, radians, sin, sqrt
+from math import asin, cos, radians, sin, sqrt
 
 
 def haversine(lat1: float, lng1: float, lat2: float, lng2: float) -> int:

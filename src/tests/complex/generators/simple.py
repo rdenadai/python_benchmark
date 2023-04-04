@@ -1,10 +1,13 @@
 # @ALLOWED_VERSIONS: 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12
 
 
-def main():
+def gen():
     for _ in range(100_000):
-        for i in range(100):
-            x = i * i
+        yield {"name": "generator"}
+
+
+def main():
+    _ = list(v for v in gen())
     return 0
 
 

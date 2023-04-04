@@ -2,6 +2,7 @@ import sys
 from collections import defaultdict
 from glob import glob
 from json import dumps, load
+from operator import itemgetter
 from os import makedirs, popen
 from statistics import mean
 
@@ -26,6 +27,7 @@ def main(version: str):
                 "max": round(content.get("max", -1), 5),
             }
         )
+    performance = sorted(performance, key=itemgetter("command"))
 
     # Load and parse memory stats generate by mprof
     memory = defaultdict(list)
@@ -53,7 +55,7 @@ def main(version: str):
     for cmd in (
         "python --version",
         "uname -rsnpo",
-        "lscpu | egrep 'Model name|Thread|Core\(s\)|NUMA|CPU\(s\):|CPU max MHz:'",
+        r"lscpu | egrep 'Model name|Thread|Core\(s\)|NUMA|CPU\(s\):|CPU max MHz:'",
         "cat /proc/meminfo | egrep 'MemTotal:|MemFree:|MemAvailable:'",
     ):
         stream = popen(cmd)
@@ -80,7 +82,10 @@ def main(version: str):
         file_to_save.write("|:---|---:|---:|---:|---:|---:|---:|---:|\n")
         for item in performance:
             file_to_save.write(
-                f"| `{item.get('command')}` | {item.get('executed')} | {item.get('mean')} | {item.get('stddev')} | {item.get('median')} | {item.get('min')} | {item.get('max')} | {item.get('memory')} |\n"
+                (
+                    f"| `{item.get('command')}` | {item.get('executed')} | {item.get('mean')} | {item.get('stddev')} | "
+                    f"{item.get('median')} | {item.get('min')} | {item.get('max')} | {item.get('memory')} |\n"
+                )
             )
 
     return 0

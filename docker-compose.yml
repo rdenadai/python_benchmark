@@ -91,7 +91,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.10.9-slim-buster
+        DOCKER_IMAGE: python:3.10.10-slim-buster
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.10
@@ -107,7 +107,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.11.1-slim-buster
+        DOCKER_IMAGE: python:3.11.2-slim-buster
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.11
@@ -119,10 +119,27 @@ services:
         condition: service_started
       python310:
         condition: service_completed_successfully
+  python312:
+    build:
+      context: ./docker/
+      args:
+        DOCKER_IMAGE: python:3.12.0a6-slim-buster
+        REQUIREMENTS: requirements312.txt
+    entrypoint: ./entrypoint.sh
+    environment:
+      - PY_VERSION=3.12
+    volumes:
+      - ./src:/code/src
+      - ./report:/code/report
+    depends_on:
+      postgres:
+        condition: service_started
+      python311:
+        condition: service_completed_successfully
   dummy_close:
     image: hello-world:latest
     depends_on:
       postgres:
         condition: service_started
-      python311:
+      python312:
         condition: service_completed_successfully

@@ -1,8 +1,8 @@
-beautifulsoup4==4.12.0
-Faker==18.3.2
-httpx==0.23.3
+beautifulsoup4==4.12.2
+Faker==18.9.0
+httpx==0.24.1
 lxml==4.9.2
-orjson==3.8.9
+orjson==3.8.2
 pandas==1.5.3
 psycopg2-binary==2.9.6
 uvloop==0.17.0

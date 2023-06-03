@@ -4,7 +4,7 @@ from typing import Tuple
 
 import numpy as np
 
-np.warnings.filterwarnings("ignore")
+# np.warnings.filterwarnings("ignore")
 
 
 class Mandelbrot:
@@ -12,7 +12,7 @@ class Mandelbrot:
         self,
         size: Tuple[float, ...] = (-1.5, 1.5, -1.5, 1.5),
         edges=2,
-        maxiter=100,
+        maxiter=25,
         color: bool = True,
     ) -> None:
         self.size = size
@@ -22,7 +22,7 @@ class Mandelbrot:
         # np.log(2): 0.693147
 
     def _initiate(self) -> Tuple[np.ndarray, ...]:
-        N = 1024
+        N = 512
         x1, x2, y1, y2 = self.size
         x, y = np.meshgrid(np.linspace(x1, x2, N), np.linspace(y1, y2, N))
         c = x + (1j * y)

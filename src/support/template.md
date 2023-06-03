@@ -6,9 +6,9 @@ This is a simple repo to validate and test any (almost any) python program again
 - Python 3.7.16
 - Python 3.8.16
 - Python 3.9.16
-- Python 3.10.10
-- Python 3.11.2
-- Python 3.12a6
+- Python 3.10.11
+- Python 3.11.3
+- Python 3.12b1
 
 ## Should i care about it
 

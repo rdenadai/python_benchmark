@@ -91,7 +91,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.10.10-slim-buster
+        DOCKER_IMAGE: python:3.10.11-slim-buster
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.10
@@ -107,7 +107,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.11.2-slim-buster
+        DOCKER_IMAGE: python:3.11.3-slim-buster
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.11
@@ -123,7 +123,8 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.12.0a6-slim-buster
+        DOCKER_IMAGE: python:3.12.0b1-slim-buster
+        SETUPTOOLS_VERSION: 67.8.0
         REQUIREMENTS: requirements312.txt
     entrypoint: ./entrypoint.sh
     environment:
@@ -137,7 +138,8 @@ services:
       python311:
         condition: service_completed_successfully
   dummy_close:
-    image: hello-world:latest
+    image: alpine:latest
+    command: sleep 2
     depends_on:
       postgres:
         condition: service_started

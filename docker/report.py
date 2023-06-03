@@ -1,7 +1,7 @@
 import sys
 from collections import defaultdict
 from glob import glob
-from json import dumps, load
+from json import dumps, loads
 from operator import itemgetter
 from os import makedirs, popen
 from statistics import mean
@@ -13,7 +13,7 @@ def main(version: str):
     filenames = "report/tmp/*part_%s.json" % version
     for file in sorted(glob(filenames)):
         with open(file, encoding="utf-8") as jfile:
-            content = load(jfile)
+            content = loads(jfile.read())
         content = content.get("results")[0]
         performance.append(
             {
@@ -51,16 +51,17 @@ def main(version: str):
         perf["memory"] = round(mean(memory.get(command, [-1])), 5)
 
     # Get system information (num of cpus, memory, etc)
-    system_state = []
-    for cmd in (
-        "python --version",
-        "uname -rsnpo",
-        r"lscpu | egrep 'Model name|Thread|Core\(s\)|NUMA|CPU\(s\):|CPU max MHz:'",
-        "cat /proc/meminfo | egrep 'MemTotal:|MemFree:|MemAvailable:'",
-    ):
-        stream = popen(cmd)
-        system_state.append(stream.read())
-    system_state = "\n".join(system_state)
+    system_state = "\n".join(
+        [
+            popen(cmd).read()
+            for cmd in (
+                "python --version",
+                "uname -rsnpo",
+                r"lscpu | egrep 'Model name|Thread|Core\(s\)|NUMA|CPU\(s\):|CPU max MHz:'",
+                "cat /proc/meminfo | egrep 'MemTotal:|MemFree:|MemAvailable:'",
+            )
+        ]
+    )
 
     # Save json data
     makedirs("report/json", exist_ok=True)

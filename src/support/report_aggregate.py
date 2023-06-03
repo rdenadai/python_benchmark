@@ -9,7 +9,10 @@ from packaging.version import parse as parseVersion
 
 
 def main() -> int:
-    DIVISOR = "|:---|---:|---:|---:|---:|---:|---:|\n"
+    DIVISOR = "|:---|---:|---:|---:|---:|---:|---:|---:|\n"
+    DIVISOR_2 = "|:---|---:|---:|---:|---:|---:|---:|\n"
+    VERSIONS = "| Command | 3.6 | 3.7 | 3.8 | 3.9 | 3.10 | 3.11 |\n"
+    VERSIONS_ALL = "| Command | 3.6 | 3.7 | 3.8 | 3.9 | 3.10 | 3.11 | 3.12 |\n"
     ROOT_DIR = dirname(abspath(__file__))
 
     performance = []
@@ -30,42 +33,43 @@ def main() -> int:
         file_to_save.write("### **Comparison**\n")
         # Mean Compare
         file_to_save.write("\n")
-        file_to_save.write("#### How much faster 3.11 is? (Mean / Median from 3.6 to 3.10)\n")
-        file_to_save.write("| Command | 3.6 (Mean / Median) | 3.7 (...) | 3.8 (...) | 3.9 (...) | 3.10 (...) |\n")
-        file_to_save.write("|:---|---:|---:|---:|---:|---:|\n")
+        file_to_save.write("#### How much faster 3.12 is? (Mean / Median from 3.6 to 3.11)\n")
+        file_to_save.write(VERSIONS)
+        file_to_save.write(DIVISOR_2)
         for command, items in final.items():
             python_latest = items[-1]
-            mean, median = python_latest.get("mean"), python_latest.get("median")
+            mean, median = python_latest.get("mean", 0), python_latest.get("median", 0)
             diff_percentage = []
             for item in items[:-1]:
                 mean_c, median_c = "--", "--"
-                if (x := item.get("mean")) > 0:
+                if (x := item.get("mean", 0)) > 0 and mean > 0:
                     mean_c = f"{((x * 100 / mean) - 100):.2f}%"
-                if (x := item.get("median")) > 0:
+                if (x := item.get("median", 0)) > 0 and median > 0:
                     median_c = f"{((x * 100 / median) - 100):.2f}%"
                 diff_percentage.append(f"{mean_c} / {median_c}")
             file_to_save.write(f"| `{command}` | {' | '.join(diff_percentage)} |\n")
         file_to_save.write("---\n")
         # Median Compare
         file_to_save.write("\n")
-        file_to_save.write("#### How much more memory 3.11 uses? (Memory from 3.6 to 3.10)\n")
-        file_to_save.write("| Command |  3.6 | 3.7 | 3.8 | 3.9 | 3.10 |\n")
-        file_to_save.write("|:---|---:|---:|---:|---:|---:|\n")
+        file_to_save.write("#### How much more memory 3.12 uses? (Memory diff from 3.6 to 3.11)\n")
+        file_to_save.write(VERSIONS)
+        file_to_save.write(DIVISOR_2)
         for command, items in final.items():
-            python_latest = items[-1].get("memory")
-            diff_percentage = " | ".join(
-                f"{round((python_latest * 100 / x) - 100, 2)}%" if (x := item.get("memory")) > 0 else "--"
+            python_latest_memory = items[-1].get("memory", 0)
+            mem_diff_percentage = " | ".join(
+                f"{round((python_latest_memory * 100 / x) - 100, 2)}%"
+                if (x := item.get("memory", 0)) > 0 and python_latest_memory > 0
+                else "--"
                 for item in items[:-1]
             )
-            file_to_save.write(f"| `{command}` | {diff_percentage} |\n")
+            file_to_save.write(f"| `{command}` | {mem_diff_percentage} |\n")
         file_to_save.write("---\n")
         # Mean
         file_to_save.write("\n")
         file_to_save.write("#### **Execution**\n")
         file_to_save.write("\n")
-        file_to_save.write(
-            "| Command |  Mean 3.6 [s] | Mean 3.7 [s] | Mean 3.8 [s] | Mean 3.9 [s] | Mean 3.10 [s] | Mean 3.11 [s] |\n"
-        )
+        file_to_save.write("##### **Mean [s]**\n")
+        file_to_save.write(VERSIONS_ALL)
         file_to_save.write(DIVISOR)
         for command, items in final.items():
             file_to_save.write(
@@ -73,9 +77,8 @@ def main() -> int:
             )
         # Median
         file_to_save.write("\n")
-        file_to_save.write(
-            "| Command |  Median 3.6 [s] | Median 3.7 [s] | Median 3.8 [s] | Median 3.9 [s] | Median 3.10 [s] | Median 3.11 [s] |\n"
-        )
+        file_to_save.write("##### **Median [s]**\n")
+        file_to_save.write(VERSIONS_ALL)
         file_to_save.write(DIVISOR)
         for command, items in final.items():
             file_to_save.write(
@@ -85,9 +88,8 @@ def main() -> int:
         file_to_save.write("\n")
         file_to_save.write("#### **Memory Usage**\n")
         file_to_save.write("\n")
-        file_to_save.write(
-            "| Command |  MEM 3.6 [MB] | MEM 3.7 [MB] | MEM 3.8 [MB] | MEM 3.9 [MB] | MEM 3.10 [MB] | MEM 3.11 [MB] |\n"
-        )
+        file_to_save.write("##### **MEM [MB]**\n")
+        file_to_save.write(VERSIONS_ALL)
         file_to_save.write(DIVISOR)
         for command, items in final.items():
             file_to_save.write(

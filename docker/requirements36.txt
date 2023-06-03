@@ -1,4 +1,4 @@
-beautifulsoup4==4.11.1
+beautifulsoup4==4.12.2
 Faker==14.2.1
 httpx==0.22.0
 lxml==4.9.1

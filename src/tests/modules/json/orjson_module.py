@@ -20,7 +20,7 @@ def main():
             {
                 "name": choice(names),
                 "age": randint(5, 75),
-                "city": "São Paulo",
+                "city": "Sao Paulo",
                 "datetime": datetime.now().isoformat(),
             }
         )

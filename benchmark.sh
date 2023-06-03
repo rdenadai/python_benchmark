@@ -8,7 +8,6 @@ rm ${FULL_REPORT} &>/dev/null &
 
 docker-compose down &>/dev/null
 docker-compose up --build -d &>/dev/null
-
 sleep 2
 
 python src/support/report_aggregate.py
@@ -30,9 +29,8 @@ done
 
 rm src/support/compare.md
 
-sleep 2
-
 # Clean Up
+sleep 2
 docker-compose down &>/dev/null
 docker system prune -f &>/dev/null
 

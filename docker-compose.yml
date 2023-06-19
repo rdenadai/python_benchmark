@@ -42,7 +42,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.7.16-slim-buster
+        DOCKER_IMAGE: python:3.7.17-slim-buster
         REQUIREMENTS: requirements37.txt
     entrypoint: ./entrypoint.sh
     environment:
@@ -59,7 +59,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.8.16-slim-buster
+        DOCKER_IMAGE: python:3.8.17-slim-buster
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.8
@@ -75,7 +75,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.9.16-slim-buster
+        DOCKER_IMAGE: python:3.9.17-slim-buster
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.9
@@ -91,7 +91,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.10.11-slim-buster
+        DOCKER_IMAGE: python:3.10.12-slim-buster
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.10
@@ -107,7 +107,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.11.3-slim-buster
+        DOCKER_IMAGE: python:3.11.4-slim-buster
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.11
@@ -123,7 +123,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.12.0b1-slim-buster
+        DOCKER_IMAGE: python:3.12.0b2-slim-buster
         SETUPTOOLS_VERSION: 67.8.0
         REQUIREMENTS: requirements312.txt
     entrypoint: ./entrypoint.sh

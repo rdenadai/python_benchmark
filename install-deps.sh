@@ -18,6 +18,10 @@ sudo apt-get install docker-compose -y
 
 # Python
 sudo apt install python3-pip -y
-alias python="python3"
-python -m pip install --upgrade pip
-python -m pip install packaging
+if [[ "$(python3 -V)" =~ "Python 3" ]]; then
+  python3 -m pip install --upgrade pip && \
+  python3 -m pip install packaging
+else
+	python -m pip install --upgrade pip && \
+  python -m pip install packaging
+fi

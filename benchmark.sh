@@ -10,7 +10,11 @@ docker-compose down &>/dev/null
 docker-compose up --build -d # &>/dev/null
 sleep 2
 
-python src/support/report_aggregate.py
+if [[ "$(python3 -V)" =~ "Python 3" ]]; then
+    python3 src/support/report_aggregate.py
+else
+	python src/support/report_aggregate.py
+fi
 
 cat src/support/template.md >> ${FULL_REPORT}
 echo "" >> ${FULL_REPORT}

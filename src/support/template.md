@@ -3,12 +3,12 @@
 This is a simple repo to validate and test any (almost any) python program againts all python 3 versions.
 
 - Python 3.6.15
-- Python 3.7.16
-- Python 3.8.16
-- Python 3.9.16
-- Python 3.10.11
-- Python 3.11.3
-- Python 3.12b1
+- Python 3.7.17
+- Python 3.8.17
+- Python 3.9.17
+- Python 3.10.12
+- Python 3.11.4
+- Python 3.12b4
 
 ## Should i care about it
 

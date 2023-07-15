@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p report/tmp
+
 sudo apt-get update -y
 
 # Docker

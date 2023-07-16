@@ -22,7 +22,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.6.15-slim
+        DOCKER_IMAGE: python:3.6.15-slim-bullseye
         SETUPTOOLS_VERSION: 59.6.0
         REQUIREMENTS: requirements36.txt
     entrypoint: ./entrypoint.sh
@@ -42,7 +42,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.7.17-slim
+        DOCKER_IMAGE: python:3.7.17-slim-bullseye
         REQUIREMENTS: requirements37.txt
     entrypoint: ./entrypoint.sh
     environment:
@@ -59,7 +59,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.8.17-slim
+        DOCKER_IMAGE: python:3.8.17-slim-bullseye
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.8
@@ -75,7 +75,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.9.17-slim
+        DOCKER_IMAGE: python:3.9.17-slim-bullseye
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.9
@@ -91,7 +91,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.10.12-slim
+        DOCKER_IMAGE: python:3.10.12-slim-bullseye
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.10
@@ -107,7 +107,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.11.4-slim
+        DOCKER_IMAGE: python:3.11.4-slim-bullseye
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.11
@@ -123,7 +123,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.12.0b4-slim
+        DOCKER_IMAGE: python:3.12.0b4-slim-bullseye
         SETUPTOOLS_VERSION: 67.8.0
         REQUIREMENTS: requirements312.txt
     entrypoint: ./entrypoint.sh

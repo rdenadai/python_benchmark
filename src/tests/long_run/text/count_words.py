@@ -1,9 +1,9 @@
 # @ALLOWED_VERSIONS: 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12
 
+import io
+import re
 from collections import Counter
 from os.path import abspath, dirname
-import re
-import io
 
 
 def count_words(text: str) -> int:

@@ -1,9 +1,10 @@
 # @ALLOWED_VERSIONS: 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12
 
-from os.path import abspath, dirname
-from re import MULTILINE, sub, findall
 import io
-from string import punctuation, digits
+from os.path import abspath, dirname
+from re import MULTILINE, findall, sub
+from string import digits, punctuation
+from typing import Tuple
 
 RM = (
     (r"(http[s]*?:\/\/)+.*[\r\n]*", r""),
@@ -25,7 +26,7 @@ RM = (
 )
 
 
-def clean_up(text: str) -> tuple[str, ...]:
+def clean_up(text: str) -> Tuple[str, ...]:
     text = text.lower()
     for punct in punctuation + digits:
         text = text.replace(punct, " ")
@@ -35,7 +36,7 @@ def clean_up(text: str) -> tuple[str, ...]:
     return tuple(word for word in words if len(word) > 2)
 
 
-def uniq_words(words: tuple[str, ...]) -> tuple[str, ...]:
+def uniq_words(words: Tuple[str, ...]) -> Tuple[str, ...]:
     return tuple(sorted(set(words)))
 
 

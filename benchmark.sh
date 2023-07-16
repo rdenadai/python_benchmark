@@ -7,7 +7,7 @@ FULL_REPORT=README.md
 rm ${FULL_REPORT} &>/dev/null &
 
 docker-compose down &>/dev/null
-docker-compose up --build -d # &>/dev/null
+docker-compose up --build -d &>/dev/null
 sleep 2
 
 if [[ "$(python3 -V)" =~ "Python 3" ]]; then

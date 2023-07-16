@@ -9,7 +9,7 @@ import io
 def count_words(text: str) -> int:
     words = re.findall(r"\b\w+\b", text.lower())
     word_counts = Counter(words)
-    return word_counts.total()
+    return sum(word_counts.values())
 
 
 def main() -> int:

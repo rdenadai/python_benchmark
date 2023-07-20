@@ -2,7 +2,6 @@
 
 from collections import deque
 from random import choice, randint
-from time import perf_counter
 
 
 class Cell:
@@ -57,13 +56,11 @@ class Maze:
 
 
 def main():
-    start = perf_counter()
     for _ in range(30):
         size = randint(15, 40)
         rows, cols = size, size
         maze = Maze(rows, cols)
         maze.run(maze.grid[0][0])
-    print(perf_counter() - start)
     return 0
 
 

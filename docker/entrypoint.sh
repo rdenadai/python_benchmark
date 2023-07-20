@@ -23,13 +23,13 @@ do
         else
             python src/prepare/tear_up.py
             # Performance
-            hyperfine --show-output --export-json report/tmp/${i}part_${PY_VERSION}.json --runs 10 --warmup 3 "python ${FILE}"
+            hyperfine --show-output --export-json report/tmp/${i}part_${PY_VERSION}.json --runs 7 --warmup 2 "python ${FILE}"
             # Memory
-            for k in {1..10}; do
+            for k in {1..7}; do
                 mprof run ${MPROF_MULTIPROCESS} -T ${MPROF_INTERVAL} -o report/tmp/${i}_${k}part_${PY_VERSION}.dat ${FILE} &>/dev/null &
             done
             wait
-            for k in {1..10}; do
+            for k in {1..7}; do
                 cat report/tmp/${i}_${k}part_${PY_VERSION}.dat | sed '/^CHLD/ d' > report/tmp/${i}_${k}part_${PY_VERSION}_parcial.dat
                 mv report/tmp/${i}_${k}part_${PY_VERSION}_parcial.dat report/tmp/${i}_${k}part_${PY_VERSION}.dat
             done

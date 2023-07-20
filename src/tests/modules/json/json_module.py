@@ -23,7 +23,7 @@ def main():
                 "datetime": datetime.now().isoformat(),
             }
         )
-        loaded = loads(dumped)
+        _ = loads(dumped)
     return 0
 
 

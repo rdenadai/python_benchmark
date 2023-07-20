@@ -35,6 +35,9 @@ rm src/support/compare.md
 
 # Clean Up
 sleep 2
+for k in {6..12}; do
+    docker logs python_performance_python3${k}_1  >& report/logs/python_performance_python3${k}.log
+done
 docker-compose down &>/dev/null
 docker system prune -f &>/dev/null
 

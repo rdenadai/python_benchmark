@@ -8,7 +8,7 @@ This is a simple repo to validate and test any (almost any) python program again
 - Python 3.9.17
 - Python 3.10.12
 - Python 3.11.4
-- Python 3.12b4
+- Python 3.12.0rc1
 
 ## Should i care about it
 

@@ -123,7 +123,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.12.0b4-slim-bookworm
+        DOCKER_IMAGE: python:3.12.0rc1-slim-bookworm
         SETUPTOOLS_VERSION: 68.0.0
         REQUIREMENTS: requirements312.txt
     entrypoint: ./entrypoint.sh

@@ -8,7 +8,7 @@ This is a simple repo to validate and test any (almost any) python program again
 - Python 3.9.17
 - Python 3.10.12
 - Python 3.11.4
-- Python 3.12b4
+- Python 3.12.0rc1
 
 ## Should i care about it
 
@@ -58,72 +58,72 @@ Please also check this metadata tags to put inside the program to be able to cha
 
 ## Results
 
-> Last run: Thu Jul 20 04:33:34 UTC 2023
+> Last run: Wed Aug  9 03:43:05 PM -03 2023
 ### **Comparison**
 
 #### How much faster 3.12 is? (Mean / Median from 3.6 to 3.11)
 | Command | 3.6 | 3.7 | 3.8 | 3.9 | 3.10 | 3.11 |
 |:---|---:|---:|---:|---:|---:|---:|
-| `algorithm/search/bin.py` | 7.43% / 7.04% | 1.62% / 1.26% | -4.27% / -4.18% | 2.08% / 1.76% | -9.18% / -9.58% | -23.01% / -23.19% |
-| `algorithm/search/hashmap_lookup.py` | 9.08% / 8.95% | 3.70% / 4.15% | -2.66% / -2.43% | 2.16% / 2.38% | -8.82% / -8.79% | -21.24% / -21.41% |
-| `algorithm/search/index.py` | 7.31% / 7.61% | 2.07% / 1.66% | -4.13% / -3.84% | 0.48% / -0.02% | -11.42% / -11.64% | -23.39% / -23.42% |
-| `algorithm/search/linear.py` | 6.80% / 7.37% | 2.73% / 4.05% | -4.35% / -3.59% | 0.81% / 1.55% | -9.92% / -9.42% | -23.02% / -22.39% |
-| `algorithm/twosum/twosum.py` | -8.62% / -8.81% | -26.67% / -26.80% | -16.59% / -16.98% | -0.26% / -0.42% | -7.04% / -6.42% | -13.66% / -14.19% |
-| `algorithm/twosum/twosum_naive.py` | -9.88% / -9.86% | -26.56% / -26.97% | -17.62% / -17.77% | -1.74% / -2.03% | -11.82% / -12.24% | -12.74% / -13.04% |
-| `complex/classes/classes.py` | 92.49% / 93.31% | 62.80% / 63.08% | 74.66% / 75.22% | 96.21% / 96.15% | 78.71% / 77.32% | -16.95% / -16.55% |
-| `complex/classes/dataclasses_.py` | -- / -- | -29.15% / -28.91% | -22.36% / -22.57% | 1.12% / 0.91% | -9.65% / -9.87% | -15.22% / -15.48% |
-| `complex/classes/namedtuple_classes.py` | -5.77% / -6.19% | -19.97% / -19.98% | -15.85% / -16.38% | 0.25% / -0.08% | -9.96% / -10.13% | -14.13% / -14.14% |
-| `complex/classes/simplenamespace.py` | 115.09% / 115.63% | 38.40% / 40.53% | 45.95% / 47.18% | 71.56% / 73.17% | 53.52% / 54.63% | -15.83% / -15.44% |
-| `complex/classes/sloted_classes.py` | 87.52% / 88.67% | 61.24% / 61.68% | 73.72% / 76.35% | 97.95% / 97.61% | 78.22% / 78.34% | -17.35% / -17.03% |
-| `complex/generators/simple.py` | 62.23% / 62.10% | 48.74% / 48.33% | 48.36% / 48.95% | 57.16% / 57.60% | 48.91% / 48.49% | -13.65% / -13.27% |
-| `dummy/dummy.py` | 120.36% / 121.87% | 83.85% / 83.51% | 98.18% / 99.77% | 130.89% / 131.25% | 112.51% / 115.00% | -15.47% / -16.60% |
-| `long_run/database/postgresql.py` | -21.53% / -21.50% | -27.80% / -27.79% | -19.01% / -18.86% | -6.36% / -6.27% | -16.20% / -15.94% | -16.18% / -16.34% |
+| `algorithm/search/bin.py` | 21.99% / 21.77% | 21.36% / 22.44% | 6.94% / 6.15% | 10.10% / 8.89% | 2.20% / 2.67% | -14.06% / -14.78% |
+| `algorithm/search/hashmap_lookup.py` | 25.30% / 25.72% | 20.58% / 21.75% | 4.52% / 4.82% | 11.29% / 11.67% | 3.18% / 2.93% | -12.44% / -11.79% |
+| `algorithm/search/index.py` | 28.21% / 28.64% | 22.02% / 23.10% | 4.51% / 4.50% | 9.55% / 8.23% | 2.24% / 3.04% | -12.36% / -12.04% |
+| `algorithm/search/linear.py` | 23.24% / 23.83% | 19.72% / 19.52% | 9.70% / 8.47% | 10.30% / 8.45% | 4.53% / 2.82% | -11.89% / -12.08% |
+| `algorithm/twosum/twosum.py` | -4.56% / -10.24% | -22.70% / -22.22% | -25.03% / -24.24% | -14.65% / -13.83% | -11.70% / -11.99% | -14.49% / -15.32% |
+| `algorithm/twosum/twosum_naive.py` | -10.61% / -11.53% | -18.73% / -19.68% | -21.28% / -23.24% | -11.02% / -15.22% | -9.97% / -12.16% | -14.93% / -17.45% |
+| `complex/classes/classes.py` | 106.38% / 114.83% | 82.58% / 79.31% | 91.10% / 100.39% | 83.33% / 89.58% | 80.78% / 85.99% | -3.34% / -0.39% |
+| `complex/classes/dataclasses_.py` | -- / -- | -18.93% / -19.48% | -16.47% / -19.41% | -7.86% / -9.01% | -3.66% / -5.06% | -12.63% / -13.18% |
+| `complex/classes/namedtuple_classes.py` | 3.29% / 5.12% | -15.36% / -15.41% | -0.63% / -4.33% | -4.90% / -4.44% | -3.77% / -4.03% | -12.64% / -12.46% |
+| `complex/classes/simplenamespace.py` | 118.18% / 115.14% | 39.46% / 43.15% | 33.33% / 31.97% | 53.51% / 53.80% | 49.91% / 46.58% | -13.15% / -13.75% |
+| `complex/classes/sloted_classes.py` | 117.80% / 117.44% | 88.13% / 86.53% | 113.14% / 96.15% | 101.00% / 102.00% | 89.79% / 92.46% | 4.47% / -3.02% |
+| `complex/generators/simple.py` | 51.94% / 50.83% | 39.45% / 39.27% | 24.65% / 26.21% | 38.78% / 43.65% | 36.53% / 40.84% | -5.19% / -9.83% |
+| `dummy/dummy.py` | 130.21% / 125.62% | 77.93% / 80.08% | 79.39% / 78.83% | 96.60% / 94.95% | 103.86% / 104.76% | -22.83% / -21.70% |
+| `long_run/database/postgresql.py` | -19.95% / -21.34% | -21.94% / -20.89% | -20.92% / -21.17% | -7.45% / -6.58% | -15.89% / -15.41% | -15.08% / -14.27% |
 | `long_run/database/sqlite_.py` | -- / -- | -- / -- | -- / -- | -- / -- | -- / -- | -- / -- |
 | `long_run/file/load_titanic_csv_pandas.py` | -- / -- | -- / -- | -- / -- | -- / -- | -- / -- | -- / -- |
-| `long_run/file/load_titanic_csv_python.py` | -1.55% / -2.08% | -11.04% / -11.66% | -3.38% / -3.78% | 15.80% / 15.11% | 1.38% / 1.11% | -8.10% / -8.47% |
+| `long_run/file/load_titanic_csv_python.py` | 42.31% / 47.07% | 6.00% / 0.22% | -4.57% / -5.18% | 5.82% / 2.59% | 11.93% / 10.62% | -10.37% / -12.19% |
 | `long_run/processes/collect_names_from_site.py` | -- / -- | -- / -- | -- / -- | -- / -- | -- / -- | -- / -- |
 | `long_run/processes/generate_fake_data.py` | -- / -- | -- / -- | -- / -- | -- / -- | -- / -- | -- / -- |
-| `long_run/processes/maze_generator.py` | 80.28% / 83.07% | 78.53% / 77.72% | 64.46% / 58.46% | 72.01% / 76.46% | 33.03% / 32.97% | -13.30% / -11.26% |
-| `long_run/text/clean_text.py` | 0.59% / 0.72% | -8.44% / -8.23% | 1.55% / 1.74% | 9.79% / 9.56% | 2.18% / 1.23% | -8.42% / -9.11% |
-| `long_run/text/count_words.py` | 3.67% / 3.75% | -5.10% / -4.85% | 3.41% / 2.89% | 18.88% / 18.82% | 5.21% / 4.84% | -9.78% / -10.03% |
-| `math/haversine.py` | 3.54% / 0.65% | 10.64% / 7.97% | -3.68% / -5.09% | 9.81% / 7.09% | -6.91% / -8.98% | -20.98% / -22.46% |
+| `long_run/processes/maze_generator.py` | 64.88% / 64.37% | 67.55% / 70.86% | 62.89% / 61.23% | 74.74% / 79.07% | 32.61% / 29.90% | -4.43% / -2.68% |
+| `long_run/text/clean_text.py` | 12.27% / 9.13% | 0.94% / 1.58% | 0.18% / 0.04% | 6.11% / 5.83% | 7.10% / 5.63% | -4.43% / -5.24% |
+| `long_run/text/count_words.py` | 12.68% / 5.28% | 2.87% / 1.39% | -0.60% / -1.33% | 9.80% / 9.77% | 10.75% / 5.58% | -7.37% / -10.18% |
+| `math/haversine.py` | -13.40% / -14.77% | 8.90% / 6.55% | -6.16% / -6.93% | 12.59% / 9.53% | 4.75% / 1.56% | -10.31% / -11.72% |
 | `math/mandelbrot.py` | -- / -- | -- / -- | -- / -- | -- / -- | -- / -- | -- / -- |
-| `math/pow_simple.py` | 27.44% / 27.10% | 32.39% / 31.94% | 34.17% / 34.60% | 34.21% / 33.94% | 22.35% / 22.64% | -6.45% / -6.20% |
-| `math/pow_using_math.py` | 27.65% / 27.82% | 40.66% / 40.89% | 8.56% / 8.37% | 12.05% / 12.16% | 4.16% / 4.41% | -11.14% / -10.97% |
-| `modules/json/json_module.py` | 12.97% / 12.94% | 15.10% / 13.89% | 6.52% / 5.56% | 10.83% / 10.65% | 2.03% / 1.13% | -8.56% / -9.20% |
+| `math/pow_simple.py` | 102.73% / 103.15% | 157.64% / 151.89% | 115.11% / 115.83% | 146.90% / 147.25% | 118.82% / 118.99% | 14.66% / 13.36% |
+| `math/pow_using_math.py` | 13.60% / 11.48% | 43.11% / 43.22% | 9.54% / 8.10% | 20.12% / 18.15% | 18.97% / 18.35% | -3.75% / -3.55% |
+| `modules/json/json_module.py` | 23.65% / 25.52% | 21.09% / 23.02% | 19.76% / 24.30% | 23.68% / 25.93% | 9.69% / 12.04% | -3.07% / -1.53% |
 | `modules/json/orjson_module.py` | -- / -- | -- / -- | -- / -- | -- / -- | -- / -- | -- / -- |
 ---
 
 #### How much more memory 3.12 uses? (Memory diff from 3.6 to 3.11)
 | Command | 3.6 | 3.7 | 3.8 | 3.9 | 3.10 | 3.11 |
 |:---|---:|---:|---:|---:|---:|---:|
-| `algorithm/search/bin.py` | 24.25% | 20.86% | 19.84% | 10.81% | 8.6% | 0.93% |
-| `algorithm/search/hashmap_lookup.py` | 28.04% | 19.8% | 18.66% | 18.1% | 7.57% | 1.59% |
-| `algorithm/search/index.py` | 25.13% | 20.23% | 18.89% | 14.24% | 8.89% | -1.08% |
-| `algorithm/search/linear.py` | 22.65% | 18.63% | 18.17% | 14.83% | 8.77% | -2.04% |
-| `algorithm/twosum/twosum.py` | 24.27% | 29.98% | 28.36% | 17.9% | 15.4% | 2.4% |
-| `algorithm/twosum/twosum_naive.py` | 24.2% | 31.24% | 27.28% | 22.16% | 17.08% | 4.43% |
-| `complex/classes/classes.py` | 30.4% | 34.49% | 30.31% | 20.51% | 11.12% | 0.25% |
-| `complex/classes/dataclasses_.py` | -- | 30.22% | 26.58% | 15.41% | 9.85% | -1.92% |
-| `complex/classes/namedtuple_classes.py` | 24.58% | 31.3% | 29.08% | 19.15% | 15.62% | 1.79% |
-| `complex/classes/simplenamespace.py` | 34.76% | 41.07% | 34.5% | 29.23% | 15.55% | 3.41% |
-| `complex/classes/sloted_classes.py` | 29.25% | 35.34% | 30.19% | 24.45% | 10.73% | 2.29% |
-| `complex/generators/simple.py` | 31.81% | 38.47% | 32.26% | 21.84% | 12.52% | -0.08% |
-| `dummy/dummy.py` | 24.11% | 28.38% | 25.65% | 15.15% | 11.41% | -0.2% |
-| `long_run/database/postgresql.py` | 18.92% | 20.44% | 20.18% | 10.71% | 14.64% | 2.69% |
+| `algorithm/search/bin.py` | 20.61% | 18.58% | 17.51% | 9.47% | 3.85% | -1.96% |
+| `algorithm/search/hashmap_lookup.py` | 28.25% | 17.08% | 19.04% | 16.89% | 6.21% | -1.51% |
+| `algorithm/search/index.py` | 21.55% | 17.58% | 16.65% | 12.28% | 9.2% | -0.79% |
+| `algorithm/search/linear.py` | 20.63% | 14.5% | 17.16% | 13.83% | 8.45% | -3.23% |
+| `algorithm/twosum/twosum.py` | 23.68% | 29.02% | 24.64% | 16.02% | 15.48% | 0.94% |
+| `algorithm/twosum/twosum_naive.py` | 24.08% | 29.65% | 25.05% | 20.27% | 15.11% | 3.17% |
+| `complex/classes/classes.py` | 28.49% | 31.01% | 28.84% | 17.3% | 9.26% | -2.09% |
+| `complex/classes/dataclasses_.py` | -- | 33.41% | 27.38% | 16.79% | 7.14% | 1.05% |
+| `complex/classes/namedtuple_classes.py` | 26.24% | 32.09% | 28.53% | 19.4% | 16.16% | 3.17% |
+| `complex/classes/simplenamespace.py` | 34.51% | 38.28% | 31.37% | 26.43% | 13.47% | 2.16% |
+| `complex/classes/sloted_classes.py` | 28.27% | 32.8% | 27.5% | 22.29% | 10.6% | 0.83% |
+| `complex/generators/simple.py` | 34.06% | 39.22% | 36.15% | 22.9% | 12.84% | 3.71% |
+| `dummy/dummy.py` | 27.33% | 29.1% | 25.35% | 16.42% | 16.64% | 1.2% |
+| `long_run/database/postgresql.py` | 22.95% | 19.94% | 18.68% | 10.5% | 14.17% | 4.86% |
 | `long_run/database/sqlite_.py` | -- | -- | -- | -- | -- | -- |
 | `long_run/file/load_titanic_csv_pandas.py` | -- | -- | -- | -- | -- | -- |
-| `long_run/file/load_titanic_csv_python.py` | 25.34% | 31.82% | 27.0% | 18.42% | 20.05% | 3.53% |
+| `long_run/file/load_titanic_csv_python.py` | 27.02% | 31.04% | 27.35% | 18.27% | 19.45% | 3.65% |
 | `long_run/processes/collect_names_from_site.py` | -- | -- | -- | -- | -- | -- |
 | `long_run/processes/generate_fake_data.py` | -- | -- | -- | -- | -- | -- |
-| `long_run/processes/maze_generator.py` | 29.08% | 28.41% | 28.16% | 19.4% | 17.66% | 4.66% |
-| `long_run/text/clean_text.py` | 24.35% | 30.77% | 28.11% | 17.96% | 15.21% | 2.95% |
-| `long_run/text/count_words.py` | 23.07% | 27.34% | 24.39% | 12.93% | 11.04% | -0.24% |
-| `math/haversine.py` | 25.51% | 29.97% | 26.53% | 16.93% | 15.88% | 4.02% |
+| `long_run/processes/maze_generator.py` | 32.16% | 29.43% | 28.79% | 19.96% | 18.97% | 5.22% |
+| `long_run/text/clean_text.py` | 24.29% | 29.04% | 25.13% | 16.53% | 15.39% | 1.61% |
+| `long_run/text/count_words.py` | 26.98% | 29.46% | 25.74% | 15.31% | 13.25% | 2.89% |
+| `math/haversine.py` | 26.77% | 30.45% | 25.63% | 16.61% | 16.89% | 3.53% |
 | `math/mandelbrot.py` | -- | -- | -- | -- | -- | -- |
-| `math/pow_simple.py` | 25.99% | 29.55% | 25.04% | 16.19% | 15.98% | 3.05% |
-| `math/pow_using_math.py` | 27.79% | 31.57% | 28.79% | 17.85% | 14.18% | 3.88% |
-| `modules/json/json_module.py` | 30.61% | 27.51% | 30.14% | 20.85% | 18.5% | 6.17% |
+| `math/pow_simple.py` | 27.81% | 30.01% | 26.27% | 16.52% | 15.16% | 3.68% |
+| `math/pow_using_math.py` | 26.77% | 30.13% | 26.37% | 16.68% | 13.1% | 2.61% |
+| `modules/json/json_module.py` | 29.92% | 26.9% | 27.5% | 18.47% | 17.12% | 4.0% |
 | `modules/json/orjson_module.py` | -- | -- | -- | -- | -- | -- |
 ---
 
@@ -132,100 +132,100 @@ Please also check this metadata tags to put inside the program to be able to cha
 ##### **Mean [s]**
 | Command | 3.6 | 3.7 | 3.8 | 3.9 | 3.10 | 3.11 | 3.12 |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| `algorithm/search/bin.py` | 1.27713 | 1.20807 | 1.13802 | 1.2135 | 1.07966 | 0.91525 | 1.18876 |
-| `algorithm/search/hashmap_lookup.py` | 1.2848 | 1.22133 | 1.14648 | 1.20324 | 1.0739 | 0.92763 | 1.1778 |
-| `algorithm/search/index.py` | 1.30595 | 1.24223 | 1.1668 | 1.22284 | 1.07798 | 0.93233 | 1.21702 |
-| `algorithm/search/linear.py` | 1.3417 | 1.29059 | 1.20161 | 1.26642 | 1.1316 | 0.9671 | 1.25627 |
-| `algorithm/twosum/twosum.py` | 0.09821 | 0.07881 | 0.08965 | 0.1072 | 0.09991 | 0.0928 | 0.10748 |
-| `algorithm/twosum/twosum_naive.py` | 0.09801 | 0.07987 | 0.08959 | 0.10686 | 0.0959 | 0.0949 | 0.10875 |
-| `complex/classes/classes.py` | 0.0518 | 0.04381 | 0.047 | 0.0528 | 0.04809 | 0.02235 | 0.02691 |
-| `complex/classes/dataclasses_.py` | -- | 0.11715 | 0.12838 | 0.16721 | 0.1494 | 0.1402 | 0.16536 |
-| `complex/classes/namedtuple_classes.py` | 0.11213 | 0.09523 | 0.10014 | 0.1193 | 0.10715 | 0.10219 | 0.119 |
-| `complex/classes/simplenamespace.py` | 0.07214 | 0.04642 | 0.04895 | 0.05754 | 0.05149 | 0.02823 | 0.03354 |
-| `complex/classes/sloted_classes.py` | 0.05123 | 0.04405 | 0.04746 | 0.05408 | 0.04869 | 0.02258 | 0.02732 |
-| `complex/generators/simple.py` | 0.07782 | 0.07135 | 0.07117 | 0.07539 | 0.07143 | 0.04142 | 0.04797 |
-| `dummy/dummy.py` | 0.03874 | 0.03232 | 0.03484 | 0.04059 | 0.03736 | 0.01486 | 0.01758 |
-| `long_run/database/postgresql.py` | 0.17597 | 0.1619 | 0.18163 | 0.20998 | 0.18793 | 0.18797 | 0.22425 |
-| `long_run/database/sqlite_.py` | 0.6733 | 0.58248 | 0.65528 | 0.75904 | 0.67795 | 0.69879 | -- |
-| `long_run/file/load_titanic_csv_pandas.py` | 0.7612 | 0.65519 | 0.71629 | 0.78969 | 0.72022 | 0.74075 | -- |
-| `long_run/file/load_titanic_csv_python.py` | 0.08279 | 0.07481 | 0.08125 | 0.09738 | 0.08525 | 0.07728 | 0.08409 |
-| `long_run/processes/collect_names_from_site.py` | -- | -- | 1.34685 | 1.46051 | 1.36394 | 1.25255 | -- |
-| `long_run/processes/generate_fake_data.py` | 0.99163 | 0.89707 | 0.95807 | 1.05338 | 0.98424 | 0.96041 | -- |
-| `long_run/processes/maze_generator.py` | 0.24372 | 0.24135 | 0.22234 | 0.23254 | 0.17984 | 0.11721 | 0.13519 |
-| `long_run/text/clean_text.py` | 0.24863 | 0.22631 | 0.25099 | 0.27136 | 0.25254 | 0.22636 | 0.24716 |
-| `long_run/text/count_words.py` | 0.10457 | 0.09573 | 0.10431 | 0.11991 | 0.10613 | 0.091 | 0.10087 |
-| `math/haversine.py` | 0.71672 | 0.76586 | 0.66672 | 0.76014 | 0.64441 | 0.54696 | 0.69221 |
-| `math/mandelbrot.py` | 4.44783 | 4.29542 | 4.34127 | 3.9563 | 3.90774 | 3.90908 | -- |
-| `math/pow_simple.py` | 0.45454 | 0.47218 | 0.47855 | 0.47868 | 0.4364 | 0.33365 | 0.35667 |
-| `math/pow_using_math.py` | 1.40262 | 1.5456 | 1.19287 | 1.23121 | 1.14454 | 0.97641 | 1.09882 |
-| `modules/json/json_module.py` | 0.48117 | 0.49022 | 0.45371 | 0.47205 | 0.43458 | 0.38948 | 0.42592 |
-| `modules/json/orjson_module.py` | 0.32131 | 0.26375 | 0.31317 | 0.36978 | 0.35034 | 0.30252 | -- |
+| `algorithm/search/bin.py` | 1.69531 | 1.68654 | 1.48611 | 1.52999 | 1.42023 | 1.19427 | 1.38969 |
+| `algorithm/search/hashmap_lookup.py` | 1.73487 | 1.66957 | 1.44718 | 1.5409 | 1.42864 | 1.21232 | 1.38459 |
+| `algorithm/search/index.py` | 1.78044 | 1.69446 | 1.45126 | 1.52132 | 1.41971 | 1.21697 | 1.38865 |
+| `algorithm/search/linear.py` | 1.76945 | 1.71896 | 1.57514 | 1.58368 | 1.50093 | 1.26511 | 1.43582 |
+| `algorithm/twosum/twosum.py` | 0.09926 | 0.08039 | 0.07797 | 0.08876 | 0.09183 | 0.08893 | 0.104 |
+| `algorithm/twosum/twosum_naive.py` | 0.09111 | 0.08283 | 0.08023 | 0.09069 | 0.09176 | 0.0867 | 0.10192 |
+| `complex/classes/classes.py` | 0.05498 | 0.04864 | 0.05091 | 0.04884 | 0.04816 | 0.02575 | 0.02664 |
+| `complex/classes/dataclasses_.py` | -- | 0.12416 | 0.12794 | 0.14112 | 0.14756 | 0.13382 | 0.15316 |
+| `complex/classes/namedtuple_classes.py` | 0.11656 | 0.09552 | 0.11214 | 0.10732 | 0.1086 | 0.09859 | 0.11285 |
+| `complex/classes/simplenamespace.py` | 0.07514 | 0.04803 | 0.04592 | 0.05287 | 0.05163 | 0.02991 | 0.03444 |
+| `complex/classes/sloted_classes.py` | 0.05652 | 0.04882 | 0.05531 | 0.05216 | 0.04925 | 0.02711 | 0.02595 |
+| `complex/generators/simple.py` | 0.07957 | 0.07303 | 0.06528 | 0.07268 | 0.0715 | 0.04965 | 0.05237 |
+| `dummy/dummy.py` | 0.03932 | 0.03039 | 0.03064 | 0.03358 | 0.03482 | 0.01318 | 0.01708 |
+| `long_run/database/postgresql.py` | 0.16714 | 0.16298 | 0.16512 | 0.19325 | 0.17562 | 0.17732 | 0.2088 |
+| `long_run/database/sqlite_.py` | 0.64942 | 0.6225 | 0.63197 | 0.74685 | 0.7041 | 0.70201 | -- |
+| `long_run/file/load_titanic_csv_pandas.py` | 0.76741 | 0.66621 | 0.68714 | 0.755 | 0.76406 | 0.74635 | -- |
+| `long_run/file/load_titanic_csv_python.py` | 0.1117 | 0.0832 | 0.0749 | 0.08306 | 0.08785 | 0.07035 | 0.07849 |
+| `long_run/processes/collect_names_from_site.py` | -- | -- | 2.08503 | 2.247 | 2.13051 | 1.84199 | -- |
+| `long_run/processes/generate_fake_data.py` | 0.95498 | 0.92023 | 0.92717 | 1.02818 | 0.95808 | 0.93505 | -- |
+| `long_run/processes/maze_generator.py` | 0.36909 | 0.37506 | 0.36464 | 0.39116 | 0.29685 | 0.21394 | 0.22385 |
+| `long_run/text/clean_text.py` | 0.32017 | 0.28788 | 0.28569 | 0.30261 | 0.30544 | 0.27257 | 0.28519 |
+| `long_run/text/count_words.py` | 0.1069 | 0.09759 | 0.0943 | 0.10417 | 0.10507 | 0.08788 | 0.09487 |
+| `math/haversine.py` | 0.86711 | 1.09047 | 0.9396 | 1.12738 | 1.0489 | 0.8981 | 1.00133 |
+| `math/mandelbrot.py` | 3.67742 | 3.51183 | 3.52718 | 3.01772 | 3.00763 | 3.02417 | -- |
+| `math/pow_simple.py` | 0.72302 | 0.91884 | 0.76718 | 0.88054 | 0.7804 | 0.40891 | 0.35664 |
+| `math/pow_using_math.py` | 1.51287 | 1.90588 | 1.45879 | 1.59969 | 1.5844 | 1.28182 | 1.33177 |
+| `modules/json/json_module.py` | 0.56449 | 0.5528 | 0.54672 | 0.56462 | 0.50076 | 0.44251 | 0.45653 |
+| `modules/json/orjson_module.py` | 0.35224 | 0.28909 | 0.30919 | 0.3782 | 0.34723 | 0.29741 | -- |
 
 ##### **Median [s]**
 | Command | 3.6 | 3.7 | 3.8 | 3.9 | 3.10 | 3.11 | 3.12 |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| `algorithm/search/bin.py` | 1.27407 | 1.20534 | 1.1406 | 1.21128 | 1.07622 | 0.91422 | 1.1903 |
-| `algorithm/search/hashmap_lookup.py` | 1.27879 | 1.22236 | 1.14516 | 1.20166 | 1.07049 | 0.92235 | 1.17369 |
-| `algorithm/search/index.py` | 1.30885 | 1.23643 | 1.16962 | 1.21606 | 1.07468 | 0.93147 | 1.21627 |
-| `algorithm/search/linear.py` | 1.34022 | 1.29881 | 1.20344 | 1.2676 | 1.13058 | 0.96873 | 1.24821 |
-| `algorithm/twosum/twosum.py` | 0.09808 | 0.07873 | 0.08929 | 0.1071 | 0.10064 | 0.09229 | 0.10755 |
-| `algorithm/twosum/twosum_naive.py` | 0.09833 | 0.07967 | 0.0897 | 0.10688 | 0.09574 | 0.09487 | 0.10909 |
-| `complex/classes/classes.py` | 0.05173 | 0.04364 | 0.04689 | 0.05249 | 0.04745 | 0.02233 | 0.02676 |
-| `complex/classes/dataclasses_.py` | -- | 0.11758 | 0.12807 | 0.16691 | 0.14908 | 0.1398 | 0.1654 |
-| `complex/classes/namedtuple_classes.py` | 0.11177 | 0.09534 | 0.09962 | 0.11904 | 0.10707 | 0.10229 | 0.11914 |
-| `complex/classes/simplenamespace.py` | 0.07176 | 0.04677 | 0.04898 | 0.05763 | 0.05146 | 0.02814 | 0.03328 |
-| `complex/classes/sloted_classes.py` | 0.0513 | 0.04396 | 0.04795 | 0.05373 | 0.04849 | 0.02256 | 0.02719 |
-| `complex/generators/simple.py` | 0.07745 | 0.07087 | 0.07117 | 0.0753 | 0.07095 | 0.04144 | 0.04778 |
-| `dummy/dummy.py` | 0.03876 | 0.03206 | 0.0349 | 0.0404 | 0.03756 | 0.01457 | 0.01747 |
-| `long_run/database/postgresql.py` | 0.17599 | 0.16187 | 0.1819 | 0.21012 | 0.18844 | 0.18756 | 0.22418 |
-| `long_run/database/sqlite_.py` | 0.67382 | 0.58148 | 0.65603 | 0.75422 | 0.67549 | 0.69964 | -- |
-| `long_run/file/load_titanic_csv_pandas.py` | 0.75972 | 0.64772 | 0.71517 | 0.79098 | 0.71971 | 0.73884 | -- |
-| `long_run/file/load_titanic_csv_python.py` | 0.08266 | 0.07458 | 0.08123 | 0.09718 | 0.08536 | 0.07727 | 0.08442 |
-| `long_run/processes/collect_names_from_site.py` | -- | -- | 1.34902 | 1.46087 | 1.36372 | 1.25363 | -- |
-| `long_run/processes/generate_fake_data.py` | 0.98897 | 0.89715 | 0.95256 | 1.05401 | 0.9615 | 0.95839 | -- |
-| `long_run/processes/maze_generator.py` | 0.24383 | 0.23671 | 0.21105 | 0.23503 | 0.1771 | 0.11819 | 0.13319 |
-| `long_run/text/clean_text.py` | 0.24851 | 0.22643 | 0.25104 | 0.27033 | 0.24978 | 0.22427 | 0.24674 |
-| `long_run/text/count_words.py` | 0.10476 | 0.09607 | 0.10389 | 0.11997 | 0.10586 | 0.09084 | 0.10097 |
-| `math/haversine.py` | 0.70997 | 0.76162 | 0.66948 | 0.7554 | 0.64203 | 0.54695 | 0.70538 |
-| `math/mandelbrot.py` | 4.44472 | 4.3317 | 4.34022 | 3.93103 | 3.9056 | 3.89498 | -- |
-| `math/pow_simple.py` | 0.45229 | 0.4695 | 0.47898 | 0.47661 | 0.4364 | 0.33377 | 0.35585 |
-| `math/pow_using_math.py` | 1.40292 | 1.54636 | 1.18946 | 1.23105 | 1.14598 | 0.97711 | 1.09755 |
-| `modules/json/json_module.py` | 0.48212 | 0.4862 | 0.45062 | 0.47238 | 0.43171 | 0.38764 | 0.4269 |
-| `modules/json/orjson_module.py` | 0.32182 | 0.26325 | 0.31462 | 0.36873 | 0.35422 | 0.30243 | -- |
+| `algorithm/search/bin.py` | 1.69248 | 1.70177 | 1.47536 | 1.51353 | 1.42701 | 1.18451 | 1.38991 |
+| `algorithm/search/hashmap_lookup.py` | 1.7283 | 1.67377 | 1.44102 | 1.53524 | 1.415 | 1.21269 | 1.37474 |
+| `algorithm/search/index.py` | 1.7772 | 1.7006 | 1.44367 | 1.49521 | 1.42345 | 1.21515 | 1.38148 |
+| `algorithm/search/linear.py` | 1.7786 | 1.71668 | 1.55799 | 1.55767 | 1.47679 | 1.26278 | 1.43635 |
+| `algorithm/twosum/twosum.py` | 0.09234 | 0.08001 | 0.07793 | 0.08864 | 0.09054 | 0.08711 | 0.10287 |
+| `algorithm/twosum/twosum_naive.py` | 0.09204 | 0.08357 | 0.07986 | 0.08821 | 0.09139 | 0.08588 | 0.10404 |
+| `complex/classes/classes.py` | 0.05504 | 0.04594 | 0.05134 | 0.04857 | 0.04765 | 0.02552 | 0.02562 |
+| `complex/classes/dataclasses_.py` | -- | 0.12419 | 0.1243 | 0.14033 | 0.14643 | 0.13391 | 0.15423 |
+| `complex/classes/namedtuple_classes.py` | 0.11672 | 0.09393 | 0.10623 | 0.10611 | 0.10657 | 0.0972 | 0.11104 |
+| `complex/classes/simplenamespace.py` | 0.07274 | 0.0484 | 0.04462 | 0.052 | 0.04956 | 0.02916 | 0.03381 |
+| `complex/classes/sloted_classes.py` | 0.05536 | 0.04749 | 0.04994 | 0.05143 | 0.049 | 0.02469 | 0.02546 |
+| `complex/generators/simple.py` | 0.07751 | 0.07157 | 0.06486 | 0.07382 | 0.07238 | 0.04634 | 0.05139 |
+| `dummy/dummy.py` | 0.03795 | 0.03029 | 0.03008 | 0.03279 | 0.03444 | 0.01317 | 0.01682 |
+| `long_run/database/postgresql.py` | 0.16226 | 0.16319 | 0.16262 | 0.19271 | 0.1745 | 0.17684 | 0.20628 |
+| `long_run/database/sqlite_.py` | 0.64961 | 0.61686 | 0.63006 | 0.74705 | 0.70219 | 0.70141 | -- |
+| `long_run/file/load_titanic_csv_pandas.py` | 0.76594 | 0.66415 | 0.68559 | 0.74713 | 0.75719 | 0.7406 | -- |
+| `long_run/file/load_titanic_csv_python.py` | 0.11582 | 0.07892 | 0.07467 | 0.08079 | 0.08711 | 0.06915 | 0.07875 |
+| `long_run/processes/collect_names_from_site.py` | -- | -- | 2.08258 | 2.24778 | 2.13237 | 1.83253 | -- |
+| `long_run/processes/generate_fake_data.py` | 0.95223 | 0.91061 | 0.9216 | 0.99667 | 0.95443 | 0.93369 | -- |
+| `long_run/processes/maze_generator.py` | 0.36973 | 0.38434 | 0.36268 | 0.4028 | 0.2922 | 0.21891 | 0.22494 |
+| `long_run/text/clean_text.py` | 0.31083 | 0.28933 | 0.28495 | 0.30143 | 0.30086 | 0.2699 | 0.28483 |
+| `long_run/text/count_words.py` | 0.10033 | 0.09662 | 0.09403 | 0.10461 | 0.10062 | 0.0856 | 0.0953 |
+| `math/haversine.py` | 0.86199 | 1.07761 | 0.94126 | 1.10783 | 1.02721 | 0.89291 | 1.0114 |
+| `math/mandelbrot.py` | 3.67466 | 3.51841 | 3.53433 | 3.02291 | 3.00062 | 3.00532 | -- |
+| `math/pow_simple.py` | 0.724 | 0.8977 | 0.76919 | 0.88116 | 0.78045 | 0.40398 | 0.35638 |
+| `math/pow_using_math.py` | 1.4831 | 1.90539 | 1.43816 | 1.57183 | 1.57453 | 1.28307 | 1.33035 |
+| `modules/json/json_module.py` | 0.56295 | 0.55176 | 0.5575 | 0.56481 | 0.50252 | 0.44165 | 0.44851 |
+| `modules/json/orjson_module.py` | 0.34727 | 0.29147 | 0.31035 | 0.37767 | 0.34459 | 0.29638 | -- |
 
 #### **Memory Usage**
 
 ##### **MEM [MB]**
 | Command | 3.6 | 3.7 | 3.8 | 3.9 | 3.10 | 3.11 | 3.12 |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| `algorithm/search/bin.py` | 28.67132 | 29.47489 | 29.72545 | 32.149 | 32.80301 | 35.29353 | 35.62333 |
-| `algorithm/search/hashmap_lookup.py` | 28.15737 | 30.09375 | 30.38337 | 30.52623 | 33.51451 | 35.48828 | 36.0519 |
-| `algorithm/search/index.py` | 28.35268 | 29.50893 | 29.84263 | 31.05692 | 32.58092 | 35.86607 | 35.47879 |
-| `algorithm/search/linear.py` | 28.74777 | 29.72154 | 29.83761 | 30.7048 | 32.41518 | 35.99163 | 35.25893 |
-| `algorithm/twosum/twosum.py` | 22.2394 | 21.26172 | 21.52958 | 23.44085 | 23.94866 | 26.98772 | 27.63616 |
-| `algorithm/twosum/twosum_naive.py` | 22.28571 | 21.0904 | 21.74609 | 22.65681 | 23.64007 | 26.50502 | 27.67857 |
-| `complex/classes/classes.py` | 21.85714 | 21.19252 | 21.87277 | 23.65067 | 25.64955 | 28.43025 | 28.50223 |
-| `complex/classes/dataclasses_.py` | -- | 21.25837 | 21.86942 | 23.98605 | 25.20089 | 28.22377 | 27.68304 |
-| `complex/classes/namedtuple_classes.py` | 22.3298 | 21.18694 | 21.55078 | 23.34821 | 24.06138 | 27.32812 | 27.81864 |
-| `complex/classes/simplenamespace.py` | 21.88225 | 20.9029 | 21.92467 | 22.81808 | 25.51897 | 28.51618 | 29.48772 |
-| `complex/classes/sloted_classes.py` | 22.01451 | 21.02344 | 21.85603 | 22.86328 | 25.69531 | 27.81696 | 28.45368 |
-| `complex/generators/simple.py` | 22.03906 | 20.97879 | 21.96484 | 23.84152 | 25.81808 | 29.07422 | 29.04967 |
-| `dummy/dummy.py` | 21.69587 | 20.97321 | 21.43025 | 23.38337 | 24.16797 | 26.97991 | 26.92634 |
-| `long_run/database/postgresql.py` | 27.35826 | 27.01339 | 27.07143 | 29.3856 | 28.37946 | 31.68192 | 32.53404 |
-| `long_run/database/sqlite_.py` | 63.72154 | 66.4827 | 66.87667 | 67.2952 | 66.23382 | 72.75614 | -- |
-| `long_run/file/load_titanic_csv_pandas.py` | 62.23159 | 64.81473 | 65.21484 | 65.92969 | 65.05636 | 70.59208 | -- |
-| `long_run/file/load_titanic_csv_python.py` | 22.15513 | 21.06641 | 21.86551 | 23.45033 | 23.13114 | 26.82366 | 27.76953 |
-| `long_run/processes/collect_names_from_site.py` | -- | -- | 45.41295 | 45.34319 | 45.12556 | 47.41908 | -- |
-| `long_run/processes/generate_fake_data.py` | 64.86886 | 69.54074 | 66.45703 | 69.65234 | 68.62277 | 72.27902 | -- |
-| `long_run/processes/maze_generator.py` | 21.74833 | 21.86217 | 21.90346 | 23.51116 | 23.85826 | 26.82143 | 28.07254 |
-| `long_run/text/clean_text.py` | 22.28516 | 21.19029 | 21.63114 | 23.49275 | 24.05301 | 26.91741 | 27.71094 |
-| `long_run/text/count_words.py` | 21.75056 | 21.02065 | 21.51953 | 23.70368 | 24.10603 | 26.83147 | 26.76786 |
-| `math/haversine.py` | 21.89955 | 21.14732 | 21.72321 | 23.5067 | 23.71931 | 26.42411 | 27.48549 |
-| `math/mandelbrot.py` | 36.70033 | 35.65123 | 36.07533 | 38.54911 | 39.63895 | 40.90792 | -- |
-| `math/pow_simple.py` | 21.66518 | 21.07031 | 21.8298 | 23.49275 | 23.5346 | 26.48884 | 27.29576 |
-| `math/pow_using_math.py` | 21.66685 | 21.0452 | 21.49944 | 23.49386 | 24.24944 | 26.65346 | 27.68862 |
-| `modules/json/json_module.py` | 21.84152 | 22.37221 | 21.91964 | 23.60435 | 24.07366 | 26.86942 | 28.52623 |
-| `modules/json/orjson_module.py` | 22.5971 | 22.5865 | 22.4654 | 24.08371 | 24.60658 | 27.5173 | -- |
+| `algorithm/search/bin.py` | 28.94643 | 29.44141 | 29.70982 | 31.89174 | 33.61607 | 35.61049 | 34.91127 |
+| `algorithm/search/hashmap_lookup.py` | 28.02455 | 30.69922 | 30.19252 | 30.74777 | 33.8404 | 36.49219 | 35.94252 |
+| `algorithm/search/index.py` | 28.60045 | 29.56641 | 29.80357 | 30.96261 | 31.83705 | 35.04185 | 34.76507 |
+| `algorithm/search/linear.py` | 28.88616 | 30.43136 | 29.74275 | 30.61049 | 32.1317 | 36.00781 | 34.84542 |
+| `algorithm/twosum/twosum.py` | 22.02567 | 21.11384 | 21.85491 | 23.47824 | 23.58929 | 26.98661 | 27.24051 |
+| `algorithm/twosum/twosum_naive.py` | 22.01395 | 21.06752 | 21.84263 | 22.71094 | 23.72879 | 26.476 | 27.31473 |
+| `complex/classes/classes.py` | 21.71596 | 21.29799 | 21.65737 | 23.78683 | 25.53795 | 28.49833 | 27.9029 |
+| `complex/classes/dataclasses_.py` | -- | 21.0519 | 22.04799 | 24.04855 | 26.21373 | 27.79241 | 28.08538 |
+| `complex/classes/namedtuple_classes.py` | 22.17355 | 21.19196 | 21.77902 | 23.44308 | 24.09821 | 27.13281 | 27.99219 |
+| `complex/classes/simplenamespace.py` | 21.60603 | 21.01674 | 22.12221 | 22.98605 | 25.61161 | 28.44643 | 29.06194 |
+| `complex/classes/sloted_classes.py` | 21.83371 | 21.08929 | 21.96596 | 22.90179 | 25.32143 | 27.77679 | 28.00614 |
+| `complex/generators/simple.py` | 21.98661 | 21.17188 | 21.64844 | 23.98326 | 26.12165 | 28.42076 | 29.47489 |
+| `dummy/dummy.py` | 21.37054 | 21.07701 | 21.70759 | 23.37165 | 23.32757 | 26.88728 | 27.21038 |
+| `long_run/database/postgresql.py` | 26.32031 | 26.98103 | 27.26786 | 29.28683 | 28.34431 | 30.85937 | 32.36049 |
+| `long_run/database/sqlite_.py` | 62.976 | 66.14342 | 66.40402 | 66.93136 | 67.13225 | 72.41685 | -- |
+| `long_run/file/load_titanic_csv_pandas.py` | 61.7394 | 64.36217 | 64.89007 | 65.59487 | 64.68304 | 70.65123 | -- |
+| `long_run/file/load_titanic_csv_python.py` | 21.86049 | 21.19029 | 21.80413 | 23.47935 | 23.24609 | 26.78906 | 27.76786 |
+| `long_run/processes/collect_names_from_site.py` | -- | -- | 45.29074 | 45.43471 | 45.42913 | 47.59319 | -- |
+| `long_run/processes/generate_fake_data.py` | 64.4548 | 69.2779 | 66.60268 | 69.61217 | 68.57143 | 72.39621 | -- |
+| `long_run/processes/maze_generator.py` | 21.43527 | 21.88728 | 21.99609 | 23.61607 | 23.8125 | 26.92355 | 28.32868 |
+| `long_run/text/clean_text.py` | 22.05246 | 21.24107 | 21.90458 | 23.52176 | 23.75335 | 26.97545 | 27.40904 |
+| `long_run/text/count_words.py` | 21.49944 | 21.08705 | 21.7115 | 23.67522 | 24.10435 | 26.53348 | 27.29911 |
+| `math/haversine.py` | 21.58538 | 20.97656 | 21.78125 | 23.46652 | 23.40848 | 26.42969 | 27.36328 |
+| `math/mandelbrot.py` | 36.28571 | 35.39174 | 35.88616 | 43.63393 | 39.4135 | 40.95201 | -- |
+| `math/pow_simple.py` | 21.43025 | 21.06752 | 21.69196 | 23.50725 | 23.78404 | 26.41908 | 27.39062 |
+| `math/pow_using_math.py` | 21.58259 | 21.02511 | 21.65067 | 23.44978 | 24.19085 | 26.66574 | 27.36049 |
+| `modules/json/json_module.py` | 21.59877 | 22.11328 | 22.00781 | 23.68694 | 23.95926 | 26.98047 | 28.06083 |
+| `modules/json/orjson_module.py` | 22.26563 | 22.46373 | 22.38728 | 24.07366 | 24.56585 | 26.90458 | -- |
 
 ---
 
@@ -235,50 +235,51 @@ Please also check this metadata tags to put inside the program to be able to cha
 ```bash
 Python 3.6.15
 
-Linux c41c48ec88b3 5.19.0-1025-aws unknown GNU/Linux
+Linux 152c60f30b6b 5.15.0-78-generic unknown GNU/Linux
 
-CPU(s):                          4
+CPU(s):                          12
 Thread(s) per core:              2
-Core(s) per socket:              2
+Core(s) per socket:              6
 NUMA node(s):                    1
-Model name:                      Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz
-NUMA node0 CPU(s):               0-3
+Model name:                      Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
+CPU max MHz:                     4100.0000
+NUMA node0 CPU(s):               0-11
 
-MemTotal:        7621152 kB
-MemFree:          607052 kB
-MemAvailable:    6901504 kB
+MemTotal:       16066528 kB
+MemFree:          906176 kB
+MemAvailable:    7365140 kB
 ```
 
 | Command | Executed | Mean [s] | Stddev [s] | Median [s] | Min [s] | Max [s] | Memory [MB] |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| `algorithm/search/bin.py` | yes | 1.27713 | 0.02156 | 1.27407 | 1.25251 | 1.30198 | 28.67132 |
-| `algorithm/search/hashmap_lookup.py` | yes | 1.2848 | 0.0108 | 1.27879 | 1.27616 | 1.30225 | 28.15737 |
-| `algorithm/search/index.py` | yes | 1.30595 | 0.01406 | 1.30885 | 1.28371 | 1.32217 | 28.35268 |
-| `algorithm/search/linear.py` | yes | 1.3417 | 0.02777 | 1.34022 | 1.30133 | 1.38769 | 28.74777 |
-| `algorithm/twosum/twosum.py` | yes | 0.09821 | 0.00101 | 0.09808 | 0.09669 | 0.09968 | 22.2394 |
-| `algorithm/twosum/twosum_naive.py` | yes | 0.09801 | 0.00086 | 0.09833 | 0.0967 | 0.09928 | 22.28571 |
-| `complex/classes/classes.py` | yes | 0.0518 | 0.0006 | 0.05173 | 0.0507 | 0.05257 | 21.85714 |
+| `algorithm/search/bin.py` | yes | 1.69531 | 0.0286 | 1.69248 | 1.66043 | 1.73026 | 28.94643 |
+| `algorithm/search/hashmap_lookup.py` | yes | 1.73487 | 0.04248 | 1.7283 | 1.69035 | 1.79462 | 28.02455 |
+| `algorithm/search/index.py` | yes | 1.78044 | 0.06586 | 1.7772 | 1.71313 | 1.8984 | 28.60045 |
+| `algorithm/search/linear.py` | yes | 1.76945 | 0.02091 | 1.7786 | 1.74255 | 1.78962 | 28.88616 |
+| `algorithm/twosum/twosum.py` | yes | 0.09926 | 0.01232 | 0.09234 | 0.08897 | 0.12252 | 22.02567 |
+| `algorithm/twosum/twosum_naive.py` | yes | 0.09111 | 0.00456 | 0.09204 | 0.08646 | 0.09753 | 22.01395 |
+| `complex/classes/classes.py` | yes | 0.05498 | 0.00202 | 0.05504 | 0.05256 | 0.05881 | 21.71596 |
 | `complex/classes/dataclasses_.py` | no | -1 | -1 | -1 | -1 | -1 | -1 |
-| `complex/classes/namedtuple_classes.py` | yes | 0.11213 | 0.00168 | 0.11177 | 0.11004 | 0.11484 | 22.3298 |
-| `complex/classes/simplenamespace.py` | yes | 0.07214 | 0.00087 | 0.07176 | 0.07133 | 0.07391 | 21.88225 |
-| `complex/classes/sloted_classes.py` | yes | 0.05123 | 0.00047 | 0.0513 | 0.05035 | 0.05173 | 22.01451 |
-| `complex/generators/simple.py` | yes | 0.07782 | 0.00089 | 0.07745 | 0.07672 | 0.0789 | 22.03906 |
-| `dummy/dummy.py` | yes | 0.03874 | 0.00023 | 0.03876 | 0.03839 | 0.03907 | 21.69587 |
-| `long_run/database/postgresql.py` | yes | 0.17597 | 0.00192 | 0.17599 | 0.17302 | 0.17855 | 27.35826 |
-| `long_run/database/sqlite_.py` | yes | 0.6733 | 0.00516 | 0.67382 | 0.66621 | 0.67933 | 63.72154 |
-| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.7612 | 0.00421 | 0.75972 | 0.75776 | 0.76964 | 62.23159 |
-| `long_run/file/load_titanic_csv_python.py` | yes | 0.08279 | 0.0005 | 0.08266 | 0.08237 | 0.08383 | 22.15513 |
+| `complex/classes/namedtuple_classes.py` | yes | 0.11656 | 0.00331 | 0.11672 | 0.1117 | 0.12136 | 22.17355 |
+| `complex/classes/simplenamespace.py` | yes | 0.07514 | 0.00446 | 0.07274 | 0.0711 | 0.08137 | 21.60603 |
+| `complex/classes/sloted_classes.py` | yes | 0.05652 | 0.00203 | 0.05536 | 0.05471 | 0.06001 | 21.83371 |
+| `complex/generators/simple.py` | yes | 0.07957 | 0.00468 | 0.07751 | 0.07581 | 0.08766 | 21.98661 |
+| `dummy/dummy.py` | yes | 0.03932 | 0.00464 | 0.03795 | 0.03566 | 0.0496 | 21.37054 |
+| `long_run/database/postgresql.py` | yes | 0.16714 | 0.01119 | 0.16226 | 0.15803 | 0.18534 | 26.32031 |
+| `long_run/database/sqlite_.py` | yes | 0.64942 | 0.00918 | 0.64961 | 0.63972 | 0.66284 | 62.976 |
+| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.76741 | 0.02737 | 0.76594 | 0.73531 | 0.82307 | 61.7394 |
+| `long_run/file/load_titanic_csv_python.py` | yes | 0.1117 | 0.02303 | 0.11582 | 0.07812 | 0.13697 | 21.86049 |
 | `long_run/processes/collect_names_from_site.py` | no | -1 | -1 | -1 | -1 | -1 | -1 |
-| `long_run/processes/generate_fake_data.py` | yes | 0.99163 | 0.0097 | 0.98897 | 0.98337 | 1.00868 | 64.86886 |
-| `long_run/processes/maze_generator.py` | yes | 0.24372 | 0.00909 | 0.24383 | 0.22887 | 0.25943 | 21.74833 |
-| `long_run/text/clean_text.py` | yes | 0.24863 | 0.00151 | 0.24851 | 0.24574 | 0.25043 | 22.28516 |
-| `long_run/text/count_words.py` | yes | 0.10457 | 0.00074 | 0.10476 | 0.10342 | 0.10534 | 21.75056 |
-| `math/haversine.py` | yes | 0.71672 | 0.01928 | 0.70997 | 0.70618 | 0.76019 | 21.89955 |
-| `math/mandelbrot.py` | yes | 4.44783 | 0.02077 | 4.44472 | 4.42295 | 4.47602 | 36.70033 |
-| `math/pow_simple.py` | yes | 0.45454 | 0.00404 | 0.45229 | 0.45144 | 0.46249 | 21.66518 |
-| `math/pow_using_math.py` | yes | 1.40262 | 0.0075 | 1.40292 | 1.39223 | 1.41349 | 21.66685 |
-| `modules/json/json_module.py` | yes | 0.48117 | 0.00495 | 0.48212 | 0.47467 | 0.48908 | 21.84152 |
-| `modules/json/orjson_module.py` | yes | 0.32131 | 0.00314 | 0.32182 | 0.3159 | 0.32527 | 22.5971 |
+| `long_run/processes/generate_fake_data.py` | yes | 0.95498 | 0.038 | 0.95223 | 0.89409 | 1.00144 | 64.4548 |
+| `long_run/processes/maze_generator.py` | yes | 0.36909 | 0.01771 | 0.36973 | 0.33707 | 0.39495 | 21.43527 |
+| `long_run/text/clean_text.py` | yes | 0.32017 | 0.02399 | 0.31083 | 0.29766 | 0.35427 | 22.05246 |
+| `long_run/text/count_words.py` | yes | 0.1069 | 0.0134 | 0.10033 | 0.09558 | 0.13464 | 21.49944 |
+| `math/haversine.py` | yes | 0.86711 | 0.01601 | 0.86199 | 0.85481 | 0.90179 | 21.58538 |
+| `math/mandelbrot.py` | yes | 3.67742 | 0.08522 | 3.67466 | 3.60726 | 3.85764 | 36.28571 |
+| `math/pow_simple.py` | yes | 0.72302 | 0.013 | 0.724 | 0.70116 | 0.73813 | 21.43025 |
+| `math/pow_using_math.py` | yes | 1.51287 | 0.0536 | 1.4831 | 1.46343 | 1.61973 | 21.58259 |
+| `modules/json/json_module.py` | yes | 0.56449 | 0.00869 | 0.56295 | 0.55054 | 0.57608 | 21.59877 |
+| `modules/json/orjson_module.py` | yes | 0.35224 | 0.02189 | 0.34727 | 0.33621 | 0.39988 | 22.26563 |
 
 
 ### **Python 3.7**
@@ -286,50 +287,51 @@ MemAvailable:    6901504 kB
 ```bash
 Python 3.7.17
 
-Linux 63921dff2e60 5.19.0-1025-aws unknown GNU/Linux
+Linux 431021ab462b 5.15.0-78-generic unknown GNU/Linux
 
-CPU(s):                          4
-Model name:                      Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz
+CPU(s):                          12
+Model name:                      Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
 Thread(s) per core:              2
-Core(s) per socket:              2
+Core(s) per socket:              6
+CPU max MHz:                     4100.0000
 NUMA node(s):                    1
-NUMA node0 CPU(s):               0-3
+NUMA node0 CPU(s):               0-11
 
-MemTotal:        7621152 kB
-MemFree:          611068 kB
-MemAvailable:    6908448 kB
+MemTotal:       16066528 kB
+MemFree:          502960 kB
+MemAvailable:    7024844 kB
 ```
 
 | Command | Executed | Mean [s] | Stddev [s] | Median [s] | Min [s] | Max [s] | Memory [MB] |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| `algorithm/search/bin.py` | yes | 1.20807 | 0.02046 | 1.20534 | 1.17806 | 1.24398 | 29.47489 |
-| `algorithm/search/hashmap_lookup.py` | yes | 1.22133 | 0.01116 | 1.22236 | 1.20856 | 1.23663 | 30.09375 |
-| `algorithm/search/index.py` | yes | 1.24223 | 0.01993 | 1.23643 | 1.22399 | 1.28352 | 29.50893 |
-| `algorithm/search/linear.py` | yes | 1.29059 | 0.01755 | 1.29881 | 1.26507 | 1.31229 | 29.72154 |
-| `algorithm/twosum/twosum.py` | yes | 0.07881 | 0.00036 | 0.07873 | 0.07835 | 0.07943 | 21.26172 |
-| `algorithm/twosum/twosum_naive.py` | yes | 0.07987 | 0.00079 | 0.07967 | 0.0792 | 0.08137 | 21.0904 |
-| `complex/classes/classes.py` | yes | 0.04381 | 0.00057 | 0.04364 | 0.04342 | 0.04503 | 21.19252 |
-| `complex/classes/dataclasses_.py` | yes | 0.11715 | 0.00084 | 0.11758 | 0.11585 | 0.11797 | 21.25837 |
-| `complex/classes/namedtuple_classes.py` | yes | 0.09523 | 0.00073 | 0.09534 | 0.09392 | 0.09601 | 21.18694 |
-| `complex/classes/simplenamespace.py` | yes | 0.04642 | 0.00157 | 0.04677 | 0.04446 | 0.0493 | 20.9029 |
-| `complex/classes/sloted_classes.py` | yes | 0.04405 | 0.00067 | 0.04396 | 0.04333 | 0.04522 | 21.02344 |
-| `complex/generators/simple.py` | yes | 0.07135 | 0.0017 | 0.07087 | 0.06924 | 0.07376 | 20.97879 |
-| `dummy/dummy.py` | yes | 0.03232 | 0.00073 | 0.03206 | 0.03173 | 0.03376 | 20.97321 |
-| `long_run/database/postgresql.py` | yes | 0.1619 | 0.00132 | 0.16187 | 0.16009 | 0.16363 | 27.01339 |
-| `long_run/database/sqlite_.py` | yes | 0.58248 | 0.00445 | 0.58148 | 0.57778 | 0.59116 | 66.4827 |
-| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.65519 | 0.01598 | 0.64772 | 0.6417 | 0.67944 | 64.81473 |
-| `long_run/file/load_titanic_csv_python.py` | yes | 0.07481 | 0.00093 | 0.07458 | 0.07349 | 0.07645 | 21.06641 |
+| `algorithm/search/bin.py` | yes | 1.68654 | 0.04204 | 1.70177 | 1.62229 | 1.74018 | 29.44141 |
+| `algorithm/search/hashmap_lookup.py` | yes | 1.66957 | 0.0166 | 1.67377 | 1.64803 | 1.69448 | 30.69922 |
+| `algorithm/search/index.py` | yes | 1.69446 | 0.01957 | 1.7006 | 1.65483 | 1.71691 | 29.56641 |
+| `algorithm/search/linear.py` | yes | 1.71896 | 0.03596 | 1.71668 | 1.67119 | 1.77302 | 30.43136 |
+| `algorithm/twosum/twosum.py` | yes | 0.08039 | 0.0024 | 0.08001 | 0.07694 | 0.08299 | 21.11384 |
+| `algorithm/twosum/twosum_naive.py` | yes | 0.08283 | 0.00222 | 0.08357 | 0.0792 | 0.08525 | 21.06752 |
+| `complex/classes/classes.py` | yes | 0.04864 | 0.00431 | 0.04594 | 0.04491 | 0.05538 | 21.29799 |
+| `complex/classes/dataclasses_.py` | yes | 0.12416 | 0.00351 | 0.12419 | 0.12004 | 0.12886 | 21.0519 |
+| `complex/classes/namedtuple_classes.py` | yes | 0.09552 | 0.00313 | 0.09393 | 0.09283 | 0.10104 | 21.19196 |
+| `complex/classes/simplenamespace.py` | yes | 0.04803 | 0.00173 | 0.0484 | 0.04557 | 0.04996 | 21.01674 |
+| `complex/classes/sloted_classes.py` | yes | 0.04882 | 0.0042 | 0.04749 | 0.04488 | 0.05708 | 21.08929 |
+| `complex/generators/simple.py` | yes | 0.07303 | 0.00432 | 0.07157 | 0.06945 | 0.08209 | 21.17188 |
+| `dummy/dummy.py` | yes | 0.03039 | 0.00143 | 0.03029 | 0.02866 | 0.03234 | 21.07701 |
+| `long_run/database/postgresql.py` | yes | 0.16298 | 0.00531 | 0.16319 | 0.15732 | 0.17191 | 26.98103 |
+| `long_run/database/sqlite_.py` | yes | 0.6225 | 0.01723 | 0.61686 | 0.60365 | 0.65491 | 66.14342 |
+| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.66621 | 0.0141 | 0.66415 | 0.65273 | 0.68741 | 64.36217 |
+| `long_run/file/load_titanic_csv_python.py` | yes | 0.0832 | 0.00824 | 0.07892 | 0.07399 | 0.09554 | 21.19029 |
 | `long_run/processes/collect_names_from_site.py` | no | -1 | -1 | -1 | -1 | -1 | -1 |
-| `long_run/processes/generate_fake_data.py` | yes | 0.89707 | 0.00485 | 0.89715 | 0.89108 | 0.90384 | 69.54074 |
-| `long_run/processes/maze_generator.py` | yes | 0.24135 | 0.01426 | 0.23671 | 0.22136 | 0.26085 | 21.86217 |
-| `long_run/text/clean_text.py` | yes | 0.22631 | 0.00116 | 0.22643 | 0.22454 | 0.22762 | 21.19029 |
-| `long_run/text/count_words.py` | yes | 0.09573 | 0.00049 | 0.09607 | 0.09501 | 0.09619 | 21.02065 |
-| `math/haversine.py` | yes | 0.76586 | 0.01197 | 0.76162 | 0.75019 | 0.78546 | 21.14732 |
-| `math/mandelbrot.py` | yes | 4.29542 | 0.10277 | 4.3317 | 4.06281 | 4.34342 | 35.65123 |
-| `math/pow_simple.py` | yes | 0.47218 | 0.00532 | 0.4695 | 0.46836 | 0.48272 | 21.07031 |
-| `math/pow_using_math.py` | yes | 1.5456 | 0.02017 | 1.54636 | 1.52396 | 1.57576 | 21.0452 |
-| `modules/json/json_module.py` | yes | 0.49022 | 0.01301 | 0.4862 | 0.47696 | 0.5092 | 22.37221 |
-| `modules/json/orjson_module.py` | yes | 0.26375 | 0.00275 | 0.26325 | 0.26076 | 0.26817 | 22.5865 |
+| `long_run/processes/generate_fake_data.py` | yes | 0.92023 | 0.02964 | 0.91061 | 0.89688 | 0.98086 | 69.2779 |
+| `long_run/processes/maze_generator.py` | yes | 0.37506 | 0.02785 | 0.38434 | 0.3388 | 0.4126 | 21.88728 |
+| `long_run/text/clean_text.py` | yes | 0.28788 | 0.00651 | 0.28933 | 0.28006 | 0.2979 | 21.24107 |
+| `long_run/text/count_words.py` | yes | 0.09759 | 0.00428 | 0.09662 | 0.09213 | 0.10607 | 21.08705 |
+| `math/haversine.py` | yes | 1.09047 | 0.04401 | 1.07761 | 1.05379 | 1.17172 | 20.97656 |
+| `math/mandelbrot.py` | yes | 3.51183 | 0.0568 | 3.51841 | 3.43401 | 3.59024 | 35.39174 |
+| `math/pow_simple.py` | yes | 0.91884 | 0.07288 | 0.8977 | 0.86559 | 1.07916 | 21.06752 |
+| `math/pow_using_math.py` | yes | 1.90588 | 0.04481 | 1.90539 | 1.82763 | 1.95792 | 21.02511 |
+| `modules/json/json_module.py` | yes | 0.5528 | 0.01505 | 0.55176 | 0.52993 | 0.57525 | 22.11328 |
+| `modules/json/orjson_module.py` | yes | 0.28909 | 0.00891 | 0.29147 | 0.27422 | 0.2996 | 22.46373 |
 
 
 ### **Python 3.8**
@@ -337,50 +339,51 @@ MemAvailable:    6908448 kB
 ```bash
 Python 3.8.17
 
-Linux f5a5bdf10e0a 5.19.0-1025-aws unknown GNU/Linux
+Linux d578ded9e5f1 5.15.0-78-generic unknown GNU/Linux
 
-CPU(s):                          4
-Model name:                      Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz
+CPU(s):                          12
+Model name:                      Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
 Thread(s) per core:              2
-Core(s) per socket:              2
+Core(s) per socket:              6
+CPU max MHz:                     4100.0000
 NUMA node(s):                    1
-NUMA node0 CPU(s):               0-3
+NUMA node0 CPU(s):               0-11
 
-MemTotal:        7621152 kB
-MemFree:          608580 kB
-MemAvailable:    6900080 kB
+MemTotal:       16066528 kB
+MemFree:         1163104 kB
+MemAvailable:    7239908 kB
 ```
 
 | Command | Executed | Mean [s] | Stddev [s] | Median [s] | Min [s] | Max [s] | Memory [MB] |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| `algorithm/search/bin.py` | yes | 1.13802 | 0.01197 | 1.1406 | 1.11944 | 1.15803 | 29.72545 |
-| `algorithm/search/hashmap_lookup.py` | yes | 1.14648 | 0.0128 | 1.14516 | 1.12668 | 1.1645 | 30.38337 |
-| `algorithm/search/index.py` | yes | 1.1668 | 0.01155 | 1.16962 | 1.15203 | 1.18158 | 29.84263 |
-| `algorithm/search/linear.py` | yes | 1.20161 | 0.01172 | 1.20344 | 1.18131 | 1.21965 | 29.83761 |
-| `algorithm/twosum/twosum.py` | yes | 0.08965 | 0.00233 | 0.08929 | 0.08785 | 0.09456 | 21.52958 |
-| `algorithm/twosum/twosum_naive.py` | yes | 0.08959 | 0.00124 | 0.0897 | 0.08797 | 0.09128 | 21.74609 |
-| `complex/classes/classes.py` | yes | 0.047 | 0.00048 | 0.04689 | 0.04656 | 0.04801 | 21.87277 |
-| `complex/classes/dataclasses_.py` | yes | 0.12838 | 0.00074 | 0.12807 | 0.12769 | 0.12949 | 21.86942 |
-| `complex/classes/namedtuple_classes.py` | yes | 0.10014 | 0.00173 | 0.09962 | 0.09843 | 0.1029 | 21.55078 |
-| `complex/classes/simplenamespace.py` | yes | 0.04895 | 0.00086 | 0.04898 | 0.04747 | 0.04987 | 21.92467 |
-| `complex/classes/sloted_classes.py` | yes | 0.04746 | 0.00097 | 0.04795 | 0.04633 | 0.04853 | 21.85603 |
-| `complex/generators/simple.py` | yes | 0.07117 | 0.00044 | 0.07117 | 0.0706 | 0.07187 | 21.96484 |
-| `dummy/dummy.py` | yes | 0.03484 | 0.00029 | 0.0349 | 0.0345 | 0.03522 | 21.43025 |
-| `long_run/database/postgresql.py` | yes | 0.18163 | 0.00239 | 0.1819 | 0.1785 | 0.18588 | 27.07143 |
-| `long_run/database/sqlite_.py` | yes | 0.65528 | 0.00377 | 0.65603 | 0.64954 | 0.66097 | 66.87667 |
-| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.71629 | 0.00475 | 0.71517 | 0.7107 | 0.72579 | 65.21484 |
-| `long_run/file/load_titanic_csv_python.py` | yes | 0.08125 | 0.00044 | 0.08123 | 0.08081 | 0.08213 | 21.86551 |
-| `long_run/processes/collect_names_from_site.py` | yes | 1.34685 | 0.00775 | 1.34902 | 1.33363 | 1.3552 | 45.41295 |
-| `long_run/processes/generate_fake_data.py` | yes | 0.95807 | 0.01161 | 0.95256 | 0.94987 | 0.98032 | 66.45703 |
-| `long_run/processes/maze_generator.py` | yes | 0.22234 | 0.02377 | 0.21105 | 0.19989 | 0.26247 | 21.90346 |
-| `long_run/text/clean_text.py` | yes | 0.25099 | 0.00151 | 0.25104 | 0.24917 | 0.25347 | 21.63114 |
-| `long_run/text/count_words.py` | yes | 0.10431 | 0.00124 | 0.10389 | 0.10308 | 0.10609 | 21.51953 |
-| `math/haversine.py` | yes | 0.66672 | 0.00808 | 0.66948 | 0.65634 | 0.67979 | 21.72321 |
-| `math/mandelbrot.py` | yes | 4.34127 | 0.02779 | 4.34022 | 4.31014 | 4.38704 | 36.07533 |
-| `math/pow_simple.py` | yes | 0.47855 | 0.00256 | 0.47898 | 0.47527 | 0.48292 | 21.8298 |
-| `math/pow_using_math.py` | yes | 1.19287 | 0.0093 | 1.18946 | 1.18634 | 1.21274 | 21.49944 |
-| `modules/json/json_module.py` | yes | 0.45371 | 0.01927 | 0.45062 | 0.43696 | 0.49453 | 21.91964 |
-| `modules/json/orjson_module.py` | yes | 0.31317 | 0.00341 | 0.31462 | 0.30678 | 0.31644 | 22.4654 |
+| `algorithm/search/bin.py` | yes | 1.48611 | 0.03808 | 1.47536 | 1.44586 | 1.54807 | 29.70982 |
+| `algorithm/search/hashmap_lookup.py` | yes | 1.44718 | 0.038 | 1.44102 | 1.41415 | 1.52858 | 30.19252 |
+| `algorithm/search/index.py` | yes | 1.45126 | 0.01856 | 1.44367 | 1.43135 | 1.47583 | 29.80357 |
+| `algorithm/search/linear.py` | yes | 1.57514 | 0.04515 | 1.55799 | 1.52072 | 1.65575 | 29.74275 |
+| `algorithm/twosum/twosum.py` | yes | 0.07797 | 0.00174 | 0.07793 | 0.0757 | 0.08085 | 21.85491 |
+| `algorithm/twosum/twosum_naive.py` | yes | 0.08023 | 0.00232 | 0.07986 | 0.07763 | 0.08334 | 21.84263 |
+| `complex/classes/classes.py` | yes | 0.05091 | 0.00173 | 0.05134 | 0.04828 | 0.05344 | 21.65737 |
+| `complex/classes/dataclasses_.py` | yes | 0.12794 | 0.01321 | 0.1243 | 0.11604 | 0.1488 | 22.04799 |
+| `complex/classes/namedtuple_classes.py` | yes | 0.11214 | 0.01378 | 0.10623 | 0.10127 | 0.14061 | 21.77902 |
+| `complex/classes/simplenamespace.py` | yes | 0.04592 | 0.00247 | 0.04462 | 0.04414 | 0.05094 | 22.12221 |
+| `complex/classes/sloted_classes.py` | yes | 0.05531 | 0.01521 | 0.04994 | 0.04707 | 0.08952 | 21.96596 |
+| `complex/generators/simple.py` | yes | 0.06528 | 0.00121 | 0.06486 | 0.06431 | 0.06791 | 21.64844 |
+| `dummy/dummy.py` | yes | 0.03064 | 0.00116 | 0.03008 | 0.02943 | 0.03226 | 21.70759 |
+| `long_run/database/postgresql.py` | yes | 0.16512 | 0.00882 | 0.16262 | 0.15604 | 0.18043 | 27.26786 |
+| `long_run/database/sqlite_.py` | yes | 0.63197 | 0.00695 | 0.63006 | 0.62241 | 0.64178 | 66.40402 |
+| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.68714 | 0.00812 | 0.68559 | 0.67663 | 0.70132 | 64.89007 |
+| `long_run/file/load_titanic_csv_python.py` | yes | 0.0749 | 0.00201 | 0.07467 | 0.07253 | 0.0778 | 21.80413 |
+| `long_run/processes/collect_names_from_site.py` | yes | 2.08503 | 0.04712 | 2.08258 | 2.03015 | 2.17065 | 45.29074 |
+| `long_run/processes/generate_fake_data.py` | yes | 0.92717 | 0.05745 | 0.9216 | 0.84944 | 1.01262 | 66.60268 |
+| `long_run/processes/maze_generator.py` | yes | 0.36464 | 0.03289 | 0.36268 | 0.32862 | 0.41551 | 21.99609 |
+| `long_run/text/clean_text.py` | yes | 0.28569 | 0.00204 | 0.28495 | 0.28306 | 0.28852 | 21.90458 |
+| `long_run/text/count_words.py` | yes | 0.0943 | 0.0008 | 0.09403 | 0.09339 | 0.09541 | 21.7115 |
+| `math/haversine.py` | yes | 0.9396 | 0.02614 | 0.94126 | 0.90543 | 0.9884 | 21.78125 |
+| `math/mandelbrot.py` | yes | 3.52718 | 0.09432 | 3.53433 | 3.4126 | 3.68553 | 35.88616 |
+| `math/pow_simple.py` | yes | 0.76718 | 0.01162 | 0.76919 | 0.75245 | 0.78224 | 21.69196 |
+| `math/pow_using_math.py` | yes | 1.45879 | 0.05511 | 1.43816 | 1.40365 | 1.55084 | 21.65067 |
+| `modules/json/json_module.py` | yes | 0.54672 | 0.02363 | 0.5575 | 0.51442 | 0.57367 | 22.00781 |
+| `modules/json/orjson_module.py` | yes | 0.30919 | 0.00791 | 0.31035 | 0.30048 | 0.32093 | 22.38728 |
 
 
 ### **Python 3.9**
@@ -388,50 +391,51 @@ MemAvailable:    6900080 kB
 ```bash
 Python 3.9.17
 
-Linux 058e914cb63f 5.19.0-1025-aws unknown GNU/Linux
+Linux 4b0297861900 5.15.0-78-generic unknown GNU/Linux
 
-CPU(s):                          4
-Model name:                      Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz
+CPU(s):                          12
+Model name:                      Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
 Thread(s) per core:              2
-Core(s) per socket:              2
+Core(s) per socket:              6
+CPU max MHz:                     4100.0000
 NUMA node(s):                    1
-NUMA node0 CPU(s):               0-3
+NUMA node0 CPU(s):               0-11
 
-MemTotal:        7621152 kB
-MemFree:          614984 kB
-MemAvailable:    6908456 kB
+MemTotal:       16066528 kB
+MemFree:         1292016 kB
+MemAvailable:    7426312 kB
 ```
 
 | Command | Executed | Mean [s] | Stddev [s] | Median [s] | Min [s] | Max [s] | Memory [MB] |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| `algorithm/search/bin.py` | yes | 1.2135 | 0.02145 | 1.21128 | 1.1903 | 1.25501 | 32.149 |
-| `algorithm/search/hashmap_lookup.py` | yes | 1.20324 | 0.00547 | 1.20166 | 1.19864 | 1.21152 | 30.52623 |
-| `algorithm/search/index.py` | yes | 1.22284 | 0.02171 | 1.21606 | 1.19513 | 1.26263 | 31.05692 |
-| `algorithm/search/linear.py` | yes | 1.26642 | 0.01316 | 1.2676 | 1.24842 | 1.28499 | 30.7048 |
-| `algorithm/twosum/twosum.py` | yes | 0.1072 | 0.00038 | 0.1071 | 0.10688 | 0.10792 | 23.44085 |
-| `algorithm/twosum/twosum_naive.py` | yes | 0.10686 | 0.00035 | 0.10688 | 0.10632 | 0.10732 | 22.65681 |
-| `complex/classes/classes.py` | yes | 0.0528 | 0.00071 | 0.05249 | 0.05239 | 0.05437 | 23.65067 |
-| `complex/classes/dataclasses_.py` | yes | 0.16721 | 0.00125 | 0.16691 | 0.16585 | 0.1693 | 23.98605 |
-| `complex/classes/namedtuple_classes.py` | yes | 0.1193 | 0.00159 | 0.11904 | 0.11735 | 0.12192 | 23.34821 |
-| `complex/classes/simplenamespace.py` | yes | 0.05754 | 0.00057 | 0.05763 | 0.05683 | 0.0584 | 22.81808 |
-| `complex/classes/sloted_classes.py` | yes | 0.05408 | 0.00127 | 0.05373 | 0.05269 | 0.05551 | 22.86328 |
-| `complex/generators/simple.py` | yes | 0.07539 | 0.00075 | 0.0753 | 0.07419 | 0.0764 | 23.84152 |
-| `dummy/dummy.py` | yes | 0.04059 | 0.00055 | 0.0404 | 0.04018 | 0.0418 | 23.38337 |
-| `long_run/database/postgresql.py` | yes | 0.20998 | 0.00106 | 0.21012 | 0.20846 | 0.21171 | 29.3856 |
-| `long_run/database/sqlite_.py` | yes | 0.75904 | 0.02529 | 0.75422 | 0.72986 | 0.79073 | 67.2952 |
-| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.78969 | 0.00248 | 0.79098 | 0.78609 | 0.79148 | 65.92969 |
-| `long_run/file/load_titanic_csv_python.py` | yes | 0.09738 | 0.00059 | 0.09718 | 0.09644 | 0.09834 | 23.45033 |
-| `long_run/processes/collect_names_from_site.py` | yes | 1.46051 | 0.01309 | 1.46087 | 1.4417 | 1.4822 | 45.34319 |
-| `long_run/processes/generate_fake_data.py` | yes | 1.05338 | 0.00754 | 1.05401 | 1.04177 | 1.06204 | 69.65234 |
-| `long_run/processes/maze_generator.py` | yes | 0.23254 | 0.0138 | 0.23503 | 0.21507 | 0.25264 | 23.51116 |
-| `long_run/text/clean_text.py` | yes | 0.27136 | 0.00211 | 0.27033 | 0.26949 | 0.27542 | 23.49275 |
-| `long_run/text/count_words.py` | yes | 0.11991 | 0.00062 | 0.11997 | 0.11918 | 0.12079 | 23.70368 |
-| `math/haversine.py` | yes | 0.76014 | 0.01354 | 0.7554 | 0.74912 | 0.78435 | 23.5067 |
-| `math/mandelbrot.py` | yes | 3.9563 | 0.07458 | 3.93103 | 3.88585 | 4.09464 | 38.54911 |
-| `math/pow_simple.py` | yes | 0.47868 | 0.00395 | 0.47661 | 0.47597 | 0.48672 | 23.49275 |
-| `math/pow_using_math.py` | yes | 1.23121 | 0.00969 | 1.23105 | 1.2193 | 1.2447 | 23.49386 |
-| `modules/json/json_module.py` | yes | 0.47205 | 0.00386 | 0.47238 | 0.46563 | 0.4772 | 23.60435 |
-| `modules/json/orjson_module.py` | yes | 0.36978 | 0.00557 | 0.36873 | 0.36423 | 0.38172 | 24.08371 |
+| `algorithm/search/bin.py` | yes | 1.52999 | 0.03554 | 1.51353 | 1.50066 | 1.60229 | 31.89174 |
+| `algorithm/search/hashmap_lookup.py` | yes | 1.5409 | 0.04514 | 1.53524 | 1.49782 | 1.63361 | 30.74777 |
+| `algorithm/search/index.py` | yes | 1.52132 | 0.04486 | 1.49521 | 1.48254 | 1.59392 | 30.96261 |
+| `algorithm/search/linear.py` | yes | 1.58368 | 0.06525 | 1.55767 | 1.53902 | 1.72605 | 30.61049 |
+| `algorithm/twosum/twosum.py` | yes | 0.08876 | 0.00081 | 0.08864 | 0.08776 | 0.0899 | 23.47824 |
+| `algorithm/twosum/twosum_naive.py` | yes | 0.09069 | 0.00507 | 0.08821 | 0.08779 | 0.10163 | 22.71094 |
+| `complex/classes/classes.py` | yes | 0.04884 | 0.00099 | 0.04857 | 0.04801 | 0.05069 | 23.78683 |
+| `complex/classes/dataclasses_.py` | yes | 0.14112 | 0.00218 | 0.14033 | 0.13908 | 0.14545 | 24.04855 |
+| `complex/classes/namedtuple_classes.py` | yes | 0.10732 | 0.00349 | 0.10611 | 0.10454 | 0.11469 | 23.44308 |
+| `complex/classes/simplenamespace.py` | yes | 0.05287 | 0.00196 | 0.052 | 0.05121 | 0.05641 | 22.98605 |
+| `complex/classes/sloted_classes.py` | yes | 0.05216 | 0.00317 | 0.05143 | 0.04892 | 0.05695 | 22.90179 |
+| `complex/generators/simple.py` | yes | 0.07268 | 0.003 | 0.07382 | 0.0677 | 0.07611 | 23.98326 |
+| `dummy/dummy.py` | yes | 0.03358 | 0.00144 | 0.03279 | 0.03243 | 0.03625 | 23.37165 |
+| `long_run/database/postgresql.py` | yes | 0.19325 | 0.00415 | 0.19271 | 0.18788 | 0.20055 | 29.28683 |
+| `long_run/database/sqlite_.py` | yes | 0.74685 | 0.00596 | 0.74705 | 0.73905 | 0.75732 | 66.93136 |
+| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.755 | 0.02583 | 0.74713 | 0.72695 | 0.80512 | 65.59487 |
+| `long_run/file/load_titanic_csv_python.py` | yes | 0.08306 | 0.00519 | 0.08079 | 0.07981 | 0.09449 | 23.47935 |
+| `long_run/processes/collect_names_from_site.py` | yes | 2.247 | 0.02937 | 2.24778 | 2.20957 | 2.28906 | 45.43471 |
+| `long_run/processes/generate_fake_data.py` | yes | 1.02818 | 0.11211 | 0.99667 | 0.92754 | 1.26572 | 69.61217 |
+| `long_run/processes/maze_generator.py` | yes | 0.39116 | 0.02851 | 0.4028 | 0.35381 | 0.42467 | 23.61607 |
+| `long_run/text/clean_text.py` | yes | 0.30261 | 0.00655 | 0.30143 | 0.29524 | 0.3109 | 23.52176 |
+| `long_run/text/count_words.py` | yes | 0.10417 | 0.00166 | 0.10461 | 0.10134 | 0.10622 | 23.67522 |
+| `math/haversine.py` | yes | 1.12738 | 0.06222 | 1.10783 | 1.08634 | 1.26022 | 23.46652 |
+| `math/mandelbrot.py` | yes | 3.01772 | 0.03416 | 3.02291 | 2.97208 | 3.06044 | 43.63393 |
+| `math/pow_simple.py` | yes | 0.88054 | 0.01867 | 0.88116 | 0.86103 | 0.91757 | 23.50725 |
+| `math/pow_using_math.py` | yes | 1.59969 | 0.06046 | 1.57183 | 1.5478 | 1.72002 | 23.44978 |
+| `modules/json/json_module.py` | yes | 0.56462 | 0.01527 | 0.56481 | 0.5479 | 0.59287 | 23.68694 |
+| `modules/json/orjson_module.py` | yes | 0.3782 | 0.01037 | 0.37767 | 0.36461 | 0.39881 | 24.07366 |
 
 
 ### **Python 3.10**
@@ -439,50 +443,51 @@ MemAvailable:    6908456 kB
 ```bash
 Python 3.10.12
 
-Linux 134d12a6dd2d 5.19.0-1025-aws unknown GNU/Linux
+Linux 135bb4be7dee 5.15.0-78-generic unknown GNU/Linux
 
-CPU(s):                          4
-Model name:                      Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz
+CPU(s):                          12
+Model name:                      Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
 Thread(s) per core:              2
-Core(s) per socket:              2
+Core(s) per socket:              6
+CPU max MHz:                     4100.0000
 NUMA node(s):                    1
-NUMA node0 CPU(s):               0-3
+NUMA node0 CPU(s):               0-11
 
-MemTotal:        7621152 kB
-MemFree:          601912 kB
-MemAvailable:    6895992 kB
+MemTotal:       16066528 kB
+MemFree:         1372992 kB
+MemAvailable:    7551252 kB
 ```
 
 | Command | Executed | Mean [s] | Stddev [s] | Median [s] | Min [s] | Max [s] | Memory [MB] |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| `algorithm/search/bin.py` | yes | 1.07966 | 0.01333 | 1.07622 | 1.06661 | 1.09939 | 32.80301 |
-| `algorithm/search/hashmap_lookup.py` | yes | 1.0739 | 0.01054 | 1.07049 | 1.0603 | 1.09396 | 33.51451 |
-| `algorithm/search/index.py` | yes | 1.07798 | 0.00507 | 1.07468 | 1.07412 | 1.08555 | 32.58092 |
-| `algorithm/search/linear.py` | yes | 1.1316 | 0.00962 | 1.13058 | 1.11572 | 1.14431 | 32.41518 |
-| `algorithm/twosum/twosum.py` | yes | 0.09991 | 0.00109 | 0.10064 | 0.09788 | 0.10069 | 23.94866 |
-| `algorithm/twosum/twosum_naive.py` | yes | 0.0959 | 0.00053 | 0.09574 | 0.09538 | 0.09698 | 23.64007 |
-| `complex/classes/classes.py` | yes | 0.04809 | 0.00096 | 0.04745 | 0.04721 | 0.04952 | 25.64955 |
-| `complex/classes/dataclasses_.py` | yes | 0.1494 | 0.00193 | 0.14908 | 0.14704 | 0.15307 | 25.20089 |
-| `complex/classes/namedtuple_classes.py` | yes | 0.10715 | 0.00052 | 0.10707 | 0.10649 | 0.10787 | 24.06138 |
-| `complex/classes/simplenamespace.py` | yes | 0.05149 | 0.00109 | 0.05146 | 0.04982 | 0.05281 | 25.51897 |
-| `complex/classes/sloted_classes.py` | yes | 0.04869 | 0.00106 | 0.04849 | 0.04747 | 0.05049 | 25.69531 |
-| `complex/generators/simple.py` | yes | 0.07143 | 0.00111 | 0.07095 | 0.06996 | 0.07298 | 25.81808 |
-| `dummy/dummy.py` | yes | 0.03736 | 0.00036 | 0.03756 | 0.03689 | 0.03771 | 24.16797 |
-| `long_run/database/postgresql.py` | yes | 0.18793 | 0.0016 | 0.18844 | 0.18505 | 0.1898 | 28.37946 |
-| `long_run/database/sqlite_.py` | yes | 0.67795 | 0.004 | 0.67549 | 0.67435 | 0.68321 | 66.23382 |
-| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.72022 | 0.00328 | 0.71971 | 0.71663 | 0.72575 | 65.05636 |
-| `long_run/file/load_titanic_csv_python.py` | yes | 0.08525 | 0.00094 | 0.08536 | 0.08342 | 0.08639 | 23.13114 |
-| `long_run/processes/collect_names_from_site.py` | yes | 1.36394 | 0.0058 | 1.36372 | 1.35756 | 1.37173 | 45.12556 |
-| `long_run/processes/generate_fake_data.py` | yes | 0.98424 | 0.03621 | 0.9615 | 0.95173 | 1.03624 | 68.62277 |
-| `long_run/processes/maze_generator.py` | yes | 0.17984 | 0.01033 | 0.1771 | 0.16939 | 0.19422 | 23.85826 |
-| `long_run/text/clean_text.py` | yes | 0.25254 | 0.0049 | 0.24978 | 0.24725 | 0.25809 | 24.05301 |
-| `long_run/text/count_words.py` | yes | 0.10613 | 0.00118 | 0.10586 | 0.10467 | 0.10846 | 24.10603 |
-| `math/haversine.py` | yes | 0.64441 | 0.00462 | 0.64203 | 0.6401 | 0.65121 | 23.71931 |
-| `math/mandelbrot.py` | yes | 3.90774 | 0.04005 | 3.9056 | 3.84921 | 3.95446 | 39.63895 |
-| `math/pow_simple.py` | yes | 0.4364 | 0.00441 | 0.4364 | 0.42838 | 0.44211 | 23.5346 |
-| `math/pow_using_math.py` | yes | 1.14454 | 0.00651 | 1.14598 | 1.13331 | 1.15196 | 24.24944 |
-| `modules/json/json_module.py` | yes | 0.43458 | 0.00606 | 0.43171 | 0.43021 | 0.44694 | 24.07366 |
-| `modules/json/orjson_module.py` | yes | 0.35034 | 0.01059 | 0.35422 | 0.33433 | 0.36354 | 24.60658 |
+| `algorithm/search/bin.py` | yes | 1.42023 | 0.03124 | 1.42701 | 1.36869 | 1.45266 | 33.61607 |
+| `algorithm/search/hashmap_lookup.py` | yes | 1.42864 | 0.0374 | 1.415 | 1.38669 | 1.49025 | 33.8404 |
+| `algorithm/search/index.py` | yes | 1.41971 | 0.01657 | 1.42345 | 1.39805 | 1.44727 | 31.83705 |
+| `algorithm/search/linear.py` | yes | 1.50093 | 0.07284 | 1.47679 | 1.44744 | 1.65269 | 32.1317 |
+| `algorithm/twosum/twosum.py` | yes | 0.09183 | 0.00305 | 0.09054 | 0.08918 | 0.09818 | 23.58929 |
+| `algorithm/twosum/twosum_naive.py` | yes | 0.09176 | 0.00234 | 0.09139 | 0.08803 | 0.09556 | 23.72879 |
+| `complex/classes/classes.py` | yes | 0.04816 | 0.00152 | 0.04765 | 0.04644 | 0.05097 | 25.53795 |
+| `complex/classes/dataclasses_.py` | yes | 0.14756 | 0.00816 | 0.14643 | 0.13896 | 0.16409 | 26.21373 |
+| `complex/classes/namedtuple_classes.py` | yes | 0.1086 | 0.00771 | 0.10657 | 0.10236 | 0.12443 | 24.09821 |
+| `complex/classes/simplenamespace.py` | yes | 0.05163 | 0.00362 | 0.04956 | 0.04897 | 0.05902 | 25.61161 |
+| `complex/classes/sloted_classes.py` | yes | 0.04925 | 0.00343 | 0.049 | 0.04588 | 0.05607 | 25.32143 |
+| `complex/generators/simple.py` | yes | 0.0715 | 0.00297 | 0.07238 | 0.06694 | 0.07487 | 26.12165 |
+| `dummy/dummy.py` | yes | 0.03482 | 0.00224 | 0.03444 | 0.0325 | 0.03864 | 23.32757 |
+| `long_run/database/postgresql.py` | yes | 0.17562 | 0.00357 | 0.1745 | 0.1714 | 0.18295 | 28.34431 |
+| `long_run/database/sqlite_.py` | yes | 0.7041 | 0.01069 | 0.70219 | 0.69058 | 0.72303 | 67.13225 |
+| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.76406 | 0.02301 | 0.75719 | 0.72907 | 0.80157 | 64.68304 |
+| `long_run/file/load_titanic_csv_python.py` | yes | 0.08785 | 0.01193 | 0.08711 | 0.07725 | 0.11118 | 23.24609 |
+| `long_run/processes/collect_names_from_site.py` | yes | 2.13051 | 0.03427 | 2.13237 | 2.0958 | 2.19766 | 45.42913 |
+| `long_run/processes/generate_fake_data.py` | yes | 0.95808 | 0.0161 | 0.95443 | 0.94568 | 0.99148 | 68.57143 |
+| `long_run/processes/maze_generator.py` | yes | 0.29685 | 0.02849 | 0.2922 | 0.26384 | 0.34283 | 23.8125 |
+| `long_run/text/clean_text.py` | yes | 0.30544 | 0.0096 | 0.30086 | 0.29538 | 0.32249 | 23.75335 |
+| `long_run/text/count_words.py` | yes | 0.10507 | 0.01116 | 0.10062 | 0.09853 | 0.12995 | 24.10435 |
+| `math/haversine.py` | yes | 1.0489 | 0.05102 | 1.02721 | 1.00428 | 1.13781 | 23.40848 |
+| `math/mandelbrot.py` | yes | 3.00763 | 0.05877 | 3.00062 | 2.90885 | 3.10253 | 39.4135 |
+| `math/pow_simple.py` | yes | 0.7804 | 0.01098 | 0.78045 | 0.76935 | 0.79894 | 23.78404 |
+| `math/pow_using_math.py` | yes | 1.5844 | 0.07123 | 1.57453 | 1.50591 | 1.71379 | 24.19085 |
+| `modules/json/json_module.py` | yes | 0.50076 | 0.00874 | 0.50252 | 0.48682 | 0.5104 | 23.95926 |
+| `modules/json/orjson_module.py` | yes | 0.34723 | 0.01042 | 0.34459 | 0.33544 | 0.36574 | 24.56585 |
 
 
 ### **Python 3.11**
@@ -490,99 +495,101 @@ MemAvailable:    6895992 kB
 ```bash
 Python 3.11.4
 
-Linux 2061df3a5467 5.19.0-1025-aws unknown GNU/Linux
+Linux bc865f15ca28 5.15.0-78-generic unknown GNU/Linux
 
-CPU(s):                          4
-Model name:                      Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz
+CPU(s):                          12
+Model name:                      Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
 Thread(s) per core:              2
-Core(s) per socket:              2
+Core(s) per socket:              6
+CPU max MHz:                     4100.0000
 NUMA node(s):                    1
-NUMA node0 CPU(s):               0-3
+NUMA node0 CPU(s):               0-11
 
-MemTotal:        7621152 kB
-MemFree:          617740 kB
-MemAvailable:    6912544 kB
+MemTotal:       16066528 kB
+MemFree:         1338560 kB
+MemAvailable:    7552692 kB
 ```
 
 | Command | Executed | Mean [s] | Stddev [s] | Median [s] | Min [s] | Max [s] | Memory [MB] |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| `algorithm/search/bin.py` | yes | 0.91525 | 0.00423 | 0.91422 | 0.90983 | 0.92319 | 35.29353 |
-| `algorithm/search/hashmap_lookup.py` | yes | 0.92763 | 0.01581 | 0.92235 | 0.91173 | 0.95203 | 35.48828 |
-| `algorithm/search/index.py` | yes | 0.93233 | 0.00718 | 0.93147 | 0.92357 | 0.94515 | 35.86607 |
-| `algorithm/search/linear.py` | yes | 0.9671 | 0.00558 | 0.96873 | 0.95987 | 0.97307 | 35.99163 |
-| `algorithm/twosum/twosum.py` | yes | 0.0928 | 0.00189 | 0.09229 | 0.09094 | 0.09668 | 26.98772 |
-| `algorithm/twosum/twosum_naive.py` | yes | 0.0949 | 0.00158 | 0.09487 | 0.09248 | 0.09696 | 26.50502 |
-| `complex/classes/classes.py` | yes | 0.02235 | 0.00013 | 0.02233 | 0.02218 | 0.02251 | 28.43025 |
-| `complex/classes/dataclasses_.py` | yes | 0.1402 | 0.00115 | 0.1398 | 0.13895 | 0.14201 | 28.22377 |
-| `complex/classes/namedtuple_classes.py` | yes | 0.10219 | 0.00138 | 0.10229 | 0.10074 | 0.10468 | 27.32812 |
-| `complex/classes/simplenamespace.py` | yes | 0.02823 | 0.00061 | 0.02814 | 0.02779 | 0.02958 | 28.51618 |
-| `complex/classes/sloted_classes.py` | yes | 0.02258 | 0.00021 | 0.02256 | 0.02231 | 0.02293 | 27.81696 |
-| `complex/generators/simple.py` | yes | 0.04142 | 0.00035 | 0.04144 | 0.0408 | 0.04185 | 29.07422 |
-| `dummy/dummy.py` | yes | 0.01486 | 0.00064 | 0.01457 | 0.01453 | 0.0163 | 26.97991 |
-| `long_run/database/postgresql.py` | yes | 0.18797 | 0.00099 | 0.18756 | 0.18717 | 0.18985 | 31.68192 |
-| `long_run/database/sqlite_.py` | yes | 0.69879 | 0.00291 | 0.69964 | 0.69313 | 0.7022 | 72.75614 |
-| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.74075 | 0.00571 | 0.73884 | 0.73479 | 0.74854 | 70.59208 |
-| `long_run/file/load_titanic_csv_python.py` | yes | 0.07728 | 0.00088 | 0.07727 | 0.07603 | 0.07871 | 26.82366 |
-| `long_run/processes/collect_names_from_site.py` | yes | 1.25255 | 0.00551 | 1.25363 | 1.24525 | 1.25908 | 47.41908 |
-| `long_run/processes/generate_fake_data.py` | yes | 0.96041 | 0.00674 | 0.95839 | 0.9533 | 0.96906 | 72.27902 |
-| `long_run/processes/maze_generator.py` | yes | 0.11721 | 0.0067 | 0.11819 | 0.1071 | 0.12366 | 26.82143 |
-| `long_run/text/clean_text.py` | yes | 0.22636 | 0.00486 | 0.22427 | 0.22199 | 0.23415 | 26.91741 |
-| `long_run/text/count_words.py` | yes | 0.091 | 0.00082 | 0.09084 | 0.08967 | 0.09202 | 26.83147 |
-| `math/haversine.py` | yes | 0.54696 | 0.00293 | 0.54695 | 0.54348 | 0.55038 | 26.42411 |
-| `math/mandelbrot.py` | yes | 3.90908 | 0.06111 | 3.89498 | 3.83415 | 3.99161 | 40.90792 |
-| `math/pow_simple.py` | yes | 0.33365 | 0.00509 | 0.33377 | 0.32695 | 0.34363 | 26.48884 |
-| `math/pow_using_math.py` | yes | 0.97641 | 0.0066 | 0.97711 | 0.96405 | 0.98501 | 26.65346 |
-| `modules/json/json_module.py` | yes | 0.38948 | 0.01231 | 0.38764 | 0.37558 | 0.41071 | 26.86942 |
-| `modules/json/orjson_module.py` | yes | 0.30252 | 0.00179 | 0.30243 | 0.3003 | 0.30474 | 27.5173 |
+| `algorithm/search/bin.py` | yes | 1.19427 | 0.01876 | 1.18451 | 1.17773 | 1.2214 | 35.61049 |
+| `algorithm/search/hashmap_lookup.py` | yes | 1.21232 | 0.0185 | 1.21269 | 1.18281 | 1.23777 | 36.49219 |
+| `algorithm/search/index.py` | yes | 1.21697 | 0.01139 | 1.21515 | 1.20313 | 1.23487 | 35.04185 |
+| `algorithm/search/linear.py` | yes | 1.26511 | 0.02226 | 1.26278 | 1.2351 | 1.29525 | 36.00781 |
+| `algorithm/twosum/twosum.py` | yes | 0.08893 | 0.00685 | 0.08711 | 0.08202 | 0.10188 | 26.98661 |
+| `algorithm/twosum/twosum_naive.py` | yes | 0.0867 | 0.00438 | 0.08588 | 0.08324 | 0.09629 | 26.476 |
+| `complex/classes/classes.py` | yes | 0.02575 | 0.00096 | 0.02552 | 0.02441 | 0.0272 | 28.49833 |
+| `complex/classes/dataclasses_.py` | yes | 0.13382 | 0.0035 | 0.13391 | 0.12904 | 0.13988 | 27.79241 |
+| `complex/classes/namedtuple_classes.py` | yes | 0.09859 | 0.00393 | 0.0972 | 0.09521 | 0.10617 | 27.13281 |
+| `complex/classes/simplenamespace.py` | yes | 0.02991 | 0.0016 | 0.02916 | 0.02842 | 0.03293 | 28.44643 |
+| `complex/classes/sloted_classes.py` | yes | 0.02711 | 0.00437 | 0.02469 | 0.02371 | 0.0351 | 27.77679 |
+| `complex/generators/simple.py` | yes | 0.04965 | 0.00895 | 0.04634 | 0.04426 | 0.06954 | 28.42076 |
+| `dummy/dummy.py` | yes | 0.01318 | 0.00069 | 0.01317 | 0.01226 | 0.01437 | 26.88728 |
+| `long_run/database/postgresql.py` | yes | 0.17732 | 0.00496 | 0.17684 | 0.17044 | 0.18365 | 30.85937 |
+| `long_run/database/sqlite_.py` | yes | 0.70201 | 0.00656 | 0.70141 | 0.69259 | 0.71198 | 72.41685 |
+| `long_run/file/load_titanic_csv_pandas.py` | yes | 0.74635 | 0.01467 | 0.7406 | 0.73553 | 0.77747 | 70.65123 |
+| `long_run/file/load_titanic_csv_python.py` | yes | 0.07035 | 0.00468 | 0.06915 | 0.06575 | 0.07733 | 26.78906 |
+| `long_run/processes/collect_names_from_site.py` | yes | 1.84199 | 0.02654 | 1.83253 | 1.81599 | 1.89465 | 47.59319 |
+| `long_run/processes/generate_fake_data.py` | yes | 0.93505 | 0.0098 | 0.93369 | 0.92008 | 0.94921 | 72.39621 |
+| `long_run/processes/maze_generator.py` | yes | 0.21394 | 0.01898 | 0.21891 | 0.17747 | 0.23484 | 26.92355 |
+| `long_run/text/clean_text.py` | yes | 0.27257 | 0.00788 | 0.2699 | 0.2634 | 0.28459 | 26.97545 |
+| `long_run/text/count_words.py` | yes | 0.08788 | 0.00662 | 0.0856 | 0.08233 | 0.10231 | 26.53348 |
+| `math/haversine.py` | yes | 0.8981 | 0.02549 | 0.89291 | 0.87284 | 0.9476 | 26.42969 |
+| `math/mandelbrot.py` | yes | 3.02417 | 0.06202 | 3.00532 | 2.94607 | 3.12749 | 40.95201 |
+| `math/pow_simple.py` | yes | 0.40891 | 0.0277 | 0.40398 | 0.37459 | 0.44364 | 26.41908 |
+| `math/pow_using_math.py` | yes | 1.28182 | 0.03635 | 1.28307 | 1.24687 | 1.35324 | 26.66574 |
+| `modules/json/json_module.py` | yes | 0.44251 | 0.00804 | 0.44165 | 0.42789 | 0.45346 | 26.98047 |
+| `modules/json/orjson_module.py` | yes | 0.29741 | 0.0092 | 0.29638 | 0.28525 | 0.3138 | 26.90458 |
 
 
 ### **Python 3.12**
 
 ```bash
-Python 3.12.0b4
+Python 3.12.0rc1
 
-Linux e21070b4cad5 5.19.0-1025-aws unknown GNU/Linux
+Linux 405e066f186e 5.15.0-78-generic unknown GNU/Linux
 
-CPU(s):                          4
-Model name:                      Intel(R) Xeon(R) CPU E5-2666 v3 @ 2.90GHz
+CPU(s):                          12
+Model name:                      Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
 Thread(s) per core:              2
-Core(s) per socket:              2
+Core(s) per socket:              6
+CPU max MHz:                     4100.0000
 NUMA node(s):                    1
-NUMA node0 CPU(s):               0-3
+NUMA node0 CPU(s):               0-11
 
-MemTotal:        7621152 kB
-MemFree:          602788 kB
-MemAvailable:    6897028 kB
+MemTotal:       16066528 kB
+MemFree:         1160948 kB
+MemAvailable:    7630888 kB
 ```
 
 | Command | Executed | Mean [s] | Stddev [s] | Median [s] | Min [s] | Max [s] | Memory [MB] |
 |:---|---:|---:|---:|---:|---:|---:|---:|
-| `algorithm/search/bin.py` | yes | 1.18876 | 0.01352 | 1.1903 | 1.17282 | 1.21409 | 35.62333 |
-| `algorithm/search/hashmap_lookup.py` | yes | 1.1778 | 0.01378 | 1.17369 | 1.16593 | 1.20442 | 36.0519 |
-| `algorithm/search/index.py` | yes | 1.21702 | 0.01214 | 1.21627 | 1.19822 | 1.23386 | 35.47879 |
-| `algorithm/search/linear.py` | yes | 1.25627 | 0.01766 | 1.24821 | 1.23562 | 1.27754 | 35.25893 |
-| `algorithm/twosum/twosum.py` | yes | 0.10748 | 0.00039 | 0.10755 | 0.10702 | 0.10799 | 27.63616 |
-| `algorithm/twosum/twosum_naive.py` | yes | 0.10875 | 0.00136 | 0.10909 | 0.10686 | 0.11051 | 27.67857 |
-| `complex/classes/classes.py` | yes | 0.02691 | 0.00073 | 0.02676 | 0.02626 | 0.02846 | 28.50223 |
-| `complex/classes/dataclasses_.py` | yes | 0.16536 | 0.00047 | 0.1654 | 0.16455 | 0.16591 | 27.68304 |
-| `complex/classes/namedtuple_classes.py` | yes | 0.119 | 0.00121 | 0.11914 | 0.11708 | 0.12056 | 27.81864 |
-| `complex/classes/simplenamespace.py` | yes | 0.03354 | 0.00076 | 0.03328 | 0.03286 | 0.03474 | 29.48772 |
-| `complex/classes/sloted_classes.py` | yes | 0.02732 | 0.00137 | 0.02719 | 0.02596 | 0.0302 | 28.45368 |
-| `complex/generators/simple.py` | yes | 0.04797 | 0.00042 | 0.04778 | 0.04755 | 0.04863 | 29.04967 |
-| `dummy/dummy.py` | yes | 0.01758 | 0.00031 | 0.01747 | 0.0173 | 0.01801 | 26.92634 |
-| `long_run/database/postgresql.py` | yes | 0.22425 | 0.00129 | 0.22418 | 0.22267 | 0.22598 | 32.53404 |
+| `algorithm/search/bin.py` | yes | 1.38969 | 0.05629 | 1.38991 | 1.33104 | 1.50273 | 34.91127 |
+| `algorithm/search/hashmap_lookup.py` | yes | 1.38459 | 0.06158 | 1.37474 | 1.33882 | 1.51555 | 35.94252 |
+| `algorithm/search/index.py` | yes | 1.38865 | 0.01793 | 1.38148 | 1.37071 | 1.41308 | 34.76507 |
+| `algorithm/search/linear.py` | yes | 1.43582 | 0.0209 | 1.43635 | 1.40338 | 1.46493 | 34.84542 |
+| `algorithm/twosum/twosum.py` | yes | 0.104 | 0.00369 | 0.10287 | 0.09955 | 0.1095 | 27.24051 |
+| `algorithm/twosum/twosum_naive.py` | yes | 0.10192 | 0.00466 | 0.10404 | 0.09576 | 0.10832 | 27.31473 |
+| `complex/classes/classes.py` | yes | 0.02664 | 0.00281 | 0.02562 | 0.02451 | 0.03279 | 27.9029 |
+| `complex/classes/dataclasses_.py` | yes | 0.15316 | 0.00244 | 0.15423 | 0.15008 | 0.15604 | 28.08538 |
+| `complex/classes/namedtuple_classes.py` | yes | 0.11285 | 0.00424 | 0.11104 | 0.10894 | 0.12068 | 27.99219 |
+| `complex/classes/simplenamespace.py` | yes | 0.03444 | 0.00255 | 0.03381 | 0.03176 | 0.03787 | 29.06194 |
+| `complex/classes/sloted_classes.py` | yes | 0.02595 | 0.00133 | 0.02546 | 0.0242 | 0.02755 | 28.00614 |
+| `complex/generators/simple.py` | yes | 0.05237 | 0.00159 | 0.05139 | 0.05092 | 0.05448 | 29.47489 |
+| `dummy/dummy.py` | yes | 0.01708 | 0.00165 | 0.01682 | 0.01515 | 0.01968 | 27.21038 |
+| `long_run/database/postgresql.py` | yes | 0.2088 | 0.00768 | 0.20628 | 0.20044 | 0.22089 | 32.36049 |
 | `long_run/database/sqlite_.py` | no | -1 | -1 | -1 | -1 | -1 | -1 |
 | `long_run/file/load_titanic_csv_pandas.py` | no | -1 | -1 | -1 | -1 | -1 | -1 |
-| `long_run/file/load_titanic_csv_python.py` | yes | 0.08409 | 0.0011 | 0.08442 | 0.08263 | 0.08557 | 27.76953 |
+| `long_run/file/load_titanic_csv_python.py` | yes | 0.07849 | 0.00276 | 0.07875 | 0.07411 | 0.08203 | 27.76786 |
 | `long_run/processes/collect_names_from_site.py` | no | -1 | -1 | -1 | -1 | -1 | -1 |
 | `long_run/processes/generate_fake_data.py` | no | -1 | -1 | -1 | -1 | -1 | -1 |
-| `long_run/processes/maze_generator.py` | yes | 0.13519 | 0.01135 | 0.13319 | 0.12047 | 0.15588 | 28.07254 |
-| `long_run/text/clean_text.py` | yes | 0.24716 | 0.00206 | 0.24674 | 0.24459 | 0.25036 | 27.71094 |
-| `long_run/text/count_words.py` | yes | 0.10087 | 0.00115 | 0.10097 | 0.099 | 0.10202 | 26.76786 |
-| `math/haversine.py` | yes | 0.69221 | 0.04756 | 0.70538 | 0.64129 | 0.74801 | 27.48549 |
+| `long_run/processes/maze_generator.py` | yes | 0.22385 | 0.01027 | 0.22494 | 0.21058 | 0.23978 | 28.32868 |
+| `long_run/text/clean_text.py` | yes | 0.28519 | 0.00679 | 0.28483 | 0.27698 | 0.29733 | 27.40904 |
+| `long_run/text/count_words.py` | yes | 0.09487 | 0.00216 | 0.0953 | 0.09083 | 0.09769 | 27.29911 |
+| `math/haversine.py` | yes | 1.00133 | 0.03056 | 1.0114 | 0.95616 | 1.03692 | 27.36328 |
 | `math/mandelbrot.py` | no | -1 | -1 | -1 | -1 | -1 | -1 |
-| `math/pow_simple.py` | yes | 0.35667 | 0.00349 | 0.35585 | 0.35252 | 0.36197 | 27.29576 |
-| `math/pow_using_math.py` | yes | 1.09882 | 0.02748 | 1.09755 | 1.0716 | 1.14297 | 27.68862 |
-| `modules/json/json_module.py` | yes | 0.42592 | 0.00563 | 0.4269 | 0.41715 | 0.43309 | 28.52623 |
+| `math/pow_simple.py` | yes | 0.35664 | 0.01205 | 0.35638 | 0.34399 | 0.37821 | 27.39062 |
+| `math/pow_using_math.py` | yes | 1.33177 | 0.03574 | 1.33035 | 1.29083 | 1.38591 | 27.36049 |
+| `modules/json/json_module.py` | yes | 0.45653 | 0.01867 | 0.44851 | 0.434 | 0.48586 | 28.06083 |
 | `modules/json/orjson_module.py` | no | -1 | -1 | -1 | -1 | -1 | -1 |
 

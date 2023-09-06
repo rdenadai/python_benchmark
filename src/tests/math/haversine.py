@@ -21,13 +21,13 @@ def haversine(lat1: float, lng1: float, lat2: float, lng2: float) -> int:
 
 
 def main():
-    data = [
+    data = (
         ({"lat1": -34.83333, "lng1": -58.5166646, "lat2": 49.0083899664, "lng2": 2.53844117956}, 11099),
         ({"lat1": 51.5007, "lng1": 0.1246, "lat2": 40.6892, "lng2": 74.0445}, 5574),
         ({"lat1": 43.2341, "lng1": 0.5463, "lat2": 58.1234, "lng2": 88.9421}, 5967),
         ({"lat1": -84.412977, "lng1": 39.152501, "lat2": -84.412946, "lng2": 39.152505}, 0),
         ({"lat1": -0.116773, "lng1": 51.510357, "lat2": -77.009003, "lng2": 38.889931}, 8585),
-    ]
+    )
     for _ in range(100_000):
         for geo, expected in data:
             result = haversine(**geo)

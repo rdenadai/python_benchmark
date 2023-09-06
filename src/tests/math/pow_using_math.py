@@ -3,10 +3,10 @@
 from math import pow
 
 
-def main():
+def main() -> int:
     for _ in range(100_000):
         for i in range(100):
-            x = pow(i, i)
+            _ = pow(i, i)
     return 0
 
 

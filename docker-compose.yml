@@ -59,7 +59,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.8.17-slim-bookworm
+        DOCKER_IMAGE: python:3.8.18-slim-bookworm
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.8
@@ -75,7 +75,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.9.17-slim-bookworm
+        DOCKER_IMAGE: python:3.9.18-slim-bookworm
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.9
@@ -91,7 +91,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.10.12-slim-bookworm
+        DOCKER_IMAGE: python:3.10.13-slim-bookworm
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.10
@@ -107,7 +107,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.11.4-slim-bookworm
+        DOCKER_IMAGE: python:3.11.5-slim-bookworm
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.11

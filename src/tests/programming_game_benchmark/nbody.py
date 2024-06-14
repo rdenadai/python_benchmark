@@ -1,4 +1,4 @@
-# @ALLOWED_VERSIONS: 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12
+# @ALLOWED_VERSIONS: 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
 
 # The Computer Language Benchmarks Game
 # https://salsa.debian.org/benchmarksgame-team/benchmarksgame/
@@ -92,7 +92,7 @@ def report_energy(bodies=SYSTEM, pairs=PAIRS):
         dx, dy, dz = x1 - x2, y1 - y2, z1 - z2
         e -= (m1 * m2) / ((dx * dx + dy * dy + dz * dz) ** 0.5)
     e += sum(m * sum(vi * vi for vi in v) / 2.0 for r, v, m in bodies)
-    print(f"{e:.9f}")
+    # print(f"{e:.9f}")
 
 
 def offset_momentum(ref, bodies=SYSTEM):

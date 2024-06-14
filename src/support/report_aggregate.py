@@ -9,10 +9,10 @@ from packaging.version import parse as parseVersion
 
 
 def main() -> int:
-    DIVISOR = "|:---|---:|---:|---:|---:|---:|---:|---:|\n"
-    DIVISOR_2 = "|:---|---:|---:|---:|---:|---:|---:|\n"
-    VERSIONS = "| Command | 3.11 | 3.10 | 3.9 | 3.8 | 3.7 | 3.6 |\n"
-    VERSIONS_ALL = "| Command | 3.12 | 3.11 | 3.10 | 3.9 | 3.8 | 3.7 | 3.6 |\n"
+    DIVISOR = "|:---|---:|---:|---:|---:|---:|---:|---:|---:|\n"
+    DIVISOR_2 = "|:---|---:|---:|---:|---:|---:|---:|---:|\n"
+    VERSIONS = "| Command | 3.12 | 3.11 | 3.10 | 3.9 | 3.8 | 3.7 | 3.6 |\n"
+    VERSIONS_ALL = "| Command | 3.13 | 3.12 | 3.11 | 3.10 | 3.9 | 3.8 | 3.7 | 3.6 |\n"
     ROOT_DIR = dirname(abspath(__file__))
 
     performance = []
@@ -34,7 +34,7 @@ def main() -> int:
         file_to_save.write("### **Comparison**\n")
         # Mean Compare
         file_to_save.write("\n")
-        file_to_save.write("#### How much faster 3.12 is? (Mean / Median from 3.11 to 3.6)\n")
+        file_to_save.write("#### How much faster 3.13 is? (Mean / Median from 3.12 to 3.6)\n")
         file_to_save.write(VERSIONS)
         file_to_save.write(DIVISOR_2)
         for command, items in final.items():
@@ -52,15 +52,17 @@ def main() -> int:
         file_to_save.write("---\n")
         # Median Compare
         file_to_save.write("\n")
-        file_to_save.write("#### How much more memory 3.12 uses? (Memory diff from 3.11 to 3.6)\n")
+        file_to_save.write("#### How much more memory 3.13 uses? (Memory diff from 3.12 to 3.6)\n")
         file_to_save.write(VERSIONS)
         file_to_save.write(DIVISOR_2)
         for command, items in final.items():
             python_latest_memory = items[0].get("memory", 0)
             mem_diff_percentage = " | ".join(
-                f"{round((python_latest_memory * 100 / x) - 100, 2)}%"
-                if (x := item.get("memory", 0)) > 0 and python_latest_memory > 0
-                else "--"
+                (
+                    f"{round((python_latest_memory * 100 / x) - 100, 2)}%"
+                    if (x := item.get("memory", 0)) > 0 and python_latest_memory > 0
+                    else "--"
+                )
                 for item in items[1:]
             )
             file_to_save.write(f"| `{command}` | {mem_diff_percentage} |\n")

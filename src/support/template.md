@@ -4,11 +4,12 @@ This is a simple repo to validate and test any (almost any) python program again
 
 - Python 3.6.15
 - Python 3.7.17
-- Python 3.8.18
-- Python 3.9.18
-- Python 3.10.13
-- Python 3.11.6
-- Python 3.12.0
+- Python 3.8.19
+- Python 3.9.19
+- Python 3.10.14
+- Python 3.11.9
+- Python 3.12.3
+- Python 3.13.0b2
 
 ## Should i care about it
 
@@ -48,7 +49,7 @@ Please also check this metadata tags to put inside the program to be able to cha
 # @DONT_RUN
 # @MPROF_INTERVAL: 0.1
 # @MPROF_MULTIPROCESS: -M
-# @ALLOWED_VERSIONS: 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12
+# @ALLOWED_VERSIONS: 3.6, 3.7, 3.8, 3.9, 3.10, 3.11, 3.12, 3.13
 ```
 
 - @DONT_RUN: This file should not be executed (in case of utils routines);

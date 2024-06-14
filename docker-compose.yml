@@ -59,7 +59,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.8.18-slim-bookworm
+        DOCKER_IMAGE: python:3.8.19-slim-bookworm
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.8
@@ -75,7 +75,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.9.18-slim-bookworm
+        DOCKER_IMAGE: python:3.9.19-slim-bookworm
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.9
@@ -91,7 +91,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.10.13-slim-bookworm
+        DOCKER_IMAGE: python:3.10.14-slim-bookworm
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.10
@@ -107,7 +107,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.11.6-slim-bookworm
+        DOCKER_IMAGE: python:3.11.9-slim-bookworm
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.11
@@ -123,7 +123,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.12.0-slim-bookworm
+        DOCKER_IMAGE: python:3.12.3-slim-bookworm
         SETUPTOOLS_VERSION: 68.2.2
         REQUIREMENTS: requirements312.txt
     entrypoint: ./entrypoint.sh
@@ -137,11 +137,29 @@ services:
         condition: service_started
       python311:
         condition: service_completed_successfully
+  python313:
+    build:
+      context: ./docker/
+      args:
+        DOCKER_IMAGE: python:3.13.0b2-slim-bookworm
+        SETUPTOOLS_VERSION: 68.2.2
+        REQUIREMENTS: requirements313.txt
+    entrypoint: ./entrypoint.sh
+    environment:
+      - PY_VERSION=3.13
+    volumes:
+      - ./src:/code/src
+      - ./report:/code/report
+    depends_on:
+      postgres:
+        condition: service_started
+      python312:
+        condition: service_completed_successfully
   dummy_close:
     image: alpine:latest
     command: sleep 2
     depends_on:
       postgres:
         condition: service_started
-      python312:
+      python313:
         condition: service_completed_successfully

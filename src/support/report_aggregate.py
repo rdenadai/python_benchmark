@@ -28,6 +28,7 @@ def main() -> int:
 
     final: DefaultDict[str, List[Dict]] = defaultdict(list)
     for item in performance:
+        print(item) if item.get("command").startswith("leet") else None
         final[item.get("command")] += [item]
 
     with open(f"{ROOT_DIR}/compare.md", "w", encoding="utf-8") as file_to_save:

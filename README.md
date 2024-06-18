@@ -55,7 +55,7 @@ Please also check this metadata tags to put inside the program to be able to cha
 - @DONT_RUN: This file should not be executed (in case of utils routines);
 - @MPROF_INTERVAL: To benchmark memory usage mprof is used, this param you maybe able to improve interval collect of memory;
 - @MPROF_MULTIPROCESS: In case your program uses python multiprocess (possible params -M or -C, default: -C);
-- @ALLOWED_VERSIONS: What python versions your program can be run: from 3.6 to 3.12;
+- @ALLOWED_VERSIONS: What python versions your program can be run: from 3.6 to 3.13;
 
 ## Results
 
@@ -704,4 +704,3 @@ MemAvailable:   14612556 kB
 | `modules/json/orjson_module.py` | no | -1 | -1 | -1 | -1 | -1 | -1 |
 | `programming_game_benchmark/nbody.py` | yes | 0.15483 | 0.00197 | 0.15416 | 0.15331 | 0.15886 | 28.22098 |
 | `programming_game_benchmark/spectral_norm.py` | yes | 0.50811 | 0.02602 | 0.50736 | 0.47361 | 0.53646 | 28.40737 |
-

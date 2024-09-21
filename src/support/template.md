@@ -4,12 +4,12 @@ This is a simple repo to validate and test any (almost any) python program again
 
 - Python 3.6.15
 - Python 3.7.17
-- Python 3.8.19
-- Python 3.9.19
-- Python 3.10.14
-- Python 3.11.9
-- Python 3.12.3
-- Python 3.13.0b2
+- Python 3.8.20
+- Python 3.9.20
+- Python 3.10.15
+- Python 3.11.10
+- Python 3.12.6
+- Python 3.13.0rc2
 
 ## Should i care about it
 

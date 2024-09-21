@@ -12,12 +12,22 @@ services:
     environment:
       POSTGRES_DB: benchmark
       POSTGRES_PASSWORD: password
+    deploy:
+      resources:
+        limits:
+          cpus: "0.25"
+          memory: 100M
   dummy_start:
     image: alpine:latest
     command: sleep 5
     depends_on:
       postgres:
         condition: service_started
+    deploy:
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
   python36:
     build:
       context: ./docker/
@@ -33,6 +43,11 @@ services:
     volumes:
       - ./src:/code/src
       - ./report:/code/report
+    deploy:
+      resources:
+        limits:
+          cpus: "0.75"
+          memory: 350M
     depends_on:
       dummy_start:
         condition: service_completed_successfully
@@ -50,6 +65,11 @@ services:
     volumes:
       - ./src:/code/src
       - ./report:/code/report
+    deploy:
+      resources:
+        limits:
+          cpus: "0.75"
+          memory: 350M
     depends_on:
       postgres:
         condition: service_started
@@ -59,13 +79,18 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.8.19-slim-bookworm
+        DOCKER_IMAGE: python:3.8.20-slim-bookworm
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.8
     volumes:
       - ./src:/code/src
       - ./report:/code/report
+    deploy:
+      resources:
+        limits:
+          cpus: "0.75"
+          memory: 350M
     depends_on:
       postgres:
         condition: service_started
@@ -75,13 +100,18 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.9.19-slim-bookworm
+        DOCKER_IMAGE: python:3.9.20-slim-bookworm
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.9
     volumes:
       - ./src:/code/src
       - ./report:/code/report
+    deploy:
+      resources:
+        limits:
+          cpus: "0.75"
+          memory: 350M
     depends_on:
       postgres:
         condition: service_started
@@ -91,13 +121,18 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.10.14-slim-bookworm
+        DOCKER_IMAGE: python:3.10.15-slim-bookworm
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.10
     volumes:
       - ./src:/code/src
       - ./report:/code/report
+    deploy:
+      resources:
+        limits:
+          cpus: "0.75"
+          memory: 350M
     depends_on:
       postgres:
         condition: service_started
@@ -107,13 +142,18 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.11.9-slim-bookworm
+        DOCKER_IMAGE: python:3.11.10-slim-bookworm
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.11
     volumes:
       - ./src:/code/src
       - ./report:/code/report
+    deploy:
+      resources:
+        limits:
+          cpus: "0.75"
+          memory: 350M
     depends_on:
       postgres:
         condition: service_started
@@ -123,7 +163,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.12.3-slim-bookworm
+        DOCKER_IMAGE: python:3.12.6-slim-bookworm
         SETUPTOOLS_VERSION: 68.2.2
         REQUIREMENTS: requirements312.txt
     entrypoint: ./entrypoint.sh
@@ -132,6 +172,11 @@ services:
     volumes:
       - ./src:/code/src
       - ./report:/code/report
+    deploy:
+      resources:
+        limits:
+          cpus: "0.75"
+          memory: 350M
     depends_on:
       postgres:
         condition: service_started
@@ -141,7 +186,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.13.0b2-slim-bookworm
+        DOCKER_IMAGE: python:3.13.0rc2-slim-bookworm
         SETUPTOOLS_VERSION: 68.2.2
         REQUIREMENTS: requirements313.txt
     entrypoint: ./entrypoint.sh
@@ -150,6 +195,11 @@ services:
     volumes:
       - ./src:/code/src
       - ./report:/code/report
+    deploy:
+      resources:
+        limits:
+          cpus: "0.75"
+          memory: 350M
     depends_on:
       postgres:
         condition: service_started
@@ -158,6 +208,11 @@ services:
   dummy_close:
     image: alpine:latest
     command: sleep 2
+    deploy:
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
     depends_on:
       postgres:
         condition: service_started

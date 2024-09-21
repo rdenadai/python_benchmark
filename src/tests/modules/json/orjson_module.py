@@ -5,12 +5,7 @@ from random import choice, randint
 
 from orjson import dumps, loads
 
-NAMES = (
-    "Rodolfo",
-    "Sthefany",
-    "Larissa",
-    "Rodrigo",
-)
+NAMES = ("Rodolfo", "John", "Jane", "Doe", "Alice", "Bob", "Charlie", "David", "Eve", "Frank")
 
 
 def main():
@@ -19,7 +14,7 @@ def main():
         dumped = dumps(
             {
                 "name": choice(names),
-                "age": randint(5, 75),
+                "age": randint(18, 65),
                 "city": "Sao Paulo",
                 "datetime": datetime.now().isoformat(),
             }

@@ -35,7 +35,7 @@ def main(version: str):
     for file in sorted(glob(filenames)):
         with open(file, "r", encoding="utf-8") as tfile:
             content = tfile.read().split("\n")
-        command = content[0].strip().split("python ")[-1].replace("src/tests/", "")
+        command = content[0].strip().split(" ")[-1].replace("src/tests/", "")
         memory_usage = content[1:]
         for line in reversed(memory_usage):
             if not line:

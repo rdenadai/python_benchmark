@@ -30,9 +30,9 @@ RUN apt-get update && \
     libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN wget https://github.com/sharkdp/hyperfine/releases/download/v1.17.0/hyperfine_1.17.0_amd64.deb && \
-    dpkg -i hyperfine_1.17.0_amd64.deb && \
-    rm hyperfine_1.17.0_amd64.deb
+RUN wget https://github.com/sharkdp/hyperfine/releases/download/v1.18.0/hyperfine_1.18.0_amd64.deb && \
+    dpkg -i hyperfine_1.18.0_amd64.deb && \
+    rm hyperfine_1.18.0_amd64.deb
 
 ARG SETUPTOOLS_VERSION=65.6.0
 ARG REQUIREMENTS=requirements.txt

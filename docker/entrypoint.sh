@@ -23,7 +23,7 @@ do
         else
             python src/prepare/tear_up.py
             # Performance
-            hyperfine --show-output --export-json report/tmp/${i}part_${PY_VERSION}.json --runs 7 --warmup 2 "python ${FILE}"
+            hyperfine --show-output --export-json report/tmp/${i}part_${PY_VERSION}.json --runs 5 --warmup 2 "python ${FILE}"
             # Memory
             for k in {1..7}; do
                 mprof run ${MPROF_MULTIPROCESS} -T ${MPROF_INTERVAL} -o report/tmp/${i}_${k}part_${PY_VERSION}.dat ${FILE} &>/dev/null &

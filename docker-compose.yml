@@ -100,7 +100,7 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.9.20-slim-bookworm
+        DOCKER_IMAGE: python:3.9.23-slim-bookworm
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.9
@@ -121,7 +121,8 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.10.15-slim-bookworm
+        DOCKER_IMAGE: python:3.10.18-slim-bookworm
+        REQUIREMENTS: requirements-newer.txt
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.10
@@ -142,7 +143,8 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.11.10-slim-bookworm
+        DOCKER_IMAGE: python:3.11.13-slim-bookworm
+        REQUIREMENTS: requirements-newer.txt
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.11
@@ -163,9 +165,9 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.12.7-slim-bookworm
+        DOCKER_IMAGE: python:3.12.11-slim-bookworm
         SETUPTOOLS_VERSION: 68.2.2
-        REQUIREMENTS: requirements312.txt
+        REQUIREMENTS: requirements-newer.txt
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.12
@@ -186,9 +188,9 @@ services:
     build:
       context: ./docker/
       args:
-        DOCKER_IMAGE: python:3.13.0-slim-bookworm
+        DOCKER_IMAGE: python:3.13.5-slim-bookworm
         SETUPTOOLS_VERSION: 68.2.2
-        REQUIREMENTS: requirements313.txt
+        REQUIREMENTS: requirements-newer.txt
     entrypoint: ./entrypoint.sh
     environment:
       - PY_VERSION=3.13
@@ -204,6 +206,29 @@ services:
       postgres:
         condition: service_started
       python312:
+        condition: service_completed_successfully
+  python314:
+    build:
+      context: ./docker/
+      args:
+        DOCKER_IMAGE: python:3.14.0rc1-slim-bookworm
+        SETUPTOOLS_VERSION: 68.2.2
+        REQUIREMENTS: requirements-newer.txt
+    entrypoint: ./entrypoint.sh
+    environment:
+      - PY_VERSION=3.14
+    volumes:
+      - ./src:/code/src
+      - ./report:/code/report
+    deploy:
+      resources:
+        limits:
+          cpus: "0.75"
+          memory: 350M
+    depends_on:
+      postgres:
+        condition: service_started
+      python313:
         condition: service_completed_successfully
   dummy_close:
     image: alpine:latest

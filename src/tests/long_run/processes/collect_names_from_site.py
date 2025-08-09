@@ -1,6 +1,6 @@
 # @MPROF_INTERVAL: 0.1
 # @MPROF_MULTIPROCESS: -M
-# @ALLOWED_VERSIONS: 3.8, 3.9, 3.10, 3.11, 3.12
+# @ALLOWED_VERSIONS: 3.8, 3.9, 3.10, 3.11, 3.12, 3.13, 3.14
 
 import asyncio
 import gc
